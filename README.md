@@ -79,5 +79,6 @@ The code is provided "as is," without warranty of any kind, express or implied. 
  * Arsalan Malik
  * Amro Awad
  * Aydin Aysu
+ * 
 At this time, external contributions to this repository are not being accepted.
 Please feel free to use, modify, and cite the code as needed, but pull requests and feature requests will not be merged.
