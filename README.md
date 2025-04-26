@@ -74,9 +74,9 @@ Use, modification, and distribution are permitted, provided that proper credit i
 The code is provided "as is," without warranty of any kind, express or implied. Use at your own risk.
 
 **🚫 Contributions**
- Markup : - Emre Karabulut
- Markup : -Arsalan Malik
- Markup : - Amro Awad
- Markup : -Aydin Aysu
+ Markup : * Emre Karabulut
+ Markup : * Arsalan Malik
+ Markup : * Amro Awad
+ Markup : * Aydin Aysu
 At this time, external contributions to this repository are not being accepted.
 Please feel free to use, modify, and cite the code as needed, but pull requests and feature requests will not be merged.
