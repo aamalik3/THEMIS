@@ -10,32 +10,32 @@ THEMIS: Time, Heterogeneity, and Energy Minded Scheduling for Fair Multi-Tenant 
 by Emre Karabulut, Arsalan Ali Malik, Amro Awad, and Aydin Aysu
 Read the full paper here
 
-🚀 About
+**🚀 About**
 
 THEMIS (Time, Heterogeneity, and Energy Minded Scheduling) is a next-generation scheduling framework that ensures fair, energy-aware, and realistic multi-tenant use of cloud FPGAs.
 Unlike prior works, THEMIS accounts for execution time, heterogeneous hardware regions, and energy trade-offs, offering significantly improved fairness and resource utilization.
 Tested on a real Xilinx ZedBoard FPGA, THEMIS improves fairness by 24.2%–98.4% and enables an adjustable balance between energy efficiency and fairness — setting a new standard for secure and sustainable FPGA cloud services.
 
-✨ Features
+**✨ Features**
 Time-Aware Scheduling:
 Incorporates execution time estimates to promote fairness among tenants.
 
-Heterogeneity-Aware Mapping:
+**Heterogeneity-Aware Mapping:**
 Models and leverages the variations in hardware resources across FPGA regions.
 
-Energy-Aware Optimization:
+**Energy-Aware Optimization:**
 Allows tuning between fairness and energy efficiency based on system goals.
 
-Fair Multi-Tenant Resource Management:
+**Fair Multi-Tenant Resource Management:**
 Ensures equitable sharing of FPGA resources even under adversarial or greedy workloads.
 
-Tested on Real Hardware:
+**Tested on Real Hardware:**
 Evaluated on Xilinx ZedBoard, demonstrating 24.2%–98.4% fairness improvement over existing baselines.
 
-Lightweight and Practical:
+**Lightweight and Practical:**
 Designed for easy integration into real-world cloud FPGA deployments.
 
-📥 Setup Instructions
+**📥 Setup Instructions**
 Clone this repository:
 ```bash
 git clone https://github.ncsu.edu/HECTOR-ECE-Research-Lab/THEMIS.git
@@ -43,7 +43,7 @@ cd THEMIS-main
 ```
 
 
-📄 Citations
+**📄 Citations**
 If you find this work useful in your research, please cite it using the following BibTeX entry:
 
 ```bibtex
@@ -68,11 +68,15 @@ MachSuite Benchmarks
 
 
 
-🛡️ License
+**🛡️ License**
 This project is licensed under the MIT License.
 Use, modification, and distribution are permitted, provided that proper credit is given to the original authors. 
 The code is provided "as is," without warranty of any kind, express or implied. Use at your own risk.
 
-🚫 Contributions
+**🚫 Contributions**
+ Markup : - Emre Karabulut
+ Markup : -Arsalan Malik
+ Markup : - Amro Awad
+ Markup : -Aydin Aysu
 At this time, external contributions to this repository are not being accepted.
 Please feel free to use, modify, and cite the code as needed, but pull requests and feature requests will not be merged.
