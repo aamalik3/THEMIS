@@ -38,7 +38,7 @@ Designed for easy integration into real-world cloud FPGA deployments.
 **📥 Setup Instructions**
 Clone this repository:
 ```bash
-git clone https://github.ncsu.edu/HECTOR-ECE-Research-Lab/THEMIS.git
+git clone https://github.com/aamalik3/THEMIS.git
 cd THEMIS-main
 ```
 
@@ -79,6 +79,6 @@ The code is provided "as is," without warranty of any kind, express or implied. 
  * Arsalan Malik
  * Amro Awad
  * Aydin Aysu
- * 
+   
 At this time, external contributions to this repository are not being accepted.
 Please feel free to use, modify, and cite the code as needed, but pull requests and feature requests will not be merged.
