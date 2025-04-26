@@ -1,0 +1,291 @@
+
+#include "PR_executer.h"
+
+//omments to uncomment for AES
+// Parameters for Partial Reconfiguration
+#define PARTIAL_AES_BITFILE_LEN  0x20939 // in number of words
+#define PARTIAL_ADDER_BITFILE_LEN  0x20939 // in number of words
+#define PARTIAL_MULT_BITFILE_LEN  0x20939 // in number of words
+#define base_addr 0x43C10000
+#define counter_addr 0x43C00000
+#define SIZE_OF_PARTIAL_BITSTREAM_BUFFER 	1*1024*1024
+#define TOTAL_NUMBER_OF_PARTIAL_BITSTREAMS 	4
+
+
+
+int SD_Init()
+{
+	FRESULT rc;
+
+	rc = f_mount(&fatfs, "", 0);
+	if (rc) {
+		xil_printf(" ERROR : f_mount returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+int SD_TransferPartial(char *FileName, u32 DestinationAddress, u32 ByteLength)
+{
+	FIL fil;
+	FRESULT rc;
+	UINT br;
+
+	rc = f_open(&fil, FileName, FA_READ);
+	if (rc) {
+		xil_printf(" ERROR : f_open returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	rc = f_lseek(&fil, 0);
+	if (rc) {
+		xil_printf(" ERROR : f_lseek returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	rc = f_read(&fil, (void*)DestinationAddress, ByteLength, &br);
+	if (rc) {
+		xil_printf(" ERROR : f_read returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	rc = f_close(&fil);
+	if (rc) {
+		xil_printf(" ERROR : f_close returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+int getNumber() {
+
+	unsigned char byte;
+	unsigned char uartBuffer[16];
+	unsigned char validNumber;
+	int digitIndex;
+	int digit, number, sign;
+	int c;
+
+	while (1) {
+		byte = 0x00;
+		digit = 0;
+		digitIndex = 0;
+		number = 0;
+		validNumber = TRUE;
+
+		//get bytes from uart until RETURN is entered
+
+		while (byte != 0x0d) {
+			byte = inbyte();
+			uartBuffer[digitIndex] = byte;
+			xil_printf("%c", byte);
+			digitIndex++;
+		}
+
+		//calculate number from string of digits
+
+		for (c = 0; c < (digitIndex - 1); c++) {
+			if (c == 0) {
+				//check if first byte is a "-"
+				if (uartBuffer[c] == 0x2D) {
+					sign = -1;
+					digit = 0;
+				}
+				//check if first byte is a digit
+				else if ((uartBuffer[c] >> 4) == 0x03) {
+					sign = 1;
+					digit = (uartBuffer[c] & 0x0F);
+				}
+				else
+					validNumber = FALSE;
+			}
+			else {
+				//check byte is a digit
+				if ((uartBuffer[c] >> 4) == 0x03) {
+					digit = (uartBuffer[c] & 0x0F);
+				}
+				else
+					validNumber = FALSE;
+			}
+			number = (number * 10) + digit;
+		}
+		number *= sign;
+		if (validNumber == TRUE) {
+			return number;
+		}
+		print("This is not a valid number.\n\r");
+	}
+}
+
+int XDcfg_TransferBitfile(XHwIcap *HwIcapInstPtr, u32 *PartialAddress, u32 bitfile_length_words)
+{
+	u32 Status = 0;
+
+	Status = XHwIcap_DeviceWrite(HwIcapInstPtr, PartialAddress, bitfile_length_words);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("error writing to ICAP (%d)\r\n", Status);
+		return -1;
+	}
+	while (XHwIcap_IsDeviceBusy(HwIcapInstPtr));
+
+	return XST_SUCCESS;
+}
+
+void do_write_aes()
+{
+	int done = 0;
+	u32 data0=0, data1=0, data2=0, data3=0, counter_value=0;
+	Xil_Out32(base_addr + 16, 0x00000002);
+	//Xil_Out32(base_addr, 0x09cf4f3c);
+	Xil_Out32(base_addr, 0x09564f3c);
+	Xil_Out32(base_addr + 4, 0x6abf7158);
+	Xil_Out32(base_addr + 8, 0x628aed2a);
+	Xil_Out32(base_addr + 12, 0x2b7e1518);
+	Xil_Out32(base_addr + 16, 0x00000001);
+	while (done >= 3) {
+
+		done = Xil_In32(base_addr + 36);
+		// xil_printf("done %d \n",Xil_In32(base_addr+36));
+	}
+	counter_value = Xil_In32(counter_addr);
+	data0 = Xil_In32(base_addr + 20);
+	data1 = Xil_In32(base_addr + 24);
+	data2 = Xil_In32(base_addr + 28);
+	data3 = Xil_In32(base_addr + 32);
+	xil_printf("counter value %x \n", counter_value);
+	xil_printf("data 0 %x \n", data0);
+	xil_printf("data 1 %x \n", data1);
+	xil_printf("data 2 %x \n", data2);
+	xil_printf("data 3 %x \n", data3);
+}
+
+int PR_Init()
+{
+
+}
+
+
+
+int PR_execution()
+{
+	//u32 PartialAddress;
+	int Status;
+
+	XHwIcap_Config *ConfigPtr;
+
+	// Flush and disable Data Cache
+	Xil_DCacheDisable();
+
+	unsigned int i;
+		for ( i = 0; i < TOTAL_NUMBER_OF_PARTIAL_BITSTREAMS; i++ )
+		{
+		     partial_bitstream_buffers[i] = (u32 *) malloc ( SIZE_OF_PARTIAL_BITSTREAM_BUFFER * sizeof(u32));
+		     printf ("allocated partial bitstream buffer No. %d, physical address: 0x%x\n\r", i, (unsigned int)partial_bitstream_buffers[i] );
+		}
+	// Initialize SD controller and transfer partials to DDR
+	SD_Init();
+	SD_TransferPartial("aes.bin", (u32)partial_bitstream_buffers[0], (PARTIAL_AES_BITFILE_LEN << 2));
+	printf ("AES bitstream reading\n\r");
+	SD_TransferPartial("add.bin", (u32 )partial_bitstream_buffers[1], (PARTIAL_ADDER_BITFILE_LEN << 2));
+	printf ("Adder bitstream reading\n\r");
+	SD_TransferPartial("mult.bin", (u32 )partial_bitstream_buffers[2], (PARTIAL_MULT_BITFILE_LEN << 2));
+	printf ("Multiplier bitstream reading\n\r");
+	xil_printf("Partial Binaries transferred successfully!\r\n");
+
+	// Invalidate and enable Data Cache
+	Xil_DCacheEnable();
+
+	// Initialize Device Configuration Interface
+	DcfgInstPtr = &DcfgInstance;
+	XDcfg_0 = XDcfg_LookupConfig(XPAR_XDCFG_0_DEVICE_ID);
+	Status = XDcfg_CfgInitialize(DcfgInstPtr, XDcfg_0, XDcfg_0->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	// Deselect PCAP as the configuration device as we are going to use the ICAP
+	XDcfg_ClearControlRegister(DcfgInstPtr, XDCFG_CTRL_PCAP_PR_MASK);
+
+	ConfigPtr = XHwIcap_LookupConfig(XPAR_AXI_HWICAP_0_DEVICE_ID);
+	if (ConfigPtr == NULL) {
+		return XST_FAILURE;
+	}
+
+	HwIcapInstPtr = &HwIcap;
+	Status = XHwIcap_CfgInitialize(HwIcapInstPtr, ConfigPtr,
+		ConfigPtr->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	XHwIcap_Reset(HwIcapInstPtr);
+	//	while(!XHwIcap_IsDeviceBusy(HwIcapInstPtr));
+	print("HWICAP Initialized\r\n");
+	//do_scheduled();//do_lottery();
+	// Display Menu
+	int Exit = 0;
+	int OptionNext = 1; // start-up default
+	while (Exit != 1) {
+		do {
+			print("    1: Config :AES\n\r");
+			print("    2: Config :Adder\n\r");
+			print("    3: Config :MULT\n\r");
+			print("> ");
+
+			OptionNext = inbyte();
+			if (isalpha(OptionNext)) {
+				OptionNext = toupper(OptionNext);
+			}
+
+			xil_printf("%c\n\r", OptionNext);
+		} while (!isdigit(OptionNext));
+
+		switch (OptionNext) {
+		case '0':
+			Exit = 1;
+			print("hi");
+			break;
+		case '1':
+			//PartialAddress = partial_bitstream_buffers[0];
+			xil_printf("Starting AES Reconfiguration\n\r");
+			Status = XDcfg_TransferBitfile(HwIcapInstPtr, (u32*)partial_bitstream_buffers[0], PARTIAL_AES_BITFILE_LEN);
+			if (Status != XST_SUCCESS)
+			{
+				xil_printf("error writing to ICAP (%d)\r\n", Status);
+				exit(EXIT_FAILURE);
+			}
+			do_write_aes();
+			xil_printf("AES Reconfiguration Completed!\n\r");
+			break;
+		case '2':
+			///PartialAddress = partial_bitstream_buffers[1];
+			xil_printf("Starting Addition Reconfiguration\n\r");
+			Status =  XDcfg_TransferBitfile(HwIcapInstPtr, (u32*)partial_bitstream_buffers[0], PARTIAL_AES_BITFILE_LEN);
+			if (Status != XST_SUCCESS) {
+				xil_printf("Error : FPGA configuration failed!\n\r");
+				exit(EXIT_FAILURE);
+			}
+			do_write_aes();
+			xil_printf("Addition Reconfiguration Completed!\n\r");
+			break;
+		case '3':
+			//PartialAddress = partial_bitstream_buffers[2];
+			xil_printf("Starting Multiplication Reconfiguration\n\r");
+			Status = XDcfg_TransferBitfile(HwIcapInstPtr, (u32*)partial_bitstream_buffers[2], PARTIAL_MULT_BITFILE_LEN);
+			if (Status != XST_SUCCESS)
+			{
+				xil_printf("error writing to ICAP (%d)\r\n", Status);
+				exit(EXIT_FAILURE);
+			}
+			do_write_aes();
+			xil_printf("Multiplication Reconfiguration Completed!\n\r");
+			break;
+		default:
+			break;
+		}
+	}
+
+	return 0;
+}

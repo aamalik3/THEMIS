@@ -1,0 +1,59 @@
+/*
+ * spmv_profiling.c
+ *
+ *  Created on: Sep 8, 2022
+ *      Author: aamalik3
+ */
+
+#include "spmv_profiling.h"
+#include "PR_executer.h"
+#include "latency_counter.h"
+
+
+void spmv_operation()
+{
+    xil_printf("\n");
+	PR_execution("spmv.bin");
+	xil_printf("Back in SPMV: ");
+	set_counter((SPMV_rowDelimiters ), ((SPMV_out_r+0x8FFC)));
+	uint32_t	i;
+
+    /* put a test vector */
+    for (i = 0; i < 495;i++){
+    	Xil_Out32 (SPMV_rowDelimiters + i*4,i*0xDEADBEEF);
+    }
+
+    /* put a test vector*/
+    for (i = 0; i < 988;i++){
+    	Xil_Out32 (SPMV_vec + i*4,i*0xDEADBEEF);
+    }
+
+    /* put a test vector*/
+    for (i = 0; i < 1666;i++){
+    	Xil_Out32 (SPMV_cols + i*4,i*0xDEADBEEF);
+    }
+
+    /* put a test vector*/
+    for (i = 0; i < 3332;i++){
+    	Xil_Out32 (SPMV_val_r + i*4,i*0xDEADBEEF);
+    }
+
+
+    //xil_printf("Start signal is sent:\n");
+    Xil_Out32 (SPMV_CRTL, 0x00000001 );
+
+    int cnt =0;
+    while ( !((Xil_In32 (SPMV_CRTL)) & 0x2) && cnt< 10000)
+    	cnt++;
+
+    uint32_t tmp;
+    for (i = 0; i < 988; i++){
+    	tmp = Xil_In32 (SPMV_out_r+i*4);
+    	//xil_printf("0x%x\n",tmp[i]);
+    }
+
+    xil_printf("SPMV: ");
+    read_counter();
+    xil_printf("SPMV: %u",tmp);
+
+}

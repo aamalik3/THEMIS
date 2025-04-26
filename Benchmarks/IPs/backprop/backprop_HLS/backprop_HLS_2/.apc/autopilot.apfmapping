@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="backprop.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\backprop.c"/>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\check.data"/>
+    <originFiles name="input.data" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\input.data"/>
+    <originFiles name="local_support.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\local_support.c"/>
+    <originFiles name="support.h" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\support.h"/>
+    <originFiles name="backprop.h" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\backprop.h"/>
+  </source>
+  <testbench>
+    <originFiles name="harness.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\harness.c"/>
+    <originFiles name="support.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\support.c"/>
+    <originFiles name="backprop.h" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\backprop.h"/>
+    <originFiles name="support.h" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\backprop\CCode_backprop\support.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

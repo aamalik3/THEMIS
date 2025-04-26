@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="input.data" path="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\CCOde_bulk\input.data"/>
+    <originFiles name="check.data" path="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\CCOde_bulk\check.data"/>
+    <originFiles name="bfs.c" path="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\CCOde_bulk\bfs.c"/>
+  </source>
+  <testbench>
+    <originFiles name="support.h" path="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\CCOde_bulk\support.h"/>
+    <originFiles name="support.c" path="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\CCOde_bulk\support.c"/>
+    <originFiles name="harness.c" path="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\CCOde_bulk\harness.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

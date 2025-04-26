@@ -1,0 +1,383 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'aamalik3' on host 'diomedes' (Windows NT_amd64 version 6.2) on Fri Sep 02 14:21:32 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/backprop/backprop_HLS_2'
+Sourcing Tcl script 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/backprop/backprop_HLS_2/backprop_HLS_2/backprop_HLS_2/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project backprop_HLS_2 
+INFO: [HLS 200-10] Opening project 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/backprop/backprop_HLS_2/backprop_HLS_2'.
+INFO: [HLS 200-1510] Running: set_top backprop 
+INFO: [HLS 200-1510] Running: add_files ../CCode_backprop/backprop.c 
+INFO: [HLS 200-10] Adding design file '../CCode_backprop/backprop.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_backprop/backprop.h 
+INFO: [HLS 200-10] Adding design file '../CCode_backprop/backprop.h' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_backprop/check.data 
+INFO: [HLS 200-10] Adding design file '../CCode_backprop/check.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_backprop/input.data 
+INFO: [HLS 200-10] Adding design file '../CCode_backprop/input.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_backprop/local_support.c 
+INFO: [HLS 200-10] Adding design file '../CCode_backprop/local_support.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_backprop/support.h 
+INFO: [HLS 200-10] Adding design file '../CCode_backprop/support.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_backprop/backprop.h 
+INFO: [HLS 200-10] Adding test bench file '../CCode_backprop/backprop.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_backprop/harness.c 
+INFO: [HLS 200-10] Adding test bench file '../CCode_backprop/harness.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_backprop/support.c 
+INFO: [HLS 200-10] Adding test bench file '../CCode_backprop/support.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_backprop/support.h 
+INFO: [HLS 200-10] Adding test bench file '../CCode_backprop/support.h' to the project
+INFO: [HLS 200-1510] Running: open_solution backprop_HLS_2 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/backprop/backprop_HLS_2/backprop_HLS_2/backprop_HLS_2'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 219.866 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCode_backprop/local_support.c' ... 
+INFO: [HLS 200-10] Analyzing design file '../CCode_backprop/backprop.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.215 seconds; current allocated memory: 221.824 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_input_layer' (../CCode_backprop/backprop.c:36:0)
+INFO: [HLS 214-178] Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_second_layer' (../CCode_backprop/backprop.c:50:0)
+INFO: [HLS 214-178] Inlining function 'add_bias_to_activations' into 'matrix_vector_product_with_bias_output_layer' (../CCode_backprop/backprop.c:64:0)
+INFO: [HLS 214-178] Inlining function 'matrix_vector_product_with_bias_input_layer' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'RELU' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'matrix_vector_product_with_bias_second_layer' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'matrix_vector_product_with_bias_output_layer' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'soft_max' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'take_difference' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_delta_matrix_weights3' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_oracle_activations2' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_delta_matrix_weights2' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_oracle_activations1' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 214-178] Inlining function 'get_delta_matrix_weights1' into 'backprop' (../CCode_backprop/backprop.c:246:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.09 seconds; current allocated memory: 224.542 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 224.543 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 226.662 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.215 seconds; current allocated memory: 225.904 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_164_2' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_169_3' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_178_5' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_182_6' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_190_8' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_195_9' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_204_11' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_208_12' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_216_14' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_221_15' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_230_17' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_234_18' (../CCode_backprop/backprop.c:158) in function 'update_weights.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_1' (../CCode_backprop/backprop.c:37) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (../CCode_backprop/backprop.c:27) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (../CCode_backprop/backprop.c:17) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_52_1' (../CCode_backprop/backprop.c:51) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (../CCode_backprop/backprop.c:27) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (../CCode_backprop/backprop.c:17) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_66_1' (../CCode_backprop/backprop.c:65) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (../CCode_backprop/backprop.c:27) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (../CCode_backprop/backprop.c:17) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_8_1' (../CCode_backprop/backprop.c:4) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_11_2' (../CCode_backprop/backprop.c:4) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_80_1' (../CCode_backprop/backprop.c:79) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_89_1' (../CCode_backprop/backprop.c:88) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_101_1' (../CCode_backprop/backprop.c:100) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_114_1' (../CCode_backprop/backprop.c:113) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_126_1' (../CCode_backprop/backprop.c:125) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_139_1' (../CCode_backprop/backprop.c:138) in function 'backprop' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_276_2' (../CCode_backprop/backprop.c:258) in function 'backprop' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_38_1' (../CCode_backprop/backprop.c:37) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_52_1' (../CCode_backprop/backprop.c:51) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_66_1' (../CCode_backprop/backprop.c:65) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_89_1' (../CCode_backprop/backprop.c:88) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_101_1' (../CCode_backprop/backprop.c:100) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_114_1' (../CCode_backprop/backprop.c:113) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_126_1' (../CCode_backprop/backprop.c:125) in function 'backprop' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_139_1' (../CCode_backprop/backprop.c:138) in function 'backprop' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_40_2' (../CCode_backprop/backprop.c:37) in function 'backprop' completely with a factor of 13.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_54_2' (../CCode_backprop/backprop.c:51) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_68_2' (../CCode_backprop/backprop.c:65) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_90_2' (../CCode_backprop/backprop.c:88) in function 'backprop' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_103_2' (../CCode_backprop/backprop.c:100) in function 'backprop' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_115_2' (../CCode_backprop/backprop.c:113) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_128_2' (../CCode_backprop/backprop.c:125) in function 'backprop' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_140_2' (../CCode_backprop/backprop.c:138) in function 'backprop' completely with a factor of 64.
+INFO: [XFORM 203-102] Automatically partitioning small array 'activations3' (../CCode_backprop/backprop.c:262) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'dactivations3' (../CCode_backprop/backprop.c:265) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'net_outputs' (../CCode_backprop/backprop.c:266) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'output_difference' (../CCode_backprop/backprop.c:268) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'activations3' (../CCode_backprop/backprop.c:262) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dactivations3' (../CCode_backprop/backprop.c:265) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'net_outputs' (../CCode_backprop/backprop.c:266) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'output_difference' (../CCode_backprop/backprop.c:268) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../CCode_backprop/backprop.c:258:8) in function 'backprop'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.658 seconds; current allocated memory: 251.128 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_163_1' (../CCode_backprop/backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_177_4' (../CCode_backprop/backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_189_7' (../CCode_backprop/backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_203_10' (../CCode_backprop/backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_215_13' (../CCode_backprop/backprop.c:158:9) in function 'update_weights.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_229_16' (../CCode_backprop/backprop.c:158:9) in function 'update_weights.1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_275_1' (../CCode_backprop/backprop.c:258:6) in function 'backprop' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (../CCode_backprop/backprop.c:277:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations2' (../CCode_backprop/backprop.c:278:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (../CCode_backprop/backprop.c:41:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (../CCode_backprop/backprop.c:29:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'dactivations1' (../CCode_backprop/backprop.c:19:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations1' (../CCode_backprop/backprop.c:20:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'activations2' (../CCode_backprop/backprop.c:55:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_weights3' (../CCode_backprop/backprop.c:91:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'oracle_activations2' (../CCode_backprop/backprop.c:106:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_weights2' (../CCode_backprop/backprop.c:116:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'oracle_activations1' (../CCode_backprop/backprop.c:131:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_weights1' (../CCode_backprop/backprop.c:141:38)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.342 seconds; current allocated memory: 268.930 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'backprop' ...
+WARNING: [SYN 201-103] Legalizing function name 'update_weights.1' to 'update_weights_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_weights_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation ('weights1_addr_write_ln165', ../CCode_backprop/backprop.c:165) of variable 'bitcast_ln165_1', ../CCode_backprop/backprop.c:165 on array 'weights1' and 'load' operation ('weights1_load', ../CCode_backprop/backprop.c:165) on array 'weights1'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 2, offset = 1) between 'store' operation ('weights1_addr_write_ln165', ../CCode_backprop/backprop.c:165) of variable 'bitcast_ln165_1', ../CCode_backprop/backprop.c:165 on array 'weights1' and 'load' operation ('weights1_load', ../CCode_backprop/backprop.c:165) on array 'weights1'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 2, offset = 1) between 'store' operation ('weights1_addr_write_ln165', ../CCode_backprop/backprop.c:165) of variable 'bitcast_ln165_1', ../CCode_backprop/backprop.c:165 on array 'weights1' and 'load' operation ('weights1_load', ../CCode_backprop/backprop.c:165) on array 'weights1'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 23, loop 'VITIS_LOOP_163_1_VITIS_LOOP_164_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_169_3'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('biases1_addr_write_ln170', ../CCode_backprop/backprop.c:170) of variable 'bitcast_ln170_1', ../CCode_backprop/backprop.c:170 on array 'biases1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'biases1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 23, loop 'VITIS_LOOP_169_3'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation ('weights1_addr_1_write_ln179', ../CCode_backprop/backprop.c:179) of variable 'bitcast_ln179_1', ../CCode_backprop/backprop.c:179 on array 'weights1' and 'load' operation ('weights1_load_1', ../CCode_backprop/backprop.c:179) on array 'weights1'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'): Unable to enforce a carried dependence constraint (II = 2, distance = 2, offset = 1) between 'store' operation ('weights1_addr_1_write_ln179', ../CCode_backprop/backprop.c:179) of variable 'bitcast_ln179_1', ../CCode_backprop/backprop.c:179 on array 'weights1' and 'load' operation ('weights1_load_1', ../CCode_backprop/backprop.c:179) on array 'weights1'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'): Unable to enforce a carried dependence constraint (II = 3, distance = 2, offset = 1) between 'store' operation ('weights1_addr_1_write_ln179', ../CCode_backprop/backprop.c:179) of variable 'bitcast_ln179_1', ../CCode_backprop/backprop.c:179 on array 'weights1' and 'load' operation ('weights1_load_1', ../CCode_backprop/backprop.c:179) on array 'weights1'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'): Unable to enforce a carried dependence constraint (II = 4, distance = 2, offset = 1) between 'store' operation ('weights1_addr_1_write_ln179', ../CCode_backprop/backprop.c:179) of variable 'bitcast_ln179_1', ../CCode_backprop/backprop.c:179 on array 'weights1' and 'load' operation ('weights1_load_1', ../CCode_backprop/backprop.c:179) on array 'weights1'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 0) between 'store' operation ('reuse_reg73_write_ln179', ../CCode_backprop/backprop.c:179) of variable 'bitcast_ln179_1', ../CCode_backprop/backprop.c:179 on local variable 'reuse_reg73' and 'load' operation ('reuse_reg73_load') on local variable 'reuse_reg73'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 0) between 'store' operation ('reuse_reg73_write_ln179', ../CCode_backprop/backprop.c:179) of variable 'bitcast_ln179_1', ../CCode_backprop/backprop.c:179 on local variable 'reuse_reg73' and 'load' operation ('reuse_reg73_load') on local variable 'reuse_reg73'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 0) between 'store' operation ('reuse_reg73_write_ln179', ../CCode_backprop/backprop.c:179) of variable 'bitcast_ln179_1', ../CCode_backprop/backprop.c:179 on local variable 'reuse_reg73' and 'load' operation ('reuse_reg73_load') on local variable 'reuse_reg73'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 32, Depth = 34, loop 'VITIS_LOOP_177_4_VITIS_LOOP_178_5'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_182_6'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('biases1_addr_1_write_ln183', ../CCode_backprop/backprop.c:183) of variable 'bitcast_ln183_1', ../CCode_backprop/backprop.c:183 on array 'biases1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'biases1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 34, loop 'VITIS_LOOP_182_6'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation ('weights2_addr_write_ln191', ../CCode_backprop/backprop.c:191) of variable 'bitcast_ln191_1', ../CCode_backprop/backprop.c:191 on array 'weights2' and 'load' operation ('weights2_load', ../CCode_backprop/backprop.c:191) on array 'weights2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'): Unable to enforce a carried dependence constraint (II = 2, distance = 2, offset = 1) between 'store' operation ('weights2_addr_write_ln191', ../CCode_backprop/backprop.c:191) of variable 'bitcast_ln191_1', ../CCode_backprop/backprop.c:191 on array 'weights2' and 'load' operation ('weights2_load', ../CCode_backprop/backprop.c:191) on array 'weights2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'): Unable to enforce a carried dependence constraint (II = 3, distance = 2, offset = 1) between 'store' operation ('weights2_addr_write_ln191', ../CCode_backprop/backprop.c:191) of variable 'bitcast_ln191_1', ../CCode_backprop/backprop.c:191 on array 'weights2' and 'load' operation ('weights2_load', ../CCode_backprop/backprop.c:191) on array 'weights2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 23, loop 'VITIS_LOOP_189_7_VITIS_LOOP_190_8'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_195_9'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('biases2_addr_write_ln196', ../CCode_backprop/backprop.c:196) of variable 'bitcast_ln196_1', ../CCode_backprop/backprop.c:196 on array 'biases2' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'biases2'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 23, loop 'VITIS_LOOP_195_9'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'.
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation ('weights2_addr_1_write_ln205', ../CCode_backprop/backprop.c:205) of variable 'bitcast_ln205_1', ../CCode_backprop/backprop.c:205 on array 'weights2' and 'load' operation ('weights2_load_1', ../CCode_backprop/backprop.c:205) on array 'weights2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'): Unable to enforce a carried dependence constraint (II = 2, distance = 2, offset = 1) between 'store' operation ('weights2_addr_1_write_ln205', ../CCode_backprop/backprop.c:205) of variable 'bitcast_ln205_1', ../CCode_backprop/backprop.c:205 on array 'weights2' and 'load' operation ('weights2_load_1', ../CCode_backprop/backprop.c:205) on array 'weights2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'): Unable to enforce a carried dependence constraint (II = 3, distance = 2, offset = 1) between 'store' operation ('weights2_addr_1_write_ln205', ../CCode_backprop/backprop.c:205) of variable 'bitcast_ln205_1', ../CCode_backprop/backprop.c:205 on array 'weights2' and 'load' operation ('weights2_load_1', ../CCode_backprop/backprop.c:205) on array 'weights2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'): Unable to enforce a carried dependence constraint (II = 4, distance = 2, offset = 1) between 'store' operation ('weights2_addr_1_write_ln205', ../CCode_backprop/backprop.c:205) of variable 'bitcast_ln205_1', ../CCode_backprop/backprop.c:205 on array 'weights2' and 'load' operation ('weights2_load_1', ../CCode_backprop/backprop.c:205) on array 'weights2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 0) between 'store' operation ('reuse_reg85_write_ln205', ../CCode_backprop/backprop.c:205) of variable 'bitcast_ln205_1', ../CCode_backprop/backprop.c:205 on local variable 'reuse_reg85' and 'load' operation ('reuse_reg85_load') on local variable 'reuse_reg85'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 0) between 'store' operation ('reuse_reg85_write_ln205', ../CCode_backprop/backprop.c:205) of variable 'bitcast_ln205_1', ../CCode_backprop/backprop.c:205 on local variable 'reuse_reg85' and 'load' operation ('reuse_reg85_load') on local variable 'reuse_reg85'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'update_weights_1' (loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 0) between 'store' operation ('reuse_reg85_write_ln205', ../CCode_backprop/backprop.c:205) of variable 'bitcast_ln205_1', ../CCode_backprop/backprop.c:205 on local variable 'reuse_reg85' and 'load' operation ('reuse_reg85_load') on local variable 'reuse_reg85'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 32, Depth = 34, loop 'VITIS_LOOP_203_10_VITIS_LOOP_204_11'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_208_12'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('biases2_addr_1_write_ln209', ../CCode_backprop/backprop.c:209) of variable 'bitcast_ln209_1', ../CCode_backprop/backprop.c:209 on array 'biases2' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'biases2'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 34, loop 'VITIS_LOOP_208_12'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_215_13_VITIS_LOOP_216_14'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('weights3_addr_write_ln217', ../CCode_backprop/backprop.c:217) of variable 'bitcast_ln217_1', ../CCode_backprop/backprop.c:217 on array 'weights3' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights3'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 23, loop 'VITIS_LOOP_215_13_VITIS_LOOP_216_14'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_221_15'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('biases3_addr_write_ln222', ../CCode_backprop/backprop.c:222) of variable 'bitcast_ln222_1', ../CCode_backprop/backprop.c:222 on array 'biases3' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'biases3'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 21, loop 'VITIS_LOOP_221_15'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_229_16_VITIS_LOOP_230_17'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('weights3_addr_1_write_ln231', ../CCode_backprop/backprop.c:231) of variable 'bitcast_ln231_1', ../CCode_backprop/backprop.c:231 on array 'weights3' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights3'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 34, loop 'VITIS_LOOP_229_16_VITIS_LOOP_230_17'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_234_18'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('biases3_addr_1_write_ln235', ../CCode_backprop/backprop.c:235) of variable 'bitcast_ln235_1', ../CCode_backprop/backprop.c:235 on array 'biases3' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'biases3'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 34, loop 'VITIS_LOOP_234_18'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.378 seconds; current allocated memory: 271.353 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] After resource sharing, estimated clock period (10.9521ns) exceeds the target (target clock period: 10ns, clock uncertainty: 0.1ns, effective delay budget: 9.9ns).
+INFO: [BIND 205-100] The critical path consists of the following:
+	'load' operation ('reuse_reg_load') on local variable 'reuse_reg' (0 ns)
+	'select' operation ('reuse_select', ../CCode_backprop/backprop.c:165) (1.48 ns)
+	'dsub' operation ('sub', ../CCode_backprop/backprop.c:165) (9.47 ns)
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.134 seconds; current allocated memory: 274.837 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backprop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_276_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_276_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('weights1_load_1', ../CCode_backprop/backprop.c:41) on array 'weights1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 13, Depth = 74, loop 'VITIS_LOOP_38_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 54, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_52_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('weights2_load_1', ../CCode_backprop/backprop.c:55) on array 'weights2' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights2'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 329, loop 'VITIS_LOOP_52_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 54, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_66_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('weights3_load_1', ../CCode_backprop/backprop.c:69) on array 'weights3' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights3'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 328, loop 'VITIS_LOOP_66_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'dadd' operation ('activations3[0]', ../CCode_backprop/backprop.c:29) and 'mux' operation ('tmp_5', ../CCode_backprop/backprop.c:29).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'dadd' operation ('activations3[0]', ../CCode_backprop/backprop.c:29) and 'mux' operation ('tmp_5', ../CCode_backprop/backprop.c:29).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'dadd' operation ('activations3[0]', ../CCode_backprop/backprop.c:29) and 'mux' operation ('tmp_5', ../CCode_backprop/backprop.c:29).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'dadd' operation ('activations3[0]', ../CCode_backprop/backprop.c:29) and 'mux' operation ('tmp_5', ../CCode_backprop/backprop.c:29).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'dadd' operation ('activations3[0]', ../CCode_backprop/backprop.c:29) and 'mux' operation ('tmp_5', ../CCode_backprop/backprop.c:29).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 7, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'phi' operation ('activations3[2]') with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20) and 'phi' operation ('activations3_2_8', ../CCode_backprop/backprop.c:20) with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'phi' operation ('activations3[2]') with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20) and 'phi' operation ('activations3_2_8', ../CCode_backprop/backprop.c:20) with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'phi' operation ('activations3[2]') with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20) and 'phi' operation ('activations3_2_8', ../CCode_backprop/backprop.c:20) with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'phi' operation ('activations3[2]') with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20) and 'phi' operation ('activations3_2_8', ../CCode_backprop/backprop.c:20) with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 0) between 'phi' operation ('activations3[2]') with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20) and 'phi' operation ('activations3_2_8', ../CCode_backprop/backprop.c:20) with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'backprop' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 0) between 'phi' operation ('activations3[2]') with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20) and 'phi' operation ('activations3_2_8', ../CCode_backprop/backprop.c:20) with incoming values : ('select_ln279', ../CCode_backprop/backprop.c:279) ('activations3[0]', ../CCode_backprop/backprop.c:69) ('activations3[0]', ../CCode_backprop/backprop.c:29) ('activations3[0]', ../CCode_backprop/backprop.c:20).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 52, Depth = 53, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 20, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 47, loop 'VITIS_LOOP_11_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_80_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 13, loop 'VITIS_LOOP_80_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_89_1'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('delta_weights3_addr_2_write_ln91', ../CCode_backprop/backprop.c:91) of variable 'mul_i3_2', ../CCode_backprop/backprop.c:91 on array 'delta_weights3', ../CCode_backprop/backprop.c:271 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'delta_weights3'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 10, loop 'VITIS_LOOP_89_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_101_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('weights3_load_65', ../CCode_backprop/backprop.c:104) on array 'weights3' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights3'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 30, loop 'VITIS_LOOP_101_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_114_1'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('delta_weights2_addr_2_write_ln116', ../CCode_backprop/backprop.c:116) of variable 'mul_i4_2', ../CCode_backprop/backprop.c:116 on array 'delta_weights2', ../CCode_backprop/backprop.c:270 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'delta_weights2'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 32, Depth = 40, loop 'VITIS_LOOP_114_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_126_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('weights2_load_65', ../CCode_backprop/backprop.c:129) on array 'weights2' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights2'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 335, loop 'VITIS_LOOP_126_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_139_1'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('delta_weights1_addr_2_write_ln141', ../CCode_backprop/backprop.c:141) of variable 'mul_i6_2', ../CCode_backprop/backprop.c:141 on array 'delta_weights1', ../CCode_backprop/backprop.c:269 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'delta_weights1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 32, Depth = 40, loop 'VITIS_LOOP_139_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 17 seconds. CPU system time: 0 seconds. Elapsed time: 17.094 seconds; current allocated memory: 287.068 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] After resource sharing, estimated clock period (12.6584ns) exceeds the target (target clock period: 10ns, clock uncertainty: 0.1ns, effective delay budget: 9.9ns).
+INFO: [BIND 205-100] The critical path consists of the following:
+	'load' operation ('dactivations3_2_load', ../CCode_backprop/backprop.c:81) on local variable 'dactivations3[2]' (0 ns)
+	'mux' operation ('tmp_s', ../CCode_backprop/backprop.c:81) (1.71 ns)
+	'dmul' operation ('output_difference[0]', ../CCode_backprop/backprop.c:81) (11 ns)
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 9 seconds. CPU system time: 0 seconds. Elapsed time: 8.577 seconds; current allocated memory: 318.888 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_weights_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_30_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_weights_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.411 seconds; current allocated memory: 325.116 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backprop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/weights1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/weights2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/weights3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/biases1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/biases2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/biases3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/training_data' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'backprop/training_targets' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'backprop' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'biases3', 'biases1', 'biases2', 'weights3', 'training_targets', 'weights1', 'weights2', 'training_data' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_15_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_32_64_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backprop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 4.128 seconds; current allocated memory: 360.926 MB.
+INFO: [RTMG 210-278] Implementing memory 'backprop_activations1_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_dactivations1_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_delta_weights1_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_delta_weights2_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_delta_weights3_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'backprop_oracle_activations1_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 11 seconds. CPU system time: 6 seconds. Elapsed time: 16.303 seconds; current allocated memory: 407.281 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for backprop.
+INFO: [VLOG 209-307] Generating Verilog RTL for backprop.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 79.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 52 seconds. CPU system time: 7 seconds. Elapsed time: 63.361 seconds; current allocated memory: 407.813 MB.
+INFO: [HLS 200-112] Total CPU user time: 54 seconds. Total CPU system time: 8 seconds. Total elapsed time: 65.931 seconds; peak allocated memory: 407.281 MB.

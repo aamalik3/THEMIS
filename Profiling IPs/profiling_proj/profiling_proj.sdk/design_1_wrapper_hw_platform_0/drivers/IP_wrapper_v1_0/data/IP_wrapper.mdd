@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER IP_wrapper
+	OPTION supported_peripherals = (IP_wrapper);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = IP_wrapper;
+END DRIVER

@@ -1,0 +1,111 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'aamalik3' on host 'diomedes' (Windows NT_amd64 version 6.2) on Thu Sep 01 13:26:51 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/aamalik3/Desktop/IPs/nw/nw_HLS'
+Sourcing Tcl script 'C:/Users/aamalik3/Desktop/IPs/nw/nw_HLS/nw_HLS/nw_HLS/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project nw_HLS 
+INFO: [HLS 200-10] Opening project 'C:/Users/aamalik3/Desktop/IPs/nw/nw_HLS/nw_HLS'.
+INFO: [HLS 200-1510] Running: set_top needwun 
+INFO: [HLS 200-1510] Running: add_files ../CCode/check.data 
+INFO: [HLS 200-10] Adding design file '../CCode/check.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode/input.data 
+INFO: [HLS 200-10] Adding design file '../CCode/input.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode/nw.c 
+INFO: [HLS 200-10] Adding design file '../CCode/nw.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode/harness.c 
+INFO: [HLS 200-10] Adding test bench file '../CCode/harness.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode/support.c 
+INFO: [HLS 200-10] Adding test bench file '../CCode/support.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode/support.h 
+INFO: [HLS 200-10] Adding test bench file '../CCode/support.h' to the project
+INFO: [HLS 200-1510] Running: open_solution nw_HLS -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/aamalik3/Desktop/IPs/nw/nw_HLS/nw_HLS/nw_HLS'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 219.732 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCode/nw.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.544 seconds; current allocated memory: 221.076 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.174 seconds; current allocated memory: 222.796 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 222.797 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 224.117 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.194 seconds; current allocated memory: 223.371 MB.
+INFO: [XFORM 203-510] Pipelining loop 'init_row' (../CCode/nw.c:28) in function 'needwun' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'init_col' (../CCode/nw.c:28) in function 'needwun' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'fill_in' (../CCode/nw.c:28) in function 'needwun' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'trace' (../CCode/nw.c:74) in function 'needwun' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'pad_a' (../CCode/nw.c:29) in function 'needwun' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'pad_b' (../CCode/nw.c:29) in function 'needwun' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.296 seconds; current allocated memory: 244.037 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'fill_out' (../CCode/nw.c:28:16) in function 'needwun' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.552 seconds; current allocated memory: 264.521 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'needwun' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'needwun' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'init_row'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'init_row'
+INFO: [SCHED 204-61] Pipelining loop 'init_col'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'init_col'
+INFO: [SCHED 204-61] Pipelining loop 'fill_in'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('M_load_1', ../CCode/nw.c:50) on array 'M' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'M'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 6, loop 'fill_in'
+INFO: [SCHED 204-61] Pipelining loop 'trace'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'trace'
+INFO: [SCHED 204-61] Pipelining loop 'pad_a'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'pad_a'
+INFO: [SCHED 204-61] Pipelining loop 'pad_b'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'pad_b'
+WARNING: [HLS 200-871] Estimated clock period (10.574ns) exceeds the target (target clock period: 10ns, clock uncertainty: 0.1ns, effective delay budget: 9.9ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'needwun' consists of the following:	'select' operation ('select_ln54', ../CCode/nw.c:54) [132]  (0.698 ns)
+	'icmp' operation ('icmp_ln54_1', ../CCode/nw.c:54) [133]  (2.47 ns)
+	'select' operation ('max', ../CCode/nw.c:54) [134]  (0.698 ns)
+	'icmp' operation ('icmp_ln59', ../CCode/nw.c:59) [144]  (2.47 ns)
+	blocking operation 4.23 ns on control path)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.289 seconds; current allocated memory: 265.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.263 seconds; current allocated memory: 274.972 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'needwun' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'needwun/SEQA' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'needwun/SEQB' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'needwun/alignedA' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'needwun/alignedB' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'needwun/M' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'needwun/ptr' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'needwun' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'SEQA', 'SEQB', 'alignedA', 'alignedB', 'ptr', 'M' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'needwun'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.343 seconds; current allocated memory: 276.206 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.9 seconds; current allocated memory: 285.115 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for needwun.
+INFO: [VLOG 209-307] Generating Verilog RTL for needwun.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 94.57 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 8.146 seconds; current allocated memory: 285.340 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 2 seconds. Total elapsed time: 10.505 seconds; peak allocated memory: 285.115 MB.

@@ -1,0 +1,24 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="stencil" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="orig" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="8192">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="32" hw_size_or_depth="8192">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32768"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="w" src_name="sol" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="8192">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="32" hw_size_or_depth="8192">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="65536"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="r" src_name="filter" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="9">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="32" hw_size_or_depth="9">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0"/>
+    </return>
+  </kernel>
+</root>

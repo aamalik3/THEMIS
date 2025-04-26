@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\IPs\gemm\CCODE_Blocked\check.data"/>
+    <originFiles name="gemm.c" path="C:\Users\aamalik3\Desktop\IPs\gemm\CCODE_Blocked\gemm.c"/>
+    <originFiles name="input.data" path="C:\Users\aamalik3\Desktop\IPs\gemm\CCODE_Blocked\input.data"/>
+  </source>
+  <testbench>
+    <originFiles name="harness.c" path="C:\Users\aamalik3\Desktop\IPs\gemm\CCODE_Blocked\harness.c"/>
+    <originFiles name="support.c" path="C:\Users\aamalik3\Desktop\IPs\gemm\CCODE_Blocked\support.c"/>
+    <originFiles name="support.h" path="C:\Users\aamalik3\Desktop\IPs\gemm\CCODE_Blocked\support.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

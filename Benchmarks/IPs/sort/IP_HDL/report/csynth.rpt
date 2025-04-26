@@ -1,0 +1,30 @@
+
+
+================================================================
+== Synthesis Summary Report of 'ms_mergesort'
+================================================================
++ General Information: 
+    * Date:           Thu Sep  1 11:41:28 2022
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        merge_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------+------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+    |        Modules       | Issue|       | Latency | Latency| Iteration|         | Trip |          |        |    |           |           |     |
+    |        & Loops       | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |    LUT    | URAM|
+    +----------------------+------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+    |+ ms_mergesort        |     -|  -0.53|        -|       -|         -|        -|     -|        no|  8 (2%)|   -|  823 (~0%)|  1112 (2%)|    -|
+    | + grp_merge_1_fu_78  |     -|  -0.92|        -|       -|         -|        -|     -|        no|  4 (1%)|   -|  540 (~0%)|   729 (1%)|    -|
+    |  o merge_label1      |     -|  -9.90|        -|       -|         2|        1|     -|       yes|       -|   -|          -|          -|    -|
+    |  o merge_label2      |     -|  -9.90|        -|       -|         2|        1|     -|       yes|       -|   -|          -|          -|    -|
+    |  o merge_label3      |     -|  -9.90|        -|       -|         2|        1|     -|       yes|       -|   -|          -|          -|    -|
+    | o mergesort_label1   |     -|  -9.90|        -|       -|         -|        -|     -|        no|       -|   -|          -|          -|    -|
+    |  o mergesort_label2  |     -|  -9.90|        -|       -|         -|        -|     -|        no|       -|   -|          -|          -|    -|
+    +----------------------+------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+

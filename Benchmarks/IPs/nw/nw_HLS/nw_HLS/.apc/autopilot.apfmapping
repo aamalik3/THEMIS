@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\IPs\nw\CCode\check.data"/>
+    <originFiles name="input.data" path="C:\Users\aamalik3\Desktop\IPs\nw\CCode\input.data"/>
+    <originFiles name="nw.c" path="C:\Users\aamalik3\Desktop\IPs\nw\CCode\nw.c"/>
+  </source>
+  <testbench>
+    <originFiles name="harness.c" path="C:\Users\aamalik3\Desktop\IPs\nw\CCode\harness.c"/>
+    <originFiles name="support.c" path="C:\Users\aamalik3\Desktop\IPs\nw\CCode\support.c"/>
+    <originFiles name="support.h" path="C:\Users\aamalik3\Desktop\IPs\nw\CCode\support.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

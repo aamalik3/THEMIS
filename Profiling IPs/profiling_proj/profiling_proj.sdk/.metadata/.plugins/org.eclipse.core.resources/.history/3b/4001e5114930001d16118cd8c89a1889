@@ -1,0 +1,27 @@
+/*
+ * common.h
+ *
+ *  Created on: Sep 9, 2022
+ *      Author: ekarabu
+ */
+
+#ifndef SRC_COMMON_H_
+#define SRC_COMMON_H_
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <stdlib.h>
+
+typedef struct WorkLoad {
+	uint8_t demandedResource; // 1 to 3
+	uint32_t latency;
+	uint8_t securityLevel;
+	uint8_t priority;
+} workload;
+
+uint8_t totalSlot;
+uint32_t interval;
+
+
+#endif /* SRC_COMMON_H_ */

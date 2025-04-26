@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log design_1_util_vector_logic_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_util_vector_logic_0_0.tcl
+

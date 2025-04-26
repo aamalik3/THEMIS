@@ -1,0 +1,11 @@
+/*
+ * kmp_profiling.c
+ *
+ *  Created on: Sep 8, 2022
+ *      Author: aamalik3
+ */
+
+
+#include "kmp_profiling.h"
+#include "PR_executer.h"
+#include "latency_counter.h"

@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log design_1_IP_wrapper_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_IP_wrapper_0_1.tcl
+

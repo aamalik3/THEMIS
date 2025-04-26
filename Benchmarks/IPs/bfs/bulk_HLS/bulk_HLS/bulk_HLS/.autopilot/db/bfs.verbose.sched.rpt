@@ -1,0 +1,281 @@
+
+
+================================================================
+== Vitis HLS Report for 'bfs'
+================================================================
+* Date:           Wed Sep  7 15:18:13 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        bulk_HLS
+* Solution:       bulk_HLS (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.059 ns|     0.10 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_horizons      |        ?|        ?|         ?|          -|          -|     ?|        no|
+        | + loop_nodes        |        ?|        ?|         ?|          -|          -|   256|        no|
+        |  ++ loop_neighbors  |        ?|        ?|         3|          2|          1|     ?|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 3, States = { 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 5 9 
+5 --> 9 6 
+6 --> 7 
+7 --> 9 8 
+8 --> 6 
+9 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.25>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_9"   --->   Operation 10 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %nodes, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = specmemcore i32 @_ssdm_op_SpecMemCore, i128 %nodes, i32 666, i32 17, i32 1"   --->   Operation 12 'specmemcore' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %nodes, void @empty_3, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %nodes"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %edges, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty_17 = specmemcore i32 @_ssdm_op_SpecMemCore, i64 %edges, i32 666, i32 17, i32 1"   --->   Operation 16 'specmemcore' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %edges, void @empty_3, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %edges"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %starting_node"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %starting_node, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_5, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %starting_node, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %level, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_7, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%empty_18 = specmemcore i32 @_ssdm_op_SpecMemCore, i8 %level, i32 666, i32 17, i32 1"   --->   Operation 23 'specmemcore' 'empty_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %level, void @empty_3, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %level"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %level_counts, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_8, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%empty_19 = specmemcore i32 @_ssdm_op_SpecMemCore, i64 %level_counts, i32 666, i32 17, i32 1"   --->   Operation 27 'specmemcore' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %level_counts, void @empty_3, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %level_counts"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (1.00ns)   --->   "%starting_node_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %starting_node" [../CCOde_bulk/bfs.c:10]   --->   Operation 31 'read' 'starting_node_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%level_addr = getelementptr i8 %level, i64 0, i64 %starting_node_read" [../CCOde_bulk/bfs.c:24]   --->   Operation 32 'getelementptr' 'level_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (3.25ns)   --->   "%store_ln24 = store i8 0, i8 %level_addr" [../CCOde_bulk/bfs.c:24]   --->   Operation 33 'store' 'store_ln24' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 256> <RAM>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%level_counts_addr = getelementptr i64 %level_counts, i64 0, i64 0" [../CCOde_bulk/bfs.c:25]   --->   Operation 34 'getelementptr' 'level_counts_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (2.32ns)   --->   "%store_ln25 = store i64 1, i4 %level_counts_addr" [../CCOde_bulk/bfs.c:25]   --->   Operation 35 'store' 'store_ln25' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 64> <Depth = 10> <RAM>
+ST_1 : Operation 36 [1/1] (1.58ns)   --->   "%br_ln27 = br void" [../CCOde_bulk/bfs.c:27]   --->   Operation 36 'br' 'br_ln27' <Predicate = true> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 3.52>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%horizon = phi i64 0, void, i64 %add_ln27, void" [../CCOde_bulk/bfs.c:27]   --->   Operation 37 'phi' 'horizon' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (3.52ns)   --->   "%add_ln27 = add i64 %horizon, i64 1" [../CCOde_bulk/bfs.c:27]   --->   Operation 38 'add' 'add_ln27' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln22 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [../CCOde_bulk/bfs.c:22]   --->   Operation 39 'specloopname' 'specloopname_ln22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln27 = trunc i64 %horizon" [../CCOde_bulk/bfs.c:27]   --->   Operation 40 'trunc' 'trunc_ln27' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (1.91ns)   --->   "%empty_20 = add i8 %trunc_ln27, i8 1" [../CCOde_bulk/bfs.c:27]   --->   Operation 41 'add' 'empty_20' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (1.58ns)   --->   "%br_ln30 = br void" [../CCOde_bulk/bfs.c:30]   --->   Operation 42 'br' 'br_ln30' <Predicate = true> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 3.98>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%cnt = phi i64 0, void, i64 %cnt_3, void %._crit_edge"   --->   Operation 43 'phi' 'cnt' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%n = phi i9 0, void, i9 %n_1, void %._crit_edge"   --->   Operation 44 'phi' 'n' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (1.82ns)   --->   "%n_1 = add i9 %n, i9 1" [../CCOde_bulk/bfs.c:30]   --->   Operation 45 'add' 'n_1' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (1.66ns)   --->   "%icmp_ln30 = icmp_eq  i9 %n, i9 256" [../CCOde_bulk/bfs.c:30]   --->   Operation 46 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%empty_21 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 256, i64 256, i64 256"   --->   Operation 47 'speclooptripcount' 'empty_21' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %icmp_ln30, void %.split2, void" [../CCOde_bulk/bfs.c:30]   --->   Operation 48 'br' 'br_ln30' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln30 = zext i9 %n" [../CCOde_bulk/bfs.c:30]   --->   Operation 49 'zext' 'zext_ln30' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%level_addr_1 = getelementptr i8 %level, i64 0, i64 %zext_ln30" [../CCOde_bulk/bfs.c:31]   --->   Operation 50 'getelementptr' 'level_addr_1' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 51 [2/2] (3.25ns)   --->   "%level_load = load i8 %level_addr_1" [../CCOde_bulk/bfs.c:31]   --->   Operation 51 'load' 'level_load' <Predicate = (!icmp_ln30)> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 256> <RAM>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%level_counts_addr_1 = getelementptr i64 %level_counts, i64 0, i64 %add_ln27" [../CCOde_bulk/bfs.c:45]   --->   Operation 52 'getelementptr' 'level_counts_addr_1' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (2.32ns)   --->   "%store_ln45 = store i64 %cnt, i4 %level_counts_addr_1" [../CCOde_bulk/bfs.c:45]   --->   Operation 53 'store' 'store_ln45' <Predicate = (icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 64> <Depth = 10> <RAM>
+ST_3 : Operation 54 [1/1] (2.77ns)   --->   "%icmp_ln45 = icmp_eq  i64 %cnt, i64 0" [../CCOde_bulk/bfs.c:45]   --->   Operation 54 'icmp' 'icmp_ln45' <Predicate = (icmp_ln30)> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln45 = br i1 %icmp_ln45, void, void %.loopexit" [../CCOde_bulk/bfs.c:45]   --->   Operation 55 'br' 'br_ln45' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%ret_ln48 = ret" [../CCOde_bulk/bfs.c:48]   --->   Operation 56 'ret' 'ret_ln48' <Predicate = (icmp_ln30 & icmp_ln45)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 7.61>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [../CCOde_bulk/bfs.c:19]   --->   Operation 57 'specloopname' 'specloopname_ln19' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/2] (3.25ns)   --->   "%level_load = load i8 %level_addr_1" [../CCOde_bulk/bfs.c:31]   --->   Operation 58 'load' 'level_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 256> <RAM>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%sext_ln31 = sext i8 %level_load" [../CCOde_bulk/bfs.c:31]   --->   Operation 59 'sext' 'sext_ln31' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln31 = zext i32 %sext_ln31" [../CCOde_bulk/bfs.c:31]   --->   Operation 60 'zext' 'zext_ln31' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (2.77ns)   --->   "%icmp_ln31 = icmp_eq  i64 %zext_ln31, i64 %horizon" [../CCOde_bulk/bfs.c:31]   --->   Operation 61 'icmp' 'icmp_ln31' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (1.58ns)   --->   "%br_ln31 = br i1 %icmp_ln31, void %._crit_edge, void" [../CCOde_bulk/bfs.c:31]   --->   Operation 62 'br' 'br_ln31' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%nodes_addr = getelementptr i128 %nodes, i64 0, i64 %zext_ln30" [../CCOde_bulk/bfs.c:32]   --->   Operation 63 'getelementptr' 'nodes_addr' <Predicate = (icmp_ln31)> <Delay = 0.00>
+ST_4 : Operation 64 [2/2] (3.25ns)   --->   "%nodes_load = load i8 %nodes_addr" [../CCOde_bulk/bfs.c:32]   --->   Operation 64 'load' 'nodes_load' <Predicate = (icmp_ln31)> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 128> <Depth = 256> <RAM>
+
+State 5 <SV = 4> <Delay = 7.61>
+ST_5 : Operation 65 [1/2] (3.25ns)   --->   "%nodes_load = load i8 %nodes_addr" [../CCOde_bulk/bfs.c:32]   --->   Operation 65 'load' 'nodes_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 128> <Depth = 256> <RAM>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_begin = trunc i128 %nodes_load" [../CCOde_bulk/bfs.c:32]   --->   Operation 66 'trunc' 'tmp_begin' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_end = partselect i64 @_ssdm_op_PartSelect.i64.i128.i32.i32, i128 %nodes_load, i32 64, i32 127" [../CCOde_bulk/bfs.c:33]   --->   Operation 67 'partselect' 'tmp_end' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 68 [1/1] (2.77ns)   --->   "%icmp_ln34 = icmp_ult  i64 %tmp_begin, i64 %tmp_end" [../CCOde_bulk/bfs.c:34]   --->   Operation 68 'icmp' 'icmp_ln34' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 69 [1/1] (1.58ns)   --->   "%br_ln34 = br i1 %icmp_ln34, void %._crit_edge, void %.lr.ph.preheader" [../CCOde_bulk/bfs.c:34]   --->   Operation 69 'br' 'br_ln34' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 70 [1/1] (1.58ns)   --->   "%br_ln0 = br void %.lr.ph"   --->   Operation 70 'br' 'br_ln0' <Predicate = (icmp_ln34)> <Delay = 1.58>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 71 [1/1] (0.00ns)   --->   "%e_1 = phi i64 %e_2, void %.split._crit_edge, i64 %tmp_begin, void %.lr.ph.preheader"   --->   Operation 71 'phi' 'e_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 72 [1/1] (2.77ns)   --->   "%icmp_ln34_1 = icmp_eq  i64 %e_1, i64 %tmp_end" [../CCOde_bulk/bfs.c:34]   --->   Operation 72 'icmp' 'icmp_ln34_1' <Predicate = true> <Delay = 2.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %icmp_ln34_1, void %.split, void %._crit_edge.loopexit" [../CCOde_bulk/bfs.c:34]   --->   Operation 73 'br' 'br_ln34' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%edges_addr = getelementptr i64 %edges, i64 0, i64 %e_1" [../CCOde_bulk/bfs.c:35]   --->   Operation 74 'getelementptr' 'edges_addr' <Predicate = (!icmp_ln34_1)> <Delay = 0.00>
+ST_6 : Operation 75 [2/2] (3.25ns)   --->   "%tmp_dst = load i12 %edges_addr" [../CCOde_bulk/bfs.c:35]   --->   Operation 75 'load' 'tmp_dst' <Predicate = (!icmp_ln34_1)> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 64> <Depth = 4096> <RAM>
+
+State 7 <SV = 6> <Delay = 6.50>
+ST_7 : Operation 76 [1/1] (0.00ns)   --->   "%cnt_1 = phi i64 %cnt_2, void %.split._crit_edge, i64 %cnt, void %.lr.ph.preheader"   --->   Operation 76 'phi' 'cnt_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 77 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 78 [1/2] (3.25ns)   --->   "%tmp_dst = load i12 %edges_addr" [../CCOde_bulk/bfs.c:35]   --->   Operation 78 'load' 'tmp_dst' <Predicate = (!icmp_ln34_1)> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 64> <Depth = 4096> <RAM>
+ST_7 : Operation 79 [1/1] (0.00ns)   --->   "%level_addr_2 = getelementptr i8 %level, i64 0, i64 %tmp_dst" [../CCOde_bulk/bfs.c:36]   --->   Operation 79 'getelementptr' 'level_addr_2' <Predicate = (!icmp_ln34_1)> <Delay = 0.00>
+ST_7 : Operation 80 [2/2] (3.25ns)   --->   "%tmp_level = load i8 %level_addr_2" [../CCOde_bulk/bfs.c:36]   --->   Operation 80 'load' 'tmp_level' <Predicate = (!icmp_ln34_1)> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 256> <RAM>
+ST_7 : Operation 81 [1/1] (3.52ns)   --->   "%e_2 = add i64 %e_1, i64 1" [../CCOde_bulk/bfs.c:34]   --->   Operation 81 'add' 'e_2' <Predicate = (!icmp_ln34_1)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 8.05>
+ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [../CCOde_bulk/bfs.c:20]   --->   Operation 82 'specloopname' 'specloopname_ln20' <Predicate = (!icmp_ln34_1)> <Delay = 0.00>
+ST_8 : Operation 83 [1/2] (3.25ns)   --->   "%tmp_level = load i8 %level_addr_2" [../CCOde_bulk/bfs.c:36]   --->   Operation 83 'load' 'tmp_level' <Predicate = (!icmp_ln34_1)> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 256> <RAM>
+ST_8 : Operation 84 [1/1] (1.55ns)   --->   "%icmp_ln38 = icmp_eq  i8 %tmp_level, i8 127" [../CCOde_bulk/bfs.c:38]   --->   Operation 84 'icmp' 'icmp_ln38' <Predicate = (!icmp_ln34_1)> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 85 [1/1] (1.58ns)   --->   "%br_ln38 = br i1 %icmp_ln38, void %.split._crit_edge, void" [../CCOde_bulk/bfs.c:38]   --->   Operation 85 'br' 'br_ln38' <Predicate = (!icmp_ln34_1)> <Delay = 1.58>
+ST_8 : Operation 86 [1/1] (3.25ns)   --->   "%store_ln39 = store i8 %empty_20, i8 %level_addr_2" [../CCOde_bulk/bfs.c:39]   --->   Operation 86 'store' 'store_ln39' <Predicate = (!icmp_ln34_1 & icmp_ln38)> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 256> <RAM>
+ST_8 : Operation 87 [1/1] (3.52ns)   --->   "%cnt_4 = add i64 %cnt_1, i64 1" [../CCOde_bulk/bfs.c:40]   --->   Operation 87 'add' 'cnt_4' <Predicate = (!icmp_ln34_1 & icmp_ln38)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 88 [1/1] (1.58ns)   --->   "%br_ln41 = br void %.split._crit_edge" [../CCOde_bulk/bfs.c:41]   --->   Operation 88 'br' 'br_ln41' <Predicate = (!icmp_ln34_1 & icmp_ln38)> <Delay = 1.58>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%cnt_2 = phi i64 %cnt_4, void, i64 %cnt_1, void %.split"   --->   Operation 89 'phi' 'cnt_2' <Predicate = (!icmp_ln34_1)> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.lr.ph"   --->   Operation 90 'br' 'br_ln0' <Predicate = (!icmp_ln34_1)> <Delay = 0.00>
+
+State 9 <SV = 7> <Delay = 1.58>
+ST_9 : Operation 91 [1/1] (1.58ns)   --->   "%br_ln0 = br void %._crit_edge"   --->   Operation 91 'br' 'br_ln0' <Predicate = (icmp_ln31 & icmp_ln34)> <Delay = 1.58>
+ST_9 : Operation 92 [1/1] (0.00ns)   --->   "%cnt_3 = phi i64 %cnt, void %.split2, i64 %cnt, void, i64 %cnt_1, void %._crit_edge.loopexit"   --->   Operation 92 'phi' 'cnt_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 93 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 4.25ns
+The critical path consists of the following:
+	s_axi read on port 'starting_node' (../CCOde_bulk/bfs.c:10) [27]  (1 ns)
+	'getelementptr' operation ('level_addr', ../CCOde_bulk/bfs.c:24) [28]  (0 ns)
+	'store' operation ('store_ln24', ../CCOde_bulk/bfs.c:24) of constant 0 on array 'level' [29]  (3.25 ns)
+
+ <State 2>: 3.52ns
+The critical path consists of the following:
+	'phi' operation ('horizon', ../CCOde_bulk/bfs.c:27) with incoming values : ('add_ln27', ../CCOde_bulk/bfs.c:27) [34]  (0 ns)
+	'add' operation ('add_ln27', ../CCOde_bulk/bfs.c:27) [35]  (3.52 ns)
+
+ <State 3>: 3.98ns
+The critical path consists of the following:
+	'phi' operation ('n') with incoming values : ('n', ../CCOde_bulk/bfs.c:30) [42]  (0 ns)
+	'getelementptr' operation ('level_addr_1', ../CCOde_bulk/bfs.c:31) [50]  (0 ns)
+	'load' operation ('level_load', ../CCOde_bulk/bfs.c:31) on array 'level' [51]  (3.25 ns)
+	blocking operation 0.729 ns on control path)
+
+ <State 4>: 7.62ns
+The critical path consists of the following:
+	'load' operation ('level_load', ../CCOde_bulk/bfs.c:31) on array 'level' [51]  (3.25 ns)
+	'icmp' operation ('icmp_ln31', ../CCOde_bulk/bfs.c:31) [54]  (2.78 ns)
+	multiplexor before 'phi' operation ('cnt') with incoming values : ('cnt', ../CCOde_bulk/bfs.c:40) [90]  (1.59 ns)
+
+ <State 5>: 7.62ns
+The critical path consists of the following:
+	'load' operation ('nodes_load', ../CCOde_bulk/bfs.c:32) on array 'nodes' [58]  (3.25 ns)
+	'icmp' operation ('icmp_ln34', ../CCOde_bulk/bfs.c:34) [61]  (2.78 ns)
+	multiplexor before 'phi' operation ('cnt') with incoming values : ('cnt', ../CCOde_bulk/bfs.c:40) [90]  (1.59 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('e') with incoming values : ('tmp_begin', ../CCOde_bulk/bfs.c:32) ('e', ../CCOde_bulk/bfs.c:34) [67]  (0 ns)
+	'getelementptr' operation ('edges_addr', ../CCOde_bulk/bfs.c:35) [73]  (0 ns)
+	'load' operation ('tmp_dst', ../CCOde_bulk/bfs.c:35) on array 'edges' [74]  (3.25 ns)
+
+ <State 7>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('tmp_dst', ../CCOde_bulk/bfs.c:35) on array 'edges' [74]  (3.25 ns)
+	'getelementptr' operation ('level_addr_2', ../CCOde_bulk/bfs.c:36) [75]  (0 ns)
+	'load' operation ('tmp_level', ../CCOde_bulk/bfs.c:36) on array 'level' [76]  (3.25 ns)
+
+ <State 8>: 8.06ns
+The critical path consists of the following:
+	'load' operation ('tmp_level', ../CCOde_bulk/bfs.c:36) on array 'level' [76]  (3.25 ns)
+	'icmp' operation ('icmp_ln38', ../CCOde_bulk/bfs.c:38) [77]  (1.55 ns)
+	multiplexor before 'phi' operation ('cnt') with incoming values : ('cnt', ../CCOde_bulk/bfs.c:40) [84]  (1.59 ns)
+	'phi' operation ('cnt') with incoming values : ('cnt', ../CCOde_bulk/bfs.c:40) [84]  (0 ns)
+	blocking operation 1.67 ns on control path)
+
+ <State 9>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('cnt') with incoming values : ('cnt', ../CCOde_bulk/bfs.c:40) [90]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

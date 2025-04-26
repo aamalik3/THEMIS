@@ -1,0 +1,57 @@
+/*
+ * fft_profiling.c
+ *
+ *  Created on: Sep 4, 2022
+ *      Author: ekarabu
+ */
+
+#include "fft_profiling.h"
+#include "PR_executer.h"
+#include "latency_counter.h"
+
+
+void fft_operation_profile(workload* app_load)
+{
+	PR_execution("fft.bin",fftPrBuffer);
+	set_counter((FFT_REAL_TWD ), ((FFT_REAL_RSLT+0xFFC)));
+
+    int i;
+    for (i = 0; i < 1024; i++)
+    {
+    	Xil_Out32 (FFT_REAL_TWD + i*4, (uint32_t)123456789);
+    }
+    //xil_printf("REAL TWDL FACTOR is sent:\n");
+
+    for (i = 0; i < 2048; i++)
+    {
+    	Xil_Out32 (FFT_REAL_R + i*4, (uint32_t)123456789);
+    }
+    //xil_printf("REAL R FACTOR  is sent:\n");
+
+    for (i = 0; i < 2048; i++)
+    {
+    	Xil_Out32 (FFT_REAL_IMG + i*4, (uint32_t)123456789);
+    }
+    //xil_printf("IMAGE is sent:\n");
+
+    Xil_Out32 (FFT_CRTL, 0x00000001 );
+    //xil_printf("Start signal is sent:\n");
+
+    int cnt =0;
+    while ( !((Xil_In32 (FFT_CRTL)) & 0x2) && cnt< 10000)
+    	cnt++;
+
+    //xil_printf("cnt: %d\n",cnt);
+
+    //xil_printf("RESULT:\n");
+    uint32_t tmp;
+    for (i = 0; i < 1024; i++){
+    	tmp = Xil_In32 (FFT_REAL_RSLT+i*4);
+    }
+
+    xil_printf("%u FFT: ",tmp);
+    read_counter();
+    latency_return(app_load);
+}
+
+

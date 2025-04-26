@@ -1,0 +1,101 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'aamalik3' on host 'diomedes' (Windows NT_amd64 version 6.2) on Mon Sep 12 11:23:02 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/spmv/crs_HLS'
+Sourcing Tcl script 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/spmv/crs_HLS/CRS_HLS/crs_HLS/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project CRS_HLS 
+INFO: [HLS 200-10] Opening project 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/spmv/crs_HLS/CRS_HLS'.
+INFO: [HLS 200-1510] Running: set_top spmv 
+INFO: [HLS 200-1510] Running: add_files ../CCode_crs/spmv.c 
+INFO: [HLS 200-10] Adding design file '../CCode_crs/spmv.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_crs/input.data 
+INFO: [HLS 200-10] Adding design file '../CCode_crs/input.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_crs/check.data 
+INFO: [HLS 200-10] Adding design file '../CCode_crs/check.data' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_crs/support.h -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../CCode_crs/support.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_crs/support.c -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../CCode_crs/support.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_crs/harness.c -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../CCode_crs/harness.c' to the project
+INFO: [HLS 200-1510] Running: open_solution crs_HLS -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/spmv/crs_HLS/CRS_HLS/crs_HLS'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: set_directive_top -name spmv spmv 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 219.739 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCode_crs/spmv.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.55 seconds; current allocated memory: 221.159 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.049 seconds; current allocated memory: 222.398 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 222.399 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 223.582 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 222.812 MB.
+INFO: [XFORM 203-510] Pipelining loop 'spmv_2' (../CCode_crs/spmv.c:18) in function 'spmv' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 243.187 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'spmv_1' (../CCode_crs/spmv.c:19:12) in function 'spmv' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.167 seconds; current allocated memory: 235.652 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'spmv' ...
+WARNING: [SYN 201-107] Renaming port name 'spmv/val' to 'spmv/val_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'spmv/out' to 'spmv/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'spmv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'spmv_2'.
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 1) between 'dadd' operation ('sum', ../CCode_crs/spmv.c:27) and 'dadd' operation ('sum', ../CCode_crs/spmv.c:27).
+Resolution: For help on HLS 200-881 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-881.html
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 2) between 'dadd' operation ('sum', ../CCode_crs/spmv.c:27) and 'dadd' operation ('sum', ../CCode_crs/spmv.c:27).
+Resolution: For help on HLS 200-881 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-881.html
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 3) between 'dadd' operation ('sum', ../CCode_crs/spmv.c:27) and 'dadd' operation ('sum', ../CCode_crs/spmv.c:27).
+Resolution: For help on HLS 200-881 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-881.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 4, Depth = 14, loop 'spmv_2'
+WARNING: [HLS 200-871] Estimated clock period (16.464ns) exceeds the target (target clock period: 10ns, clock uncertainty: 0.1ns, effective delay budget: 9.9ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'spmv' consists of the following:	'dadd' operation ('sum', ../CCode_crs/spmv.c:27) [64]  (8.23 ns)
+	'phi' operation ('sum') with incoming values : ('sum', ../CCode_crs/spmv.c:27) [48]  (0 ns)
+	'dadd' operation ('sum', ../CCode_crs/spmv.c:27) [64]  (8.23 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 235.981 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.184 seconds; current allocated memory: 236.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'spmv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/val_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/cols' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/rowDelimiters' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/vec' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'spmv/out_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'spmv' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'rowDelimiters', 'vec', 'cols', 'val_r', 'out_r' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'spmv'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 236.894 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.616 seconds; current allocated memory: 244.921 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for spmv.
+INFO: [VLOG 209-307] Generating Verilog RTL for spmv.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 60.74 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 6.91 seconds; current allocated memory: 245.105 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 9.283 seconds; peak allocated memory: 244.921 MB.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="aes.c" path="C:\Users\ekarabu\Desktop\Aydin_amro\DMA_Prefetch_Sch\HLS_IPs\aes\aes\aes.c"/>
+    <originFiles name="check.data" path="C:\Users\ekarabu\Desktop\Aydin_amro\DMA_Prefetch_Sch\HLS_IPs\aes\aes\check.data"/>
+    <originFiles name="input.data" path="C:\Users\ekarabu\Desktop\Aydin_amro\DMA_Prefetch_Sch\HLS_IPs\aes\aes\input.data"/>
+    <originFiles name="support.c" path="C:\Users\ekarabu\Desktop\Aydin_amro\DMA_Prefetch_Sch\HLS_IPs\common\support.c"/>
+  </source>
+  <testbench>
+    <originFiles name="harness.c" path="C:\Users\ekarabu\Desktop\Aydin_amro\DMA_Prefetch_Sch\HLS_IPs\common\harness.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

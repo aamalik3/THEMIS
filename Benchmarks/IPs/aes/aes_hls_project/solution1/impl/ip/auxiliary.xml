@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="aes256_encrypt_ecb" xd:componentRef="aes256_encrypt_ecb" xd:initiationInterval="1768" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_BUS_A" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(ctx)" xd:originalName="ctx" xd:direction="inout" xd:interfaceRef="s_axi_BUS_A" xd:busTypeRef="axilite" xd:offset="0x80" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(k)" xd:originalName="k" xd:direction="in" xd:interfaceRef="s_axi_BUS_A" xd:busTypeRef="axilite" xd:offset="0x20" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(buf)" xd:originalName="buf" xd:direction="inout" xd:interfaceRef="s_axi_BUS_A" xd:busTypeRef="axilite" xd:offset="0x40" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="1767" xd:worst-case="1767" xd:average-case="1767"/>
+  <xd:resourceEstimates xd:LUT="4863" xd:FF="1799" xd:BRAM="8" xd:DSP="0"/>
+</xd:acceleratorMap>

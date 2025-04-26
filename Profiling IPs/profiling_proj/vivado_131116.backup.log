@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Sep 13 12:02:35 2022
+# Process ID: 131116
+# Current directory: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/profiling_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent130404 C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\profiling_proj\profiling_proj.xpr
+# Log file: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/profiling_proj/vivado.log
+# Journal file: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/profiling_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 13 12:02:52 2022...

@@ -1,0 +1,677 @@
+20:24:43 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:24:49 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:25:54 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+../src/scheduler.c: In function 'scheduling':
+../src/scheduler.c:49:5: error: 'next' undeclared (first use in this function)
+     next=1;
+     ^~~~
+../src/scheduler.c:49:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/scheduler.c:53:6: warning: statement with no effect [-Wunused-value]
+      least_IP;
+      ^~~~~~~~
+make: *** [src/scheduler.o] Error 1
+20:26:02 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+../src/scheduler.c: In function 'scheduling':
+../src/scheduler.c:53:6: warning: statement with no effect [-Wunused-value]
+      least_IP;
+      ^~~~~~~~
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115056	   2652	67117984	67235692	401ef6c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:26:14 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115056	   2652	67117984	67235692	401ef6c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:26:21 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:30:50 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:37:04 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115056	   2652	67117984	67235692	401ef6c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:37:08 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:42:26 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115056	   2652	67117984	67235692	401ef6c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:42:29 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:45:54 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115056	   2652	67117984	67235692	401ef6c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:46:09 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:47:32 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+20:51:14 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+../src/scheduler.c: In function 'scheduling':
+../src/scheduler.c:41:12: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+      IPs[j].priority = 0;
+            ^
+../src/scheduler.c:68:23: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+        IPs[highest_IP].priority++;
+                       ^
+../src/scheduler.c: In function 'find_highest_priority':
+../src/scheduler.c:85:23: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+  int priority = row[0].priority;
+                       ^
+../src/scheduler.c:89:28: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+      if (priority > (row[j].priority))
+                            ^
+../src/scheduler.c:91:23: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+       priority =row[j].priority;
+                       ^
+../src/scheduler.c: In function 'find_least_priority':
+../src/scheduler.c:101:23: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+  int priority = row[0].priority;
+                       ^
+../src/scheduler.c:105:28: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+      if (priority < (row[j].priority))
+                            ^
+../src/scheduler.c:107:23: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+       priority =row[j].priority;
+                       ^
+../src/scheduler.c: In function 'find_next_priority':
+../src/scheduler.c:123:29: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+      if ((priority <= row[j].priority) && (priority >= current_priorty) && (current_order != j))
+                             ^
+../src/scheduler.c:125:23: error: 'workload {aka struct WorkLoad}' has no member named 'priority'
+       priority =row[j].priority;
+                       ^
+make: *** [src/scheduler.o] Error 1
+20:51:37 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/aes_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_profiling.d" -MT"src/aes_profiling.o" -o "src/aes_profiling.o" "../src/aes_profiling.c"
+'Finished building: ../src/aes_profiling.c'
+' '
+'Building file: ../src/bfs_my_module.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bfs_my_module.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/bfs_my_module.d" -MT"src/bfs_my_module.o" -o "src/bfs_my_module.o" "../src/bfs_my_module.c"
+'Finished building: ../src/bfs_my_module.c'
+' '
+'Building file: ../src/fft_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_profiling.d" -MT"src/fft_profiling.o" -o "src/fft_profiling.o" "../src/fft_profiling.c"
+'Finished building: ../src/fft_profiling.c'
+' '
+'Building file: ../src/gemm_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gemm_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gemm_profiling.d" -MT"src/gemm_profiling.o" -o "src/gemm_profiling.o" "../src/gemm_profiling.c"
+'Finished building: ../src/gemm_profiling.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/kmp_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/kmp_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/kmp_profiling.d" -MT"src/kmp_profiling.o" -o "src/kmp_profiling.o" "../src/kmp_profiling.c"
+'Finished building: ../src/kmp_profiling.c'
+' '
+'Building file: ../src/latency_counter.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/latency_counter.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/latency_counter.d" -MT"src/latency_counter.o" -o "src/latency_counter.o" "../src/latency_counter.c"
+'Finished building: ../src/latency_counter.c'
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/sha_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_profiling.d" -MT"src/sha_profiling.o" -o "src/sha_profiling.o" "../src/sha_profiling.c"
+'Finished building: ../src/sha_profiling.c'
+' '
+'Building file: ../src/sort_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_profiling.d" -MT"src/sort_profiling.o" -o "src/sort_profiling.o" "../src/sort_profiling.c"
+'Finished building: ../src/sort_profiling.c'
+' '
+'Building file: ../src/spmv_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spmv_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/spmv_profiling.d" -MT"src/spmv_profiling.o" -o "src/spmv_profiling.o" "../src/spmv_profiling.c"
+'Finished building: ../src/spmv_profiling.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 114928	   2652	67117984	67235564	401eeec	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:53:42 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115056	   2652	67117984	67235692	401ef6c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:53:53 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/aes_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_profiling.d" -MT"src/aes_profiling.o" -o "src/aes_profiling.o" "../src/aes_profiling.c"
+'Finished building: ../src/aes_profiling.c'
+' '
+'Building file: ../src/bfs_my_module.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bfs_my_module.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/bfs_my_module.d" -MT"src/bfs_my_module.o" -o "src/bfs_my_module.o" "../src/bfs_my_module.c"
+'Finished building: ../src/bfs_my_module.c'
+' '
+'Building file: ../src/fft_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_profiling.d" -MT"src/fft_profiling.o" -o "src/fft_profiling.o" "../src/fft_profiling.c"
+'Finished building: ../src/fft_profiling.c'
+' '
+'Building file: ../src/gemm_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gemm_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gemm_profiling.d" -MT"src/gemm_profiling.o" -o "src/gemm_profiling.o" "../src/gemm_profiling.c"
+'Finished building: ../src/gemm_profiling.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/kmp_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/kmp_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/kmp_profiling.d" -MT"src/kmp_profiling.o" -o "src/kmp_profiling.o" "../src/kmp_profiling.c"
+'Finished building: ../src/kmp_profiling.c'
+' '
+'Building file: ../src/latency_counter.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/latency_counter.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/latency_counter.d" -MT"src/latency_counter.o" -o "src/latency_counter.o" "../src/latency_counter.c"
+'Finished building: ../src/latency_counter.c'
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/sha_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_profiling.d" -MT"src/sha_profiling.o" -o "src/sha_profiling.o" "../src/sha_profiling.c"
+'Finished building: ../src/sha_profiling.c'
+' '
+'Building file: ../src/sort_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_profiling.d" -MT"src/sort_profiling.o" -o "src/sort_profiling.o" "../src/sort_profiling.c"
+'Finished building: ../src/sort_profiling.c'
+' '
+'Building file: ../src/spmv_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spmv_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/spmv_profiling.d" -MT"src/spmv_profiling.o" -o "src/spmv_profiling.o" "../src/spmv_profiling.c"
+'Finished building: ../src/spmv_profiling.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115056	   2652	67117984	67235692	401ef6c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:54:19 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115120	   2652	67117984	67235756	401efac	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:55:47 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/aes_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_profiling.d" -MT"src/aes_profiling.o" -o "src/aes_profiling.o" "../src/aes_profiling.c"
+In file included from ../src/aes_profiling.h:21:0,
+                 from ../src/aes_profiling.c:2:
+../src/common.h:17:7: error: expected identifier or '(' before '[' token
+  char [20] name;
+       ^
+make: *** [src/aes_profiling.o] Error 1
+20:56:05 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/aes_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_profiling.d" -MT"src/aes_profiling.o" -o "src/aes_profiling.o" "../src/aes_profiling.c"
+'Finished building: ../src/aes_profiling.c'
+' '
+'Building file: ../src/bfs_my_module.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bfs_my_module.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/bfs_my_module.d" -MT"src/bfs_my_module.o" -o "src/bfs_my_module.o" "../src/bfs_my_module.c"
+'Finished building: ../src/bfs_my_module.c'
+' '
+'Building file: ../src/fft_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_profiling.d" -MT"src/fft_profiling.o" -o "src/fft_profiling.o" "../src/fft_profiling.c"
+'Finished building: ../src/fft_profiling.c'
+' '
+'Building file: ../src/gemm_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gemm_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gemm_profiling.d" -MT"src/gemm_profiling.o" -o "src/gemm_profiling.o" "../src/gemm_profiling.c"
+'Finished building: ../src/gemm_profiling.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/kmp_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/kmp_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/kmp_profiling.d" -MT"src/kmp_profiling.o" -o "src/kmp_profiling.o" "../src/kmp_profiling.c"
+'Finished building: ../src/kmp_profiling.c'
+' '
+'Building file: ../src/latency_counter.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/latency_counter.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/latency_counter.d" -MT"src/latency_counter.o" -o "src/latency_counter.o" "../src/latency_counter.c"
+'Finished building: ../src/latency_counter.c'
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/sha_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_profiling.d" -MT"src/sha_profiling.o" -o "src/sha_profiling.o" "../src/sha_profiling.c"
+'Finished building: ../src/sha_profiling.c'
+' '
+'Building file: ../src/sort_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_profiling.d" -MT"src/sort_profiling.o" -o "src/sort_profiling.o" "../src/sort_profiling.c"
+'Finished building: ../src/sort_profiling.c'
+' '
+'Building file: ../src/spmv_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spmv_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/spmv_profiling.d" -MT"src/spmv_profiling.o" -o "src/spmv_profiling.o" "../src/spmv_profiling.c"
+'Finished building: ../src/spmv_profiling.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115312	   2652	67117984	67235948	401f06c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:56:51 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+../src/scheduler.c: In function 'scheduling':
+../src/scheduler.c:40:5: error: 'Ps' undeclared (first use in this function)
+     Ps[0].demandedResource = 1;
+     ^~
+../src/scheduler.c:40:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/scheduler.o] Error 1
+20:56:59 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115312	   2652	67117984	67235948	401f06c	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+20:57:40 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+../src/scheduler.c: In function 'scheduling':
+../src/scheduler.c:43:17: error: assignment to expression with array type
+     IPs[0].name = "aes";
+                 ^
+../src/scheduler.c:44:17: error: assignment to expression with array type
+     IPs[1].name = "fft";
+                 ^
+../src/scheduler.c:45:17: error: assignment to expression with array type
+     IPs[2].name = "sha";
+                 ^
+make: *** [src/scheduler.o] Error 1
+20:57:50 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+../src/scheduler.c: In function 'scheduling':
+../src/scheduler.c:43:19: warning: multi-character character constant [-Wmultichar]
+     IPs[0].name = 'aes';
+                   ^~~~~
+../src/scheduler.c:43:17: error: assignment to expression with array type
+     IPs[0].name = 'aes';
+                 ^
+../src/scheduler.c:44:17: error: assignment to expression with array type
+     IPs[1].name = "fft";
+                 ^
+../src/scheduler.c:45:17: error: assignment to expression with array type
+     IPs[2].name = "sha";
+                 ^
+make: *** [src/scheduler.o] Error 1
+20:58:52 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+../src/scheduler.c: In function 'scheduling':
+../src/scheduler.c:44:17: error: assignment to expression with array type
+     IPs[1].name = "fft";
+                 ^
+../src/scheduler.c:45:17: error: assignment to expression with array type
+     IPs[2].name = "sha";
+                 ^
+make: *** [src/scheduler.o] Error 1
+20:59:19 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115376	   2652	67117984	67236012	401f0ac	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+21:00:30 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115464	   2652	67117984	67236100	401f104	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+21:00:36 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:00:59 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115464	   2652	67117984	67236100	401f104	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+21:01:03 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:01:50 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115464	   2652	67117984	67236100	401f104	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+21:02:01 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:02:57 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:03:59 **** Auto Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../profiling_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building target: profiling_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../profiling_app_bsp/ps7_cortexa9_0/lib -o "profiling_app.elf"  ./src/PR_executer.o ./src/aes_profiling.o ./src/bfs_my_module.o ./src/fft_profiling.o ./src/gemm_profiling.o ./src/helloworld.o ./src/kmp_profiling.o ./src/latency_counter.o ./src/platform.o ./src/scheduler.o ./src/sha_profiling.o ./src/sort_profiling.o ./src/spmv_profiling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: profiling_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size profiling_app.elf  |tee "profiling_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115464	   2652	67117984	67236100	401f104	profiling_app.elf
+'Finished building: profiling_app.elf.size'
+' '
+21:04:02 **** Incremental Build of configuration Debug for project profiling_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

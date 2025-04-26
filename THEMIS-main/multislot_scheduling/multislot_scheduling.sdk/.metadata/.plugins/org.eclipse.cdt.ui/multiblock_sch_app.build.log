@@ -1,0 +1,19 @@
+13:19:30 **** Incremental Build of configuration Debug for project multiblock_sch_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building target: multiblock_sch_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../multiblock_sch_app_bsp/ps7_cortexa9_0/lib -o "multiblock_sch_app.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/PR_executer.o: In function `SD_Init':
+C:\Users\aamalik3\Desktop\GitHub\Scedhuling-DAC-23\Scedhuling-DAC-23\multislot_scheduling\multislot_scheduling.sdk\multiblock_sch_app\Debug/../src/PR_executer.c:42: undefined reference to `f_mount'
+./src/PR_executer.o: In function `SD_TransferPartial':
+C:\Users\aamalik3\Desktop\GitHub\Scedhuling-DAC-23\Scedhuling-DAC-23\multislot_scheduling\multislot_scheduling.sdk\multiblock_sch_app\Debug/../src/PR_executer.c:57: undefined reference to `f_open'
+C:\Users\aamalik3\Desktop\GitHub\Scedhuling-DAC-23\Scedhuling-DAC-23\multislot_scheduling\multislot_scheduling.sdk\multiblock_sch_app\Debug/../src/PR_executer.c:63: undefined reference to `f_lseek'
+C:\Users\aamalik3\Desktop\GitHub\Scedhuling-DAC-23\Scedhuling-DAC-23\multislot_scheduling\multislot_scheduling.sdk\multiblock_sch_app\Debug/../src/PR_executer.c:69: undefined reference to `f_read'
+C:\Users\aamalik3\Desktop\GitHub\Scedhuling-DAC-23\Scedhuling-DAC-23\multislot_scheduling\multislot_scheduling.sdk\multiblock_sch_app\Debug/../src/PR_executer.c:75: undefined reference to `f_close'
+collect2.exe: error: ld returned 1 exit status
+make: *** [multiblock_sch_app.elf] Error 1
+
+13:19:31 Build Finished (took 396ms)
+

@@ -1,0 +1,24 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="aes256_encrypt_ecb" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="rw" src_name="ctx" src_type="*" src_isptr="1" src_bitwidth="768" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="8" hw_size_or_depth="96">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="r" src_name="k" src_type="unsigned char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="32">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="8" hw_size_or_depth="32">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="rw" src_name="buf" src_type="unsigned char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="16">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="8" hw_size_or_depth="16">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0"/>
+    </return>
+  </kernel>
+</root>

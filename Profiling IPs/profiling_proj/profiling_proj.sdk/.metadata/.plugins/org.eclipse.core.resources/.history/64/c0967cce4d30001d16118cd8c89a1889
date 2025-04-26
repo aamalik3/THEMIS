@@ -1,0 +1,29 @@
+/*
+ * scheduler.c
+ *
+ *  Created on: Sep 9, 2022
+ *      Author: ekarabu
+ */
+
+#include "scheduler.h"
+
+void scheduling()
+{
+
+    u32 Status = PR_Init();
+    if (Status != XST_SUCCESS)
+    {
+    	xil_printf("error in ICAP \n");
+    }
+    workload aes_load,fft_load,bfs_load,gemm_load,kmp_load;
+    aes_256_operation_profile	(&aes_load);
+    xil_printf("aes latency %u\n",aes_load.latency);
+    fft_operation		();
+    //bfs_operation		();
+    //gemm_operation		();
+    //kmp_operation		();
+    //sort_operation		();
+    //spmv_operation		();
+    //sha_operation		();
+
+}

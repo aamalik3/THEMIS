@@ -1,0 +1,27 @@
+
+
+================================================================
+== Synthesis Summary Report of 'bfs'
+================================================================
++ General Information: 
+    * Date:           Wed Sep  7 15:18:14 2022
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        bulk_HLS
+    * Solution:       bulk_HLS (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------+------+-------+---------+--------+----------+---------+------+----------+----------+----+-----------+-----------+-----+
+    |       Modules       | Issue|       | Latency | Latency| Iteration|         | Trip |          |          |    |           |           |     |
+    |       & Loops       | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   | DSP|     FF    |    LUT    | URAM|
+    +---------------------+------+-------+---------+--------+----------+---------+------+----------+----------+----+-----------+-----------+-----+
+    |+ bfs                |     -|  -1.84|        -|       -|         -|        -|     -|        no|  30 (10%)|   -|  994 (~0%)|  1047 (1%)|    -|
+    | o loop_horizons     |     -|  -9.90|        -|       -|         -|        -|     -|        no|         -|   -|          -|          -|    -|
+    |  o loop_nodes       |     -|  -9.90|        -|       -|         -|        -|     -|        no|         -|   -|          -|          -|    -|
+    |   o loop_neighbors  |    II|  -9.90|        -|       -|         3|        2|     -|       yes|         -|   -|          -|          -|    -|
+    +---------------------+------+-------+---------+--------+----------+---------+------+----------+----------+----+-----------+-----------+-----+
+

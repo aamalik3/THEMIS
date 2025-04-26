@@ -1,0 +1,29 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="fft" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="rw" src_name="real" src_type="double*" src_isptr="1" src_bitwidth="64" src_size_or_depth="1024">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="64" hw_size_or_depth="1024">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="8192"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="rw" src_name="img" src_type="double*" src_isptr="1" src_bitwidth="64" src_size_or_depth="1024">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="64" hw_size_or_depth="1024">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16384"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="r" src_name="real_twid" src_type="double*" src_isptr="1" src_bitwidth="64" src_size_or_depth="512">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="64" hw_size_or_depth="512">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="4096"/>
+        </hw>
+      </arg>
+      <arg id="3" access_type="r" src_name="img_twid" src_type="double*" src_isptr="1" src_bitwidth="64" src_size_or_depth="512">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="BUS_A" hw_bitwidth="64" hw_size_or_depth="512">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24576"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0"/>
+    </return>
+  </kernel>
+</root>

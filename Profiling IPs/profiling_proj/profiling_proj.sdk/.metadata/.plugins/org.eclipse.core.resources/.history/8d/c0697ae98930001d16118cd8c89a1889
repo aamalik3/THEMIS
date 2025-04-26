@@ -1,0 +1,69 @@
+/*
+ * scheduler.c
+ *
+ *  Created on: Sep 9, 2022
+ *      Author: ekarabu
+ */
+
+#include "scheduler.h"
+
+void scheduling()
+{
+
+    u32 Status = PR_Init();
+    if (Status != XST_SUCCESS)
+    {
+    	xil_printf("error in ICAP \n");
+    }
+    workload aes_load,fft_load,sha_load;
+    aes_256_operation_profile	(&aes_load);
+    xil_printf("aes latency %u\n",aes_load.latency);
+    fft_operation_profile	(&fft_load);
+    xil_printf("fft latency %u\n",fft_load.latency);
+    //bfs_operation		();
+    //gemm_operation		();
+    //kmp_operation		();
+    //sort_operation		();
+    //spmv_operation		();
+    sha_operation_profile	(&sha_load);
+    xil_printf("sha latency %u\n",sha_load.latency);
+    aes_load.demandedResource =	1;
+    fft_load.demandedResource =	4;
+    sha_load.demandedResource =	3;
+    totalSlot=6;
+    interval =0;
+    remainingSlot=6;
+    int queue[6][3];
+    int successRate[3];
+    int i,j;
+    for(i=0;i<6;i++)
+    {
+    	for(j=0;j<3;j++)
+    	{
+    		queue[i][j] = 0;
+    		successRate[j] = 0;
+    	}
+    }
+    int terms=0;
+    while(terms<18)
+    {
+    	i = (terms/3) % 6;
+    	int priority = find_highest_priority (&successRate[0],3);
+
+    	terms++;
+    }
+
+
+}
+
+int find_highest_priority (int * row, int length){
+	int j;
+	int priority = (int)(*(row+0));
+	for(j=1;j<length;j++) // find the highest priority in the order
+	{
+	    if (priority > ((int)(*(row+j))))
+	    	priority =(int)(*(row+j));
+	}
+	return priority;
+}
+

@@ -1,0 +1,29 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../../common/harness.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'ekarabu' on host 'diomedes' (Windows NT_amd64 version 6.2) on Sun Aug 28 18:53:28 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes/aes_hls_project/solution1/csim/build'
+../../../../../common/harness.c:47:74: error: use of undeclared identifier 'S_IRGRP'
+  out_fd = open("output.data", O_WRONLY|O_CREAT|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH);
+                                                                         ^
+../../../../../common/harness.c:47:82: error: use of undeclared identifier 'S_IWGRP'
+  out_fd = open("output.data", O_WRONLY|O_CREAT|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH);
+                                                                                 ^
+../../../../../common/harness.c:47:90: error: use of undeclared identifier 'S_IROTH'
+  out_fd = open("output.data", O_WRONLY|O_CREAT|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH);
+                                                                                         ^
+../../../../../common/harness.c:47:98: error: use of undeclared identifier 'S_IWOTH'
+  out_fd = open("output.data", O_WRONLY|O_CREAT|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH);
+                                                                                                 ^
+4 errors generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is apcc_db
+ERROR: [APCC 202-1] APCC failed.
+   Generating csim.exe
+Makefile.rules:392: recipe for target 'csim.exe' failed
+g++.exe: error: obj/harness.o: No such file or directory
+make: *** [csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

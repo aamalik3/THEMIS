@@ -1,0 +1,44 @@
+
+for each PR
+	1- if PR's IP is done
+		make PR.empty yes
+		make PR.new_PR_needed yes
+
+for each requested IP
+
+	1- find whether there is an available slot
+		a- find the smallest and empty PR that IP fits into
+			a1. update the PR and IP priority and break
+	2- for each PR
+		a- find least priority and compare with your selected IP
+			a1- if the priorities are equal
+				skip
+			a2- if the PR's IP has a higher priority
+				skip
+			a3- if the PR's IP has a lower priority
+				.- if you terminate the PR's IP, does it make PR's IP priority higher than the selected IP? and if yes
+					skip
+				.- else
+					assign the PR candidate the PR
+					update the PR candidate priority
+					update the old PR's IP priority
+					make PR.new_PR_needed yes
+interval++;					
+for each PR
+	1- if PR.new_PR_needed
+		perform PR
+	2- PR.Latency--
+	
+interval++;
+
+
+
+Time is 2nd interval
+
+
+		
+
+					
+
+
+					

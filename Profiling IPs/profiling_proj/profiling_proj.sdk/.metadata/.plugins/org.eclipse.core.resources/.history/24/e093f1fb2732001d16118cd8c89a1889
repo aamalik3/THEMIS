@@ -1,0 +1,98 @@
+/*
+ * scheduler.c
+ *
+ *  Created on: Sep 9, 2022
+ *      Author: ekarabu
+ */
+
+#include "scheduler.h"
+
+void scheduling()
+{
+
+    u32 Status = PR_Init();
+    if (Status != XST_SUCCESS)
+    {
+    	xil_printf("error in ICAP \n");
+    }
+    workload aes_load,fft_load,sha_load;
+    aes_256_operation_profile	(&aes_load);
+    xil_printf("aes latency %u\n",aes_load.latency);
+    fft_operation_profile	(&fft_load);
+    xil_printf("fft latency %u\n",fft_load.latency);
+    //bfs_operation		();
+    //gemm_operation		();
+    //kmp_operation		();
+    //sort_operation		();
+    //spmv_operation		();
+    sha_operation_profile	(&sha_load);
+    xil_printf("sha latency %u\n",sha_load.latency);
+    aes_load.demandedResource =	1;
+    fft_load.demandedResource =	4;
+    sha_load.demandedResource =	3;
+    totalSlot=6;
+    interval =0;
+    remainingSlot=6;
+    int smallestDemandedSlot=1;
+    workload IPs[3];
+    int j;
+    for(j=0;j<3;j++)
+    {
+    	IPs[j].successRate = 0;
+    }
+    IPs[0].demandedResource = aes_load.demandedResource;
+    IPs[1].demandedResource = fft_load.demandedResource;
+    IPs[2].demandedResource = sha_load.demandedResource;
+    int terms=0;
+    while(terms<18)
+    {
+    	int least_IP, highest_IP;
+    	int highest_priority = find_highest_priority (IPs,3, &highest_IP);
+
+    	int least_priority = find_least_priority (IPs,3, &least_IP);
+
+    	do{
+    		int priroty = least_priority;
+    		int IP=least_IP;
+
+    	}
+    	while(highest_priority==least_priority && remainingSlot<smallestDemandedSlot);
+
+    	terms++;
+    }
+
+
+}
+
+int find_highest_priority (workload  row[], int length, int *IP_order){
+	int j;
+	int priority = row[0].successRate;
+	int order = 0;
+	for(j=1;j<length;j++) // find the highest priority in the order
+	{
+	    if (priority > (row[j].successRate))
+	    {
+	    	priority =row[j].successRate;
+	    	order = j;
+	    }
+	}
+	*IP_order = order;
+	return priority;
+}
+
+int find_least_priority (workload  row[], int length, int *IP_order){
+	int j;
+	int priority = row[0].successRate;
+	int order = 0;
+	for(j=1;j<length;j++) // find the highest priority in the order
+	{
+	    if (priority < (row[j].successRate))
+	    {
+	    	priority =row[j].successRate;
+	    	order = j;
+	    }
+	}
+	*IP_order = order;
+	return priority;
+}
+

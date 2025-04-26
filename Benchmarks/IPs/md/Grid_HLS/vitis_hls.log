@@ -1,0 +1,116 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'aamalik3' on host 'diomedes' (Windows NT_amd64 version 6.2) on Thu Sep 01 13:31:59 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/aamalik3/Desktop/IPs/md/Grid_HLS'
+Sourcing Tcl script 'C:/Users/aamalik3/Desktop/IPs/md/Grid_HLS/Grid_HLS/Grid_HLS/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project Grid_HLS 
+INFO: [HLS 200-10] Opening project 'C:/Users/aamalik3/Desktop/IPs/md/Grid_HLS/Grid_HLS'.
+INFO: [HLS 200-1510] Running: set_top md 
+INFO: [HLS 200-1510] Running: add_files ../CCode_grid/check.data 
+INFO: [HLS 200-10] Adding design file '../CCode_grid/check.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_grid/input.data 
+INFO: [HLS 200-10] Adding design file '../CCode_grid/input.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCode_grid/md.c 
+INFO: [HLS 200-10] Adding design file '../CCode_grid/md.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_grid/harness.c 
+INFO: [HLS 200-10] Adding test bench file '../CCode_grid/harness.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_grid/support.c 
+INFO: [HLS 200-10] Adding test bench file '../CCode_grid/support.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCode_grid/support.h 
+INFO: [HLS 200-10] Adding test bench file '../CCode_grid/support.h' to the project
+INFO: [HLS 200-1510] Running: open_solution Grid_HLS -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/aamalik3/Desktop/IPs/md/Grid_HLS/Grid_HLS/Grid_HLS'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 219.733 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCode_grid/md.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.575 seconds; current allocated memory: 221.108 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.169 seconds; current allocated memory: 222.502 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 222.503 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 223.937 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 223.201 MB.
+INFO: [XFORM 203-510] Pipelining loop 'loop_q' (../CCode_grid/md.c:18) in function 'md' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'md' (../CCode_grid/md.c:6)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.267 seconds; current allocated memory: 244.021 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'loop_p' (../CCode_grid/md.c:18:11) in function 'md' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'loop_grid1_z' (../CCode_grid/md.c:31:23) in function 'md' the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_grid1_y' (../CCode_grid/md.c:28:22) in function 'md'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_grid1_x' (../CCode_grid/md.c:27:22) in function 'md'.
+WARNING: [HLS 200-960] Cannot flatten loop 'loop_grid0_z' (../CCode_grid/md.c:16:12) in function 'md' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_grid0_y' (../CCode_grid/md.c:16:12) in function 'md'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_grid0_x' (../CCode_grid/md.c:16:12) in function 'md'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.359 seconds; current allocated memory: 238.631 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'md' ...
+WARNING: [SYN 201-107] Renaming port name 'md/force' to 'md/force_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'md' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_q'.
+WARNING: [HLS 200-880] The II Violation in module 'md' (loop 'loop_q'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'br' operation ('br_ln55', ../CCode_grid/md.c:55) and 'dadd' operation ('sum_z', ../CCode_grid/md.c:54).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'md' (loop 'loop_q'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'br' operation ('br_ln55', ../CCode_grid/md.c:55) and 'dadd' operation ('sum_z', ../CCode_grid/md.c:54).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'md' (loop 'loop_q'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'br' operation ('br_ln55', ../CCode_grid/md.c:55) and 'dadd' operation ('sum_z', ../CCode_grid/md.c:54).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'md' (loop 'loop_q'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'br' operation ('br_ln55', ../CCode_grid/md.c:55) and 'dadd' operation ('sum_z', ../CCode_grid/md.c:54).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 5, Depth = 106, loop 'loop_q'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.722 seconds; current allocated memory: 240.295 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.041 seconds; current allocated memory: 242.394 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/n_points' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/force_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/position' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'md' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'n_points', 'force_r', 'position' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_128ns_192_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_64ns_128_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_129_3_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_74_3_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_76_3_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_60ns_5ns_4_64_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.089 seconds; current allocated memory: 246.534 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'md_mul_64ns_64ns_128_3_1_Multiplier_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'md_mul_64ns_128ns_192_3_1_Multiplier_1'
+INFO: [RTMG 210-282] Generating pipelined core: 'md_mul_64ns_66ns_129_3_1_Multiplier_2'
+INFO: [RTMG 210-282] Generating pipelined core: 'md_mul_64ns_66ns_76_3_1_Multiplier_3'
+INFO: [RTMG 210-282] Generating pipelined core: 'md_mul_64ns_66ns_74_3_1_Multiplier_4'
+INFO: [RTMG 210-282] Generating pipelined core: 'md_urem_60ns_5ns_4_64_seq_1_div'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.648 seconds; current allocated memory: 260.041 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for md.
+INFO: [VLOG 209-307] Generating Verilog RTL for md.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.83 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8 seconds. CPU system time: 1 seconds. Elapsed time: 12.603 seconds; current allocated memory: 260.198 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 2 seconds. Total elapsed time: 15.03 seconds; peak allocated memory: 260.041 MB.

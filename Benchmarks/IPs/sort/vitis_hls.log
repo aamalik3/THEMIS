@@ -1,0 +1,59 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'aamalik3' on host 'diomedes' (Windows NT_amd64 version 6.2) on Thu Sep 01 11:41:52 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/aamalik3/Desktop/merge_sort'
+Sourcing Tcl script 'C:/Users/aamalik3/Desktop/merge_sort/merge_ip/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: open_project merge_ip 
+INFO: [HLS 200-10] Opening project 'C:/Users/aamalik3/Desktop/merge_sort/merge_ip'.
+INFO: [HLS 200-1510] Running: set_top ms_mergesort 
+INFO: [HLS 200-1510] Running: add_files merge/sort.c 
+INFO: [HLS 200-10] Adding design file 'merge/sort.c' to the project
+INFO: [HLS 200-1510] Running: add_files merge/input.data 
+INFO: [HLS 200-10] Adding design file 'merge/input.data' to the project
+INFO: [HLS 200-1510] Running: add_files merge/check.data 
+INFO: [HLS 200-10] Adding design file 'merge/check.data' to the project
+INFO: [HLS 200-1510] Running: add_files -tb merge/harness.c -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'merge/harness.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/aamalik3/Desktop/merge_sort/merge_ip/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/aamalik3/Desktop/merge_sort/hdl_ip/ms_mergesort.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/aamalik3/Desktop/merge_sort/hdl_ip/ms_mergesort.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: set_directive_top -name ms_mergesort ms_mergesort 
+INFO: [HLS 200-1510] Running: export_design -flow syn -rtl verilog -format ip_catalog -output C:/Users/aamalik3/Desktop/merge_sort/hdl_ip/ms_mergesort.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+bad lexical cast: source type value could not be interpreted as target
+    while executing
+"rdi::set_property core_revision 2209011141 {component component_1}"
+    invoked from within
+"set_property core_revision $Revision $core"
+    (file "run_ippack.tcl" line 838)
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  1 11:42:04 2022...
+ERROR: [IMPL 213-28] Failed to generate IP.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.627 seconds; current allocated memory: 227.239 MB.
+command 'ap_source' returned error code
+    while executing
+"source C:/Users/aamalik3/Desktop/merge_sort/merge_ip/solution1/export.tcl"
+    invoked from within
+"hls::main C:/Users/aamalik3/Desktop/merge_sort/merge_ip/solution1/export.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"

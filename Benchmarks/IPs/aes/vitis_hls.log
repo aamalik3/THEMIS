@@ -1,0 +1,55 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'ekarabu' on host 'diomedes' (Windows NT_amd64 version 6.2) on Sun Aug 28 19:09:12 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes'
+Sourcing Tcl script 'C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes/aes_hls_project/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: open_project aes_hls_project 
+INFO: [HLS 200-10] Opening project 'C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes/aes_hls_project'.
+INFO: [HLS 200-1510] Running: set_top aes256_encrypt_ecb 
+INFO: [HLS 200-1510] Running: add_files aes/aes.c 
+INFO: [HLS 200-10] Adding design file 'aes/aes.c' to the project
+INFO: [HLS 200-1510] Running: add_files aes/check.data 
+INFO: [HLS 200-10] Adding design file 'aes/check.data' to the project
+INFO: [HLS 200-1510] Running: add_files aes/input.data 
+INFO: [HLS 200-10] Adding design file 'aes/input.data' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../common/harness.c 
+INFO: [HLS 200-10] Adding test bench file '../common/harness.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes/aes_hls_project/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.0 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -vendor ekarabu -display_name aes_ip_bench -output C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes/aes_hls_project/rtl/aes256_encrypt_ecb.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+bad lexical cast: source type value could not be interpreted as target
+    while executing
+"rdi::set_property core_revision 2208281909 {component component_1}"
+    invoked from within
+"set_property core_revision $Revision $core"
+    (file "run_ippack.tcl" line 838)
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 28 19:09:25 2022...
+ERROR: [IMPL 213-28] Failed to generate IP.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.851 seconds; current allocated memory: 228.815 MB.
+command 'ap_source' returned error code
+    while executing
+"source C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes/aes_hls_project/solution1/export.tcl"
+    invoked from within
+"hls::main C:/Users/ekarabu/Desktop/Aydin_amro/DMA_Prefetch_Sch/HLS_IPs/aes/aes_hls_project/solution1/export.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"

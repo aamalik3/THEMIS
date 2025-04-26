@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1662578294631">
+  <ports id="1" name="nodes" type="PortType" coreName="RAM_1P" coreId="4294967291" bitwidth="128" iftype="IfTypeRegister" arraysize="256">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="edges" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="64" iftype="IfTypeRegister" arraysize="4096">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="starting_node" type="PortType" originalName="starting_node" coreId="0" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="level" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="8" direction="DirInOut" iftype="IfTypeRegister" arraysize="256">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="5" name="level_counts" type="PortType" coreName="RAM_1P" coreId="0" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="10">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="102" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="103" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="109" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="110" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.4"/>
+  <edges id="115" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="116" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="119" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="121" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="123" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="124" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="130" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0" is_back_edge="1"/>
+  <edges id="131" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.2/@node_objs.0" is_back_edge="1"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="135" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.1" is_back_edge="1"/>
+  <edges id="136" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.2/@node_objs.1" is_back_edge="1"/>
+  <edges id="137" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="140" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="143" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="144" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="145" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="146" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="147" source_obj="//@ports.3" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="149" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="150" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="151" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="152" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="153" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="154" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="155" source_obj="//@blocks.3/@node_objs.5" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="157" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="158" source_obj="//@ports.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="160" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="161" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="162" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="165" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="170" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="171" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="172" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="174" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="175" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="177" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="178" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="179" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.3/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="182" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="184" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="185" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="187" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="188" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="189" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="193" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="197" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="200" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="201" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="202" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="203" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="204" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="207" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="208" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="209" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="211" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="214" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="215" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="216" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="217" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="218" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="220" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="221" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="222" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="223" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@ports.4"/>
+  <edges id="225" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="226" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="227" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="228" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="230" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="231" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="232" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="510" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="511" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="512" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.8"/>
+  <edges id="513" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="514" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="515" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.7"/>
+  <edges id="516" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="517" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.7"/>
+  <edges id="518" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="519" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.6"/>
+  <edges id="520" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="521" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="522" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="523" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="524" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="525" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="526" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.2" is_back_edge="1"/>
+  <edges id="527" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="528" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="529" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3" is_back_edge="1"/>
+  <edges id="-103" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.3"/>
+  <edges id="-147" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@ports.3"/>
+  <edges id="-193" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@ports.3"/>
+  <blocks id="33" name="block_33" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_40</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="starting_node_read" lineNumber="10" originalName="starting_node" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="114" contextFuncName="bfs" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="10" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>starting_node</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="level_addr" lineNumber="24" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="50" contextFuncName="bfs" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="24" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>level</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>level</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="level_addr_write_ln24" lineNumber="24" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="24" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="level_counts_addr" lineNumber="25" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="0" contextFuncName="bfs" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="25" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataOutputObjs>level_counts</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="level_counts_addr_write_ln25" lineNumber="25" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" opcode="store" m_display="0" m_delay="2.32" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="25" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln27" lineNumber="27" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="29" contextFuncName="bfs" opcode="br" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="27" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <controlInputObjs>block_40</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+      <validLinenumbers>10</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="40" name="block_40" type="BlockType">
+    <controlInputObjs>block_33</controlInputObjs>
+    <controlInputObjs>block_97</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_47</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="horizon" lineNumber="27" originalName="horizon" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="0" contextFuncName="bfs" bitwidth="64" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="27" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>block_33</controlInputObjs>
+      <controlInputObjs>block_97</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="add_ln27" lineNumber="27" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="add_ln27_fu_263_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="bfs" bitwidth="64" opcode="add" nodeLabel="1.0" m_display="0" m_delay="3.52" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="27" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="trunc_ln27" lineNumber="27" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="trunc_ln27_fu_269_p1" coreId="0" contextFuncName="bfs" bitwidth="8" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="27" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="empty_20" lineNumber="27" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="empty_20_fu_273_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="bfs" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.91" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="27" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln30" lineNumber="30" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="4294967295" contextFuncName="bfs" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="30" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <controlInputObjs>block_47</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+      <validLinenumbers>27</validLinenumbers>
+      <validLinenumbers>30</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="47" name="block_47" type="BlockType">
+    <controlInputObjs>block_40</controlInputObjs>
+    <controlInputObjs>._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_97</controlOutputObjs>
+    <controlOutputObjs>.split2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="cnt" originalName="cnt" coreId="424314928" bitwidth="64" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="n" originalName="n" coreId="0" bitwidth="9" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="n_1" lineNumber="30" originalName="n" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="n_1_fu_279_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="bfs" bitwidth="9" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="30" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln30" lineNumber="30" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="icmp_ln30_fu_285_p2" opType="icmp" coreId="0" contextFuncName="bfs" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.66" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="30" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln30" lineNumber="30" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="2" contextFuncName="bfs" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="30" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlInputObjs>block_97</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+      <validLinenumbers>30</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="56" name=".split2" type="BlockType">
+    <controlInputObjs>block_47</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_63</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="zext_ln30" lineNumber="30" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="zext_ln30_fu_291_p1" coreId="1551824752" contextFuncName="bfs" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="30" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="level_addr_1" lineNumber="31" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="0" contextFuncName="bfs" bitwidth="8" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="31" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>level</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>level</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="level_load" lineNumber="31" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" bitwidth="8" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="31" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="sext_ln31" lineNumber="31" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="sext_ln31_fu_302_p1" coreId="0" contextFuncName="bfs" bitwidth="32" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="31" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="zext_ln31" lineNumber="31" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="zext_ln31_fu_306_p1" coreId="1551841776" contextFuncName="bfs" bitwidth="64" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="31" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="icmp_ln31" lineNumber="31" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="icmp_ln31_fu_310_p2" opType="icmp" coreId="0" contextFuncName="bfs" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.77" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="31" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln31" lineNumber="31" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="4294967295" contextFuncName="bfs" opcode="br" nodeLabel="3.0" m_display="0" m_delay="1.58" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="31" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlInputObjs>block_63</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+      <validLinenumbers>30</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="63" name="block_63" type="BlockType">
+    <controlInputObjs>.split2</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.lr.ph.preheader</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="nodes_addr" lineNumber="32" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="254" contextFuncName="bfs" bitwidth="8" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="32" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>nodes</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="nodes_load" lineNumber="32" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" bitwidth="128" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="32" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_begin" lineNumber="32" originalName="tmp_begin" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="tmp_begin_fu_316_p1" coreId="0" contextFuncName="bfs" bitwidth="64" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="32" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="tmp_end" lineNumber="33" originalName="tmp_end" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="tmp_end_reg_406" coreId="1551839728" contextFuncName="bfs" bitwidth="64" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="33" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="icmp_ln34" lineNumber="34" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="icmp_ln34_fu_330_p2" opType="icmp" coreId="32" contextFuncName="bfs" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.77" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="34" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln34" lineNumber="34" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="1551828848" contextFuncName="bfs" opcode="br" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="34" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlInputObjs>.lr.ph.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+      <validLinenumbers>32</validLinenumbers>
+      <validLinenumbers>33</validLinenumbers>
+      <validLinenumbers>34</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="65" name=".lr.ph.preheader" type="BlockType">
+    <controlInputObjs>block_63</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.lr.ph</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="br_ln0" coreId="171" opcode="br" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <controlInputObjs>.lr.ph</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="89" name="._crit_edge.loopexit" type="BlockType">
+    <controlInputObjs>.lr.ph</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln0" coreId="4182377306" opcode="br" nodeLabel="8.0" m_display="0" m_delay="1.58" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <controlInputObjs>._crit_edge</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="92" name="._crit_edge" type="BlockType">
+    <controlInputObjs>.split2</controlInputObjs>
+    <controlInputObjs>block_63</controlInputObjs>
+    <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_47</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="cnt_3" originalName="cnt" coreId="123848992" bitwidth="64" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlInputObjs>block_63</controlInputObjs>
+      <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="br_ln0" coreId="0" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_47</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="97" name="block_97" type="BlockType">
+    <controlInputObjs>block_47</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <controlOutputObjs>block_40</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="level_counts_addr_1" lineNumber="45" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="0" contextFuncName="bfs" bitwidth="4" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="45" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>level_counts</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="level_counts_addr_1_write_ln45" lineNumber="45" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" opcode="store" nodeLabel="2.0" m_display="0" m_delay="2.32" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="45" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="icmp_ln45" lineNumber="45" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="icmp_ln45_fu_296_p2" opType="icmp" coreId="0" contextFuncName="bfs" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="2.77" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="45" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="br_ln45" lineNumber="45" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="0" contextFuncName="bfs" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="45" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+      <validLinenumbers>45</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="99" name=".loopexit" type="BlockType">
+    <controlInputObjs>block_97</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="_ln48" lineNumber="48" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="0" contextFuncName="bfs" opcode="ret" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="48" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+      <validLinenumbers>48</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="343" pipe_depth="3" RegionName="loop_neighbors">
+    <basic_blocks id="71" name=".lr.ph" type="BlockType">
+      <controlInputObjs>.lr.ph.preheader</controlInputObjs>
+      <controlInputObjs>.split._crit_edge</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="cnt_1" originalName="cnt" coreId="4294967295" bitwidth="64" opcode="phi" nodeLabel="7.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+        <controlInputObjs>.lr.ph.preheader</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="e_1" originalName="e" coreId="0" bitwidth="64" opcode="phi" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+        <controlInputObjs>.lr.ph.preheader</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="icmp_ln34_1" lineNumber="34" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="icmp_ln34_1_fu_336_p2" opType="icmp" coreId="133" contextFuncName="bfs" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="2.77" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="34" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="br_ln34" lineNumber="34" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="1551836272" contextFuncName="bfs" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="34" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+        <validLinenumbers>34</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="79" name=".split" type="BlockType">
+      <controlInputObjs>.lr.ph</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>block_83</controlOutputObjs>
+      <controlOutputObjs>.split._crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="edges_addr" lineNumber="35" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="1551842800" contextFuncName="bfs" bitwidth="12" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="35" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>edges</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_dst" lineNumber="35" originalName="tmp_dst" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" bitwidth="64" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="35" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="level_addr_2" lineNumber="36" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="0" contextFuncName="bfs" bitwidth="8" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="36" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>level</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>level</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="tmp_level" lineNumber="36" originalName="tmp_level" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="1" m_delay="3.25" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="36" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>store</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="icmp_ln38" lineNumber="38" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="icmp_ln38_fu_347_p2" opType="icmp" coreId="0" contextFuncName="bfs" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="1.55" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="38" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="br_ln38" lineNumber="38" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="4294967294" contextFuncName="bfs" opcode="br" nodeLabel="7.0" m_display="0" m_delay="1.58" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="38" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+        <controlInputObjs>block_83</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+        <validLinenumbers>35</validLinenumbers>
+        <validLinenumbers>36</validLinenumbers>
+        <validLinenumbers>38</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="83" name="block_83" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>.split._crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="level_addr_2_write_ln39" lineNumber="39" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="bfs" opcode="store" nodeLabel="7.0" m_display="1" m_delay="3.25" m_isLCDNode="true" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="39" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="cnt_4" lineNumber="40" originalName="cnt" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="cnt_4_fu_353_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="bfs" bitwidth="64" opcode="add" nodeLabel="7.0" m_display="0" m_delay="3.52" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="40" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="br_ln41" lineNumber="41" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." coreId="4294967295" contextFuncName="bfs" opcode="br" nodeLabel="7.0" m_display="0" m_delay="1.58" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="41" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+        <validLinenumbers>39</validLinenumbers>
+        <validLinenumbers>40</validLinenumbers>
+        <validLinenumbers>41</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="87" name=".split._crit_edge" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>block_83</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.lr.ph</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="cnt_2" originalName="cnt" coreId="0" bitwidth="64" opcode="phi" nodeLabel="7.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_83</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="e_2" lineNumber="34" originalName="e" fileName="../CCOde_bulk/bfs.c" fileDirectory=".." rtlName="e_2_fu_341_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="bfs" bitwidth="64" opcode="add" nodeLabel="6.0" m_display="0" m_delay="3.52" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCOde_bulk/bfs.c" linenumber="34" fileDirectory="C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\IPs\bfs\bulk_HLS" functionName="bfs"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="br_ln0" coreId="2" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <controlInputObjs>.lr.ph</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../CCOde_bulk/bfs.c">
+        <validLinenumbers>34</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <regnodes realName="cnt_2_reg_235">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln34_reg_411">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="cnt_3_reg_247">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln31_reg_392">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="horizon_reg_177">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="n_1_reg_371">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_end_reg_406">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="cnt_1_reg_224">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="e_2_reg_429">
+    <nodeIds>85</nodeIds>
+  </regnodes>
+  <regnodes realName="edges_addr_reg_419">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln27_reg_360">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="level_addr_1_reg_384">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln30_reg_379">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_20_reg_366">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln34_1_reg_415">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="n_reg_202">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="cnt_reg_189">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="e_1_reg_213">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="level_addr_2_reg_424">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="nodes_addr_reg_396">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_begin_reg_401">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <expressionNodes realName="tmp_begin_fu_316">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln30_fu_285">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="nodes_addr_gep_fu_142">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln31_fu_306">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="n_1_fu_279">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="level_counts_addr_gep_fu_111">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln34_1_fu_336">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_20_fu_273">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="horizon_phi_fu_181">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="level_counts_addr_1_gep_fu_134">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln27_fu_269">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln34_fu_330">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="level_addr_gep_fu_96">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln45_fu_296">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_end_fu_320">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln27_fu_263">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cnt_4_fu_353">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="n_phi_fu_206">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln31_fu_310">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="edges_addr_gep_fu_155">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln31_fu_302">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cnt_1_phi_fu_227">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="level_addr_2_gep_fu_168">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cnt_phi_fu_193">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="e_2_fu_341">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln30_fu_291">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cnt_3_phi_fu_251">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln38_fu_347">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="level_addr_1_gep_fu_126">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cnt_2_phi_fu_239">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="e_1_phi_fu_216">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="starting_node_read_read_fu_90">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="edges">
+    <nodeIds>74</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="level">
+    <nodeIds>29</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>76</nodeIds>
+    <nodeIds>80</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="level_counts">
+    <nodeIds>31</nodeIds>
+    <nodeIds>94</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="nodes">
+    <nodeIds>58</nodeIds>
+  </memoryPorts>
+  <ioPorts name="edges(p0)">
+    <contents name="load">
+      <nodeIds>74</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="level(p0)">
+    <contents name="load">
+      <nodeIds>51</nodeIds>
+      <nodeIds>76</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>29</nodeIds>
+      <nodeIds>80</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="level_counts(p0)">
+    <contents name="store">
+      <nodeIds>31</nodeIds>
+      <nodeIds>94</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="nodes(p0)">
+    <contents name="load">
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="starting_node">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="2" latency="2"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="2"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="58" stage="1" latency="2"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="2"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="2" latency="2"/>
+      <operations id="85" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="2"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="bfs" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>11</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>33</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="loop_horizons" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>10</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>40</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="loop_nodes" mII="-1" mDepth="-1" mMinTripCount="256" mMaxTripCount="256" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <subRegions>9</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="2">
+      <basicBlocks>47</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>63</basicBlocks>
+      <basicBlocks>65</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="loop_neighbors" mII="2" mDepth="3" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>71</basicBlocks>
+      <basicBlocks>79</basicBlocks>
+      <basicBlocks>83</basicBlocks>
+      <basicBlocks>87</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>89</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Region 4" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>92</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="10" mTag="Region 5" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>97</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="11" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>99</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,8 @@
+16:10:31 **** Incremental Build of configuration Debug for project multiblock_sch_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+16:10:31 Build Finished (took 219ms)
+

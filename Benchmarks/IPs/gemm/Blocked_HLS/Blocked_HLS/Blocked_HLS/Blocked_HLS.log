@@ -1,0 +1,75 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 219.720 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCODE_Blocked/gemm.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.544 seconds; current allocated memory: 221.095 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.983 seconds; current allocated memory: 222.295 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 222.296 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 223.411 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 222.732 MB.
+INFO: [XFORM 203-510] Pipelining loop 'loopk' (../CCODE_Blocked/gemm.c:16) in function 'bbgemm' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopk' (../CCODE_Blocked/gemm.c:16) in function 'bbgemm' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopj' (../CCODE_Blocked/gemm.c:16) in function 'bbgemm' completely with a factor of 8.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 243.322 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'loopi' (../CCODE_Blocked/gemm.c:16:6) in function 'bbgemm'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loopkk' (../CCODE_Blocked/gemm.c:16:19) in function 'bbgemm'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loopjj' (../CCODE_Blocked/gemm.c:16:15) in function 'bbgemm'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 236.272 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bbgemm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bbgemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopjj_loopi_loopk'.
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('prod_addr_3_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_11', ../CCODE_Blocked/gemm.c:29 on array 'prod' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'prod'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('m2_load_4', ../CCODE_Blocked/gemm.c:28) on array 'm2' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'm2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 17, Depth = 25, loop 'loopjj_loopi_loopk'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.867 seconds; current allocated memory: 237.028 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.327 seconds; current allocated memory: 237.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bbgemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bbgemm/m1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bbgemm/m2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bbgemm/prod' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'bbgemm' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'm1', 'm2', 'prod' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bbgemm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.389 seconds; current allocated memory: 239.426 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.209 seconds; current allocated memory: 249.155 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for bbgemm.
+INFO: [VLOG 209-307] Generating Verilog RTL for bbgemm.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 107.08 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 8.411 seconds; current allocated memory: 249.288 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 2 seconds. Total elapsed time: 10.758 seconds; peak allocated memory: 249.155 MB.

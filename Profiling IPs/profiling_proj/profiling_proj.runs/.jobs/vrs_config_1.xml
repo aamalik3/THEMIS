@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_processing_system7_0_0_synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/design_1_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_profiler_0_0_synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/design_1_profiler_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xbar_0_synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/design_1_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_hwicap_0_0_synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/design_1_axi_hwicap_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_0_synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/design_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_IP_wrapper_0_0_synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/design_1_IP_wrapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/design_1_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_processing_system7_0_0_synth_1"/>
+		<Parent Id="design_1_profiler_0_0_synth_1"/>
+		<Parent Id="design_1_xbar_0_synth_1"/>
+		<Parent Id="design_1_axi_hwicap_0_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+		<Parent Id="design_1_IP_wrapper_0_0_synth_1"/>
+		<Parent Id="design_1_rst_ps7_0_100M_0_synth_1"/>
+	</Run>
+</Runs>
+

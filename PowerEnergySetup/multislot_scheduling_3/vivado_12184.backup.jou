@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Nov  9 12:09:26 2022
+# Process ID: 12184
+# Current directory: C:/Users/aamalik3/Desktop/Power Energy Setup/multislot_scheduling_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent51736 C:\Users\aamalik3\Desktop\Power Energy Setup\multislot_scheduling_3\multislot_scheduling.xpr
+# Log file: C:/Users/aamalik3/Desktop/Power Energy Setup/multislot_scheduling_3/vivado.log
+# Journal file: C:/Users/aamalik3/Desktop/Power Energy Setup/multislot_scheduling_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/aamalik3/Desktop/Power Energy Setup/multislot_scheduling_3/multislot_scheduling.xpr}
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/aamalik3/Desktop/custom_IP.dcp
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+update_design -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] -black_box 
+pwd
+cd ../../
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_1/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_2/inst/custom_IP] custom_IP.dcp
+opt_design
+place_design
+route_design
+report_power
+close_design
+close_project

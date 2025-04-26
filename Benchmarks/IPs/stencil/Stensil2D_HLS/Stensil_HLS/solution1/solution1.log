@@ -1,0 +1,161 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 219.734 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCode/stencil.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.551 seconds; current allocated memory: 221.093 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.006 seconds; current allocated memory: 222.277 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 222.278 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 223.446 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 222.713 MB.
+INFO: [XFORM 203-510] Pipelining loop 'stencil_label2' (../CCode/stencil.c:11) in function 'stencil' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'stencil_label2' (../CCode/stencil.c:11) in function 'stencil' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'stencil_label3' (../CCode/stencil.c:10) in function 'stencil' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'stencil_label4' (../CCode/stencil.c:10) in function 'stencil' completely with a factor of 3.
+INFO: [XFORM 203-11] Balancing expressions in function 'stencil' (../CCode/stencil.c:10:44)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 243.191 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'stencil_label1' (../CCode/stencil.c:10:6) in function 'stencil'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 235.632 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'stencil' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stencil' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'stencil_label1_stencil_label2'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('orig_load_1', ../CCode/stencil.c:18) on array 'orig' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'orig'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 9, Depth = 13, loop 'stencil_label1_stencil_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 236.118 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 236.638 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stencil' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stencil/orig' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stencil/sol' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stencil/filter' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'stencil' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'filter', 'orig', 'sol' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stencil'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.277 seconds; current allocated memory: 237.664 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'stencil_mul_32s_32s_32_1_1_Multiplier_0'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.691 seconds; current allocated memory: 246.042 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for stencil.
+INFO: [VLOG 209-307] Generating Verilog RTL for stencil.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 114.39 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 7.157 seconds; current allocated memory: 246.159 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 9.525 seconds; peak allocated memory: 246.042 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: set_directive_top -name stencil stencil 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Cannot find source file check.data; skipping it.
+WARNING: [HLS 200-40] Cannot find source file input.data; skipping it.
+WARNING: [HLS 200-40] Cannot find source file stencil.c; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.122 seconds; current allocated memory: 219.739 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 219.740 MB.
+ERROR: [HLS 200-70] Cannot find any design unit to elaborate.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.313 seconds; current allocated memory: 219.722 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.873 seconds; peak allocated memory: 219.740 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: set_directive_top -name stencil stencil 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Cannot find source file check.data; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.117 seconds; current allocated memory: 219.740 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCode_stencil2d/stencil.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.632 seconds; current allocated memory: 221.115 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.976 seconds; current allocated memory: 222.331 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 222.332 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 223.485 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 222.751 MB.
+INFO: [XFORM 203-510] Pipelining loop 'stencil_label2' (../CCode_stencil2d/stencil.c:11) in function 'stencil' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'stencil_label2' (../CCode_stencil2d/stencil.c:11) in function 'stencil' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'stencil_label3' (../CCode_stencil2d/stencil.c:10) in function 'stencil' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'stencil_label4' (../CCode_stencil2d/stencil.c:10) in function 'stencil' completely with a factor of 3.
+INFO: [XFORM 203-11] Balancing expressions in function 'stencil' (../CCode_stencil2d/stencil.c:10:44)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.199 seconds; current allocated memory: 243.193 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'stencil_label1' (../CCode_stencil2d/stencil.c:10:6) in function 'stencil'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 235.663 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'stencil' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stencil' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'stencil_label1_stencil_label2'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('orig_load_1', ../CCode_stencil2d/stencil.c:18) on array 'orig' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'orig'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 9, Depth = 13, loop 'stencil_label1_stencil_label2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 236.159 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 236.634 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stencil' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stencil/orig' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stencil/sol' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stencil/filter' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'stencil' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'filter', 'orig', 'sol' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stencil'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.275 seconds; current allocated memory: 237.692 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'stencil_mul_32s_32s_32_1_1_Multiplier_0'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.761 seconds; current allocated memory: 246.027 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for stencil.
+INFO: [VLOG 209-307] Generating Verilog RTL for stencil.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 114.39 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 7.129 seconds; current allocated memory: 246.190 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.558 seconds; peak allocated memory: 246.027 MB.

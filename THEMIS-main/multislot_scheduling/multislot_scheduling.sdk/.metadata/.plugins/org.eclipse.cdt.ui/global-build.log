@@ -1,0 +1,1556 @@
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/hwicap_v11_1/src"
+make -C ps7_cortexa9_0/libsrc/hwicap_v11_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling hwicap"
+xhwicap_device_read_frame.c: In function 'XHwIcap_DeviceReadFrame':
+xhwicap_device_read_frame.c:111:6: warning: unused variable 'Data' [-Wunused-variable]
+  u32 Data;
+      ^~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/IP_wrapper_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/IP_wrapper_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling IP_wrapper..."
+IP_wrapper_selftest.c: In function 'IP_WRAPPER_Reg_SelfTest':
+IP_wrapper_selftest.c:52:59: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( IP_WRAPPER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                           ^~
+IP_wrapper_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling XilFFs Library"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilmfs_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xilmfs_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling XilMFS Library"
+mfs_filesys.c: In function 'mfs_file_lseek':
+mfs_filesys.c:1010:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (offset >= mfs_file_system[mfs_open_files[fd].first_block].block_size) { /* attempting to seek beyond end of file */
+                ^~
+'Finished building libraries'
+13:28:16 **** Clean-only build of configuration Debug for project mutli_2 ****
+make clean 
+rm -rf  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o  ./src/PR_executer.d ./src/aes_checker.d ./src/bfs_checker.d ./src/fft_checker.d ./src/fft_profiling.d ./src/gemm_checker.d ./src/helloworld.d ./src/kmp_checker.d ./src/platform.d ./src/scheduler.d ./src/sha_checker.d ./src/sha_profiling.d ./src/sort_checker.d ./src/sort_profiling.d ./src/spmv_checking.d ./src/stencil_checker.d ./src/stfs_scheduling.d  mutli_2.elf.size  mutli_2.elf
+' '
+13:28:16 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PR_executer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PR_executer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PR_executer.d" -MT"src/PR_executer.o" -o "src/PR_executer.o" "../src/PR_executer.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/PR_executer.c:2:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/PR_executer.c'
+' '
+'Building file: ../src/aes_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_checker.d" -MT"src/aes_checker.o" -o "src/aes_checker.o" "../src/aes_checker.c"
+In file included from ../src/aes_checker.h:19:0,
+                 from ../src/aes_checker.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/aes_checker.c: In function 'aes_256_operation':
+../src/aes_checker.c:30:4: warning: this 'else' clause does not guard... [-Wmisleading-indentation]
+    else
+    ^~~~
+../src/aes_checker.c:32:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+     for (i = 0; i < 8; i++)
+     ^~~
+../src/aes_checker.c:17:14: warning: variable 'res1' set but not used [-Wunused-but-set-variable]
+     uint32_t res1;
+              ^~~~
+../src/aes_checker.c:16:14: warning: variable 'res0' set but not used [-Wunused-but-set-variable]
+     uint32_t res0;
+              ^~~~
+'Finished building: ../src/aes_checker.c'
+' '
+'Building file: ../src/bfs_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bfs_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/bfs_checker.d" -MT"src/bfs_checker.o" -o "src/bfs_checker.o" "../src/bfs_checker.c"
+In file included from ../src/bfs_checker.h:19:0,
+                 from ../src/bfs_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/bfs_checker.c'
+' '
+'Building file: ../src/fft_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_checker.d" -MT"src/fft_checker.o" -o "src/fft_checker.o" "../src/fft_checker.c"
+In file included from ../src/fft_checker.h:19:0,
+                 from ../src/fft_checker.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/fft_checker.c: In function 'fft_operation':
+../src/fft_checker.c:38:23: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+              uint32_t tmp;
+                       ^~~
+'Finished building: ../src/fft_checker.c'
+In file included from ../src/fft_profiling.h:20:0,
+' '
+                 from ../src/fft_profiling.c:8:
+'Building file: ../src/fft_profiling.c'
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_profiling.d" -MT"src/fft_profiling.o" -o "src/fft_profiling.o" "../src/fft_profiling.c"
+'Finished building: ../src/fft_profiling.c'
+' '
+'Building file: ../src/gemm_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gemm_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gemm_checker.d" -MT"src/gemm_checker.o" -o "src/gemm_checker.o" "../src/gemm_checker.c"
+In file included from ../src/gemm_checker.h:19:0,
+                 from ../src/gemm_checker.c:7:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/gemm_checker.c: In function 'gemm_operation':
+../src/gemm_checker.c:18:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("gemm0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/gemm_checker.c:43:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+../src/gemm_checker.c:83:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+'Finished building: ../src/gemm_checker.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/kmp_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/kmp_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/kmp_checker.d" -MT"src/kmp_checker.o" -o "src/kmp_checker.o" "../src/kmp_checker.c"
+In file included from ../src/kmp_checker.h:20:0,
+                 from ../src/kmp_checker.c:7:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/kmp_checker.c: In function 'kmp_operation':
+../src/kmp_checker.c:19:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("kmp0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/kmp_checker.c:44:25: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                uint32_t tmp;
+                         ^~~
+../src/kmp_checker.c:87:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+../src/kmp_checker.c:130:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+'Finished building: ../src/kmp_checker.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/scheduler.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/sha_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_checker.d" -MT"src/sha_checker.o" -o "src/sha_checker.o" "../src/sha_checker.c"
+In file included from ../src/sha_checker.h:18:0,
+                 from ../src/sha_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/sha_checker.c: In function 'sha_operation':
+../src/sha_checker.c:39:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:72:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:104:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+'Finished building: ../src/sha_checker.c'
+' '
+'Building file: ../src/sha_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_profiling.d" -MT"src/sha_profiling.o" -o "src/sha_profiling.o" "../src/sha_profiling.c"
+In file included from ../src/sha_profiling.h:18:0,
+                 from ../src/sha_profiling.c:9:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/sha_profiling.c'
+' '
+'Building file: ../src/sort_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_checker.d" -MT"src/sort_checker.o" -o "src/sort_checker.o" "../src/sort_checker.c"
+In file included from ../src/sort_checker.h:19:0,
+                 from ../src/sort_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/sort_checker.c: In function 'sort_operation':
+../src/sort_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:75:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:110:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/sort_checker.c'
+' '
+'Building file: ../src/sort_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_profiling.d" -MT"src/sort_profiling.o" -o "src/sort_profiling.o" "../src/sort_profiling.c"
+In file included from ../src/sort_profiling.h:18:0,
+                 from ../src/sort_profiling.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/sort_profiling.c'
+' '
+'Building file: ../src/spmv_checking.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spmv_checking.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/spmv_checking.d" -MT"src/spmv_checking.o" -o "src/spmv_checking.o" "../src/spmv_checking.c"
+In file included from ../src/spmv_checking.h:19:0,
+                 from ../src/spmv_checking.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/spmv_checking.c: In function 'spmv_operation':
+../src/spmv_checking.c:12:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("spmv0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/spmv_checking.c:42:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:86:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:130:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/spmv_checking.c'
+' '
+'Building file: ../src/stencil_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stencil_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stencil_checker.d" -MT"src/stencil_checker.o" -o "src/stencil_checker.o" "../src/stencil_checker.c"
+In file included from ../src/stencil_checker.h:19:0,
+                 from ../src/stencil_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/stencil_checker.c: In function 'stencil_operation':
+../src/stencil_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/stencil_checker.c:76:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/stencil_checker.c'
+' '
+'Building file: ../src/stfs_scheduling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stfs_scheduling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stfs_scheduling.d" -MT"src/stfs_scheduling.o" -o "src/stfs_scheduling.o" "../src/stfs_scheduling.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/stfs_scheduling.h:16,
+                 from ../src/stfs_scheduling.c:9:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/stfs_scheduling.c: In function 'stfs_swaping':
+../src/stfs_scheduling.c:282:8: warning: unused variable 'old_order' [-Wunused-variable]
+    int old_order = Slots->IP_order;
+        ^~~~~~~~~
+'Finished building: ../src/stfs_scheduling.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137804	   3416	  11248	 152468	  25394	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:28:21 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:28:32 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:29:48 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/scheduler.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/stfs_scheduling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stfs_scheduling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stfs_scheduling.d" -MT"src/stfs_scheduling.o" -o "src/stfs_scheduling.o" "../src/stfs_scheduling.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/stfs_scheduling.h:16,
+                 from ../src/stfs_scheduling.c:9:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/stfs_scheduling.c: In function 'stfs_swaping':
+../src/stfs_scheduling.c:282:8: warning: unused variable 'old_order' [-Wunused-variable]
+    int old_order = Slots->IP_order;
+        ^~~~~~~~~
+'Finished building: ../src/stfs_scheduling.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136716	   3416	  11248	 151380	  24f54	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:30:00 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:30:25 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:30:58 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:31:02 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136780	   3416	  11248	 151444	  24f94	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:31:36 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136796	   3416	  11248	 151460	  24fa4	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:32:14 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136780	   3416	  11248	 151444	  24f94	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:32:45 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136780	   3416	  11248	 151444	  24f94	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:32:56 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:115:5: error: too many arguments to function 'print'
+     print("cost_time =%.8f ",cost_time);
+     ^~~~~
+In file included from ../src/helloworld.c:50:0:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xil_printf.h:40:6: note: declared here
+ void print( const char8 *ptr);
+      ^~~~~
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+make: *** [src/helloworld.o] Error 1
+13:33:39 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136804	   3416	  11248	 151468	  24fac	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:33:42 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:34:13 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136804	   3416	  11248	 151468	  24fac	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:35:14 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136804	   3416	  11248	 151468	  24fac	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:36:18 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136804	   3416	  11248	 151468	  24fac	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:36:22 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:37:39 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136780	   3416	  11248	 151444	  24f94	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:38:07 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136780	   3416	  11248	 151444	  24f94	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:38:22 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136052	   3416	  11248	 150716	  24cbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:38:38 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:39:05 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136052	   3416	  11248	 150716	  24cbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:39:23 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136052	   3416	  11248	 150716	  24cbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:39:37 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136052	   3416	  11248	 150716	  24cbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:39:53 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PR_executer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PR_executer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PR_executer.d" -MT"src/PR_executer.o" -o "src/PR_executer.o" "../src/PR_executer.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/PR_executer.c:2:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/PR_executer.c'
+' '
+'Building file: ../src/aes_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_checker.d" -MT"src/aes_checker.o" -o "src/aes_checker.o" "../src/aes_checker.c"
+In file included from ../src/aes_checker.h:19:0,
+                 from ../src/aes_checker.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/aes_checker.c: In function 'aes_256_operation':
+../src/aes_checker.c:30:4: warning: this 'else' clause does not guard... [-Wmisleading-indentation]
+    else
+    ^~~~
+../src/aes_checker.c:32:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+     for (i = 0; i < 8; i++)
+     ^~~
+../src/aes_checker.c:17:14: warning: variable 'res1' set but not used [-Wunused-but-set-variable]
+     uint32_t res1;
+              ^~~~
+../src/aes_checker.c:16:14: warning: variable 'res0' set but not used [-Wunused-but-set-variable]
+     uint32_t res0;
+              ^~~~
+'Finished building: ../src/aes_checker.c'
+' '
+'Building file: ../src/bfs_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bfs_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/bfs_checker.d" -MT"src/bfs_checker.o" -o "src/bfs_checker.o" "../src/bfs_checker.c"
+In file included from ../src/bfs_checker.h:19:0,
+                 from ../src/bfs_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/bfs_checker.c'
+' '
+'Building file: ../src/fft_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_checker.d" -MT"src/fft_checker.o" -o "src/fft_checker.o" "../src/fft_checker.c"
+In file included from ../src/fft_checker.h:19:0,
+                 from ../src/fft_checker.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/fft_checker.c: In function 'fft_operation':
+../src/fft_checker.c:38:23: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+              uint32_t tmp;
+                       ^~~
+'Finished building: ../src/fft_checker.c'
+' '
+'Building file: ../src/fft_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_profiling.d" -MT"src/fft_profiling.o" -o "src/fft_profiling.o" "../src/fft_profiling.c"
+In file included from ../src/fft_profiling.h:20:0,
+                 from ../src/fft_profiling.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/fft_profiling.c'
+' '
+'Building file: ../src/gemm_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gemm_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gemm_checker.d" -MT"src/gemm_checker.o" -o "src/gemm_checker.o" "../src/gemm_checker.c"
+In file included from ../src/gemm_checker.h:19:0,
+                 from ../src/gemm_checker.c:7:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/gemm_checker.c: In function 'gemm_operation':
+../src/gemm_checker.c:18:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("gemm0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/gemm_checker.c:43:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+../src/gemm_checker.c:83:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+'Finished building: ../src/gemm_checker.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/kmp_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/kmp_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/kmp_checker.d" -MT"src/kmp_checker.o" -o "src/kmp_checker.o" "../src/kmp_checker.c"
+In file included from ../src/kmp_checker.h:20:0,
+                 from ../src/kmp_checker.c:7:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/kmp_checker.c: In function 'kmp_operation':
+../src/kmp_checker.c:19:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("kmp0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/kmp_checker.c:44:25: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                uint32_t tmp;
+                         ^~~
+../src/kmp_checker.c:87:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+../src/kmp_checker.c:130:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+'Finished building: ../src/kmp_checker.c'
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/scheduler.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/sha_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_checker.d" -MT"src/sha_checker.o" -o "src/sha_checker.o" "../src/sha_checker.c"
+In file included from ../src/sha_checker.h:18:0,
+                 from ../src/sha_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/sha_checker.c: In function 'sha_operation':
+../src/sha_checker.c:39:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:72:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:104:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+'Finished building: ../src/sha_checker.c'
+' '
+'Building file: ../src/sha_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_profiling.d" -MT"src/sha_profiling.o" -o "src/sha_profiling.o" "../src/sha_profiling.c"
+In file included from ../src/sha_profiling.h:18:0,
+                 from ../src/sha_profiling.c:9:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/sha_profiling.c'
+' '
+'Building file: ../src/sort_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_checker.d" -MT"src/sort_checker.o" -o "src/sort_checker.o" "../src/sort_checker.c"
+In file included from ../src/sort_checker.h:19:0,
+                 from ../src/sort_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/sort_checker.c: In function 'sort_operation':
+../src/sort_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:75:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:110:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/sort_checker.c'
+' '
+'Building file: ../src/sort_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_profiling.d" -MT"src/sort_profiling.o" -o "src/sort_profiling.o" "../src/sort_profiling.c"
+In file included from ../src/sort_profiling.h:18:0,
+                 from ../src/sort_profiling.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/sort_profiling.c'
+' '
+'Building file: ../src/spmv_checking.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spmv_checking.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/spmv_checking.d" -MT"src/spmv_checking.o" -o "src/spmv_checking.o" "../src/spmv_checking.c"
+In file included from ../src/spmv_checking.h:19:0,
+                 from ../src/spmv_checking.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/spmv_checking.c: In function 'spmv_operation':
+../src/spmv_checking.c:12:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("spmv0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/spmv_checking.c:42:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:86:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:130:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/spmv_checking.c'
+' '
+'Building file: ../src/stencil_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stencil_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stencil_checker.d" -MT"src/stencil_checker.o" -o "src/stencil_checker.o" "../src/stencil_checker.c"
+In file included from ../src/stencil_checker.h:19:0,
+                 from ../src/stencil_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/stencil_checker.c: In function 'stencil_operation':
+../src/stencil_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/stencil_checker.c:76:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/stencil_checker.c'
+' '
+'Building file: ../src/stfs_scheduling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stfs_scheduling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stfs_scheduling.d" -MT"src/stfs_scheduling.o" -o "src/stfs_scheduling.o" "../src/stfs_scheduling.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/stfs_scheduling.h:16,
+                 from ../src/stfs_scheduling.c:9:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/stfs_scheduling.c: In function 'stfs_swaping':
+../src/stfs_scheduling.c:282:8: warning: unused variable 'old_order' [-Wunused-variable]
+    int old_order = Slots->IP_order;
+        ^~~~~~~~~
+'Finished building: ../src/stfs_scheduling.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136308	   3416	  11248	 150972	  24dbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:39:58 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:40:12 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136308	   3416	  11248	 150972	  24dbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:40:28 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136308	   3416	  11248	 150972	  24dbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+13:40:40 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136308	   3416	  11248	 150972	  24dbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+14:59:58 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PR_executer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PR_executer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PR_executer.d" -MT"src/PR_executer.o" -o "src/PR_executer.o" "../src/PR_executer.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/PR_executer.c:2:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/PR_executer.c'
+' '
+'Building file: ../src/aes_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_checker.d" -MT"src/aes_checker.o" -o "src/aes_checker.o" "../src/aes_checker.c"
+In file included from ../src/aes_checker.h:19:0,
+                 from ../src/aes_checker.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/aes_checker.c: In function 'aes_256_operation':
+../src/aes_checker.c:30:4: warning: this 'else' clause does not guard... [-Wmisleading-indentation]
+    else
+    ^~~~
+../src/aes_checker.c:32:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+     for (i = 0; i < 8; i++)
+     ^~~
+../src/aes_checker.c:17:14: warning: variable 'res1' set but not used [-Wunused-but-set-variable]
+     uint32_t res1;
+              ^~~~
+../src/aes_checker.c:16:14: warning: variable 'res0' set but not used [-Wunused-but-set-variable]
+     uint32_t res0;
+              ^~~~
+'Finished building: ../src/aes_checker.c'
+' '
+'Building file: ../src/bfs_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bfs_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/bfs_checker.d" -MT"src/bfs_checker.o" -o "src/bfs_checker.o" "../src/bfs_checker.c"
+In file included from ../src/bfs_checker.h:19:0,
+                 from ../src/bfs_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/bfs_checker.c'
+' '
+'Building file: ../src/fft_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_checker.d" -MT"src/fft_checker.o" -o "src/fft_checker.o" "../src/fft_checker.c"
+In file included from ../src/fft_checker.h:19:0,
+                 from ../src/fft_checker.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/fft_checker.c: In function 'fft_operation':
+../src/fft_checker.c:38:23: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+              uint32_t tmp;
+                       ^~~
+'Finished building: ../src/fft_checker.c'
+' '
+'Building file: ../src/fft_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_profiling.d" -MT"src/fft_profiling.o" -o "src/fft_profiling.o" "../src/fft_profiling.c"
+In file included from ../src/fft_profiling.h:20:0,
+                 from ../src/fft_profiling.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/fft_profiling.c'
+' '
+'Building file: ../src/gemm_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gemm_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gemm_checker.d" -MT"src/gemm_checker.o" -o "src/gemm_checker.o" "../src/gemm_checker.c"
+In file included from ../src/gemm_checker.h:19:0,
+                 from ../src/gemm_checker.c:7:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/gemm_checker.c: In function 'gemm_operation':
+../src/gemm_checker.c:18:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("gemm0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/gemm_checker.c:43:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+../src/gemm_checker.c:83:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+'Finished building: ../src/gemm_checker.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/helloworld.c:51:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:13: warning: unused variable 'idx' [-Wunused-variable]
+    uint32_t idx;
+             ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/kmp_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/kmp_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/kmp_checker.d" -MT"src/kmp_checker.o" -o "src/kmp_checker.o" "../src/kmp_checker.c"
+In file included from ../src/kmp_checker.h:20:0,
+                 from ../src/kmp_checker.c:7:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/kmp_checker.c: In function 'kmp_operation':
+../src/kmp_checker.c:19:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("kmp0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/kmp_checker.c:44:25: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                uint32_t tmp;
+                         ^~~
+../src/kmp_checker.c:87:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+../src/kmp_checker.c:130:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+'Finished building: ../src/kmp_checker.c'
+' '
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/scheduler.h:14,
+                 from ../src/scheduler.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/sha_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_checker.d" -MT"src/sha_checker.o" -o "src/sha_checker.o" "../src/sha_checker.c"
+In file included from ../src/sha_checker.h:18:0,
+                 from ../src/sha_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/sha_checker.c: In function 'sha_operation':
+../src/sha_checker.c:39:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:72:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:104:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+'Finished building: ../src/sha_checker.c'
+' '
+'Building file: ../src/sha_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_profiling.d" -MT"src/sha_profiling.o" -o "src/sha_profiling.o" "../src/sha_profiling.c"
+In file included from ../src/sha_profiling.h:18:0,
+                 from ../src/sha_profiling.c:9:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/sha_profiling.c'
+' '
+'Building file: ../src/sort_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_checker.d" -MT"src/sort_checker.o" -o "src/sort_checker.o" "../src/sort_checker.c"
+In file included from ../src/sort_checker.h:19:0,
+                 from ../src/sort_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/sort_checker.c: In function 'sort_operation':
+../src/sort_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:75:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:110:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/sort_checker.c'
+' '
+'Building file: ../src/sort_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_profiling.d" -MT"src/sort_profiling.o" -o "src/sort_profiling.o" "../src/sort_profiling.c"
+In file included from ../src/sort_profiling.h:18:0,
+                 from ../src/sort_profiling.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/sort_profiling.c'
+' '
+'Building file: ../src/spmv_checking.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spmv_checking.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/spmv_checking.d" -MT"src/spmv_checking.o" -o "src/spmv_checking.o" "../src/spmv_checking.c"
+In file included from ../src/spmv_checking.h:19:0,
+                 from ../src/spmv_checking.c:1:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/spmv_checking.c: In function 'spmv_operation':
+../src/spmv_checking.c:12:14: warning: implicit declaration of function 'PR_execution'; did you mean '__section'? [-Wimplicit-function-declaration]
+              PR_execution("spmv0.bin");
+              ^~~~~~~~~~~~
+              __section
+../src/spmv_checking.c:42:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:86:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:130:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/spmv_checking.c'
+' '
+'Building file: ../src/stencil_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stencil_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stencil_checker.d" -MT"src/stencil_checker.o" -o "src/stencil_checker.o" "../src/stencil_checker.c"
+In file included from ../src/stencil_checker.h:19:0,
+                 from ../src/stencil_checker.c:8:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/stencil_checker.c: In function 'stencil_operation':
+../src/stencil_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/stencil_checker.c:76:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/stencil_checker.c'
+' '
+'Building file: ../src/stfs_scheduling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stfs_scheduling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mutli_2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stfs_scheduling.d" -MT"src/stfs_scheduling.o" -o "src/stfs_scheduling.o" "../src/stfs_scheduling.c"
+In file included from ../src/common.h:15:0,
+                 from ../src/PR_executer.h:23,
+                 from ../src/stfs_scheduling.h:16,
+                 from ../src/stfs_scheduling.c:9:
+../../mutli_2_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/stfs_scheduling.c: In function 'stfs_swaping':
+../src/stfs_scheduling.c:282:8: warning: unused variable 'old_order' [-Wunused-variable]
+    int old_order = Slots->IP_order;
+        ^~~~~~~~~
+'Finished building: ../src/stfs_scheduling.c'
+' '
+'Building target: mutli_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../mutli_2_bsp/ps7_cortexa9_0/lib -o "mutli_2.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o ./src/stfs_scheduling.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mutli_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size mutli_2.elf  |tee "mutli_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136052	   3416	  11248	 150716	  24cbc	mutli_2.elf
+'Finished building: mutli_2.elf.size'
+' '
+12:17:11 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+12:17:23 **** Incremental Build of configuration Debug for project mutli_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

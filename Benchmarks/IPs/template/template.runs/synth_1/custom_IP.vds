@@ -1,0 +1,929 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Sep  1 19:45:33 2022
+# Process ID: 259744
+# Current directory: C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.runs/synth_1
+# Command line: vivado.exe -log custom_IP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source custom_IP.tcl
+# Log file: C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.runs/synth_1/custom_IP.vds
+# Journal file: C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source custom_IP.tcl -notrace
+Command: synth_design -top custom_IP -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 225384 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 356.148 ; gain = 99.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'custom_IP' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 27'b000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 27'b000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 27'b000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 27'b000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 27'b000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 27'b000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 27'b000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 27'b000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 27'b000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 27'b000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 27'b000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 27'b000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 27'b000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 27'b000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 27'b000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 27'b000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 27'b000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 27'b000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 27'b000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 27'b000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 27'b000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 27'b000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 27'b000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 27'b000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 27'b001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 27'b010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 27'b100000000000000000000000000 
+	Parameter C_S_AXI_BUS_A_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_BUS_A_ADDR_WIDTH bound to: 15 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_BUS_A_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:94]
+INFO: [Synth 8-638] synthesizing module 'fft_BUS_A_s_axi' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 15 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 15'b000000000000000 
+	Parameter ADDR_GIE bound to: 15'b000000000000100 
+	Parameter ADDR_IER bound to: 15'b000000000001000 
+	Parameter ADDR_ISR bound to: 15'b000000000001100 
+	Parameter ADDR_REAL_TWID_BASE bound to: 15'b001000000000000 
+	Parameter ADDR_REAL_TWID_HIGH bound to: 15'b001111111111111 
+	Parameter ADDR_REAL_R_BASE bound to: 15'b010000000000000 
+	Parameter ADDR_REAL_R_HIGH bound to: 15'b011111111111111 
+	Parameter ADDR_IMG_BASE bound to: 15'b100000000000000 
+	Parameter ADDR_IMG_HIGH bound to: 15'b101111111111111 
+	Parameter ADDR_IMG_TWID_BASE bound to: 15'b110000000000000 
+	Parameter ADDR_IMG_TWID_HIGH bound to: 15'b110111111111111 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 15 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'fft_BUS_A_s_axi_ram' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:684]
+	Parameter BYTES bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 512 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fft_BUS_A_s_axi_ram' (1#1) [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:684]
+INFO: [Synth 8-638] synthesizing module 'fft_BUS_A_s_axi_ram__parameterized0' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:684]
+	Parameter BYTES bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 1024 - type: integer 
+	Parameter AWIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fft_BUS_A_s_axi_ram__parameterized0' (1#1) [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:684]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:366]
+INFO: [Synth 8-256] done synthesizing module 'fft_BUS_A_s_axi' (2#1) [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'AWADDR' does not match port width (15) of module 'fft_BUS_A_s_axi' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:219]
+WARNING: [Synth 8-689] width (32) of port connection 'ARADDR' does not match port width (15) of module 'fft_BUS_A_s_axi' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:226]
+INFO: [Synth 8-638] synthesizing module 'fft_dadddsub_64ns_64ns_64_5_full_dsp_1' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dadddsub_64ns_64ns_64_5_full_dsp_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'bbgemm_ap_dadd_3_full_dsp_64' [c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dadd_3_full_dsp_64/synth/bbgemm_ap_dadd_3_full_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_5' declared at 'c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dmul_4_max_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_5' [c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dadd_3_full_dsp_64/synth/bbgemm_ap_dadd_3_full_dsp_64.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'bbgemm_ap_dadd_3_full_dsp_64' (29#1) [c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dadd_3_full_dsp_64/synth/bbgemm_ap_dadd_3_full_dsp_64.vhd:72]
+WARNING: [Synth 8-6014] Unused sequential element opcode_buf1_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dadddsub_64ns_64ns_64_5_full_dsp_1.v:60]
+INFO: [Synth 8-256] done synthesizing module 'fft_dadddsub_64ns_64ns_64_5_full_dsp_1' (30#1) [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dadddsub_64ns_64ns_64_5_full_dsp_1.v:8]
+INFO: [Synth 8-638] synthesizing module 'fft_dmul_64ns_64ns_64_6_max_dsp_1' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'bbgemm_ap_dmul_4_max_dsp_64' [c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dmul_4_max_dsp_64/synth/bbgemm_ap_dmul_4_max_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 4 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_5' declared at 'c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dmul_4_max_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_5' [c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dmul_4_max_dsp_64/synth/bbgemm_ap_dmul_4_max_dsp_64.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'bbgemm_ap_dmul_4_max_dsp_64' (37#1) [c:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.srcs/sources_1/ip/bbgemm_ap_dmul_4_max_dsp_64/synth/bbgemm_ap_dmul_4_max_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'fft_dmul_64ns_64ns_64_6_max_dsp_1' (38#1) [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:8]
+INFO: [Synth 8-256] done synthesizing module 'custom_IP' (39#1) [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:12]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized65 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized65 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized65 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized65 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized65 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized4 has unconnected port B[18]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized41 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized41 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized41 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized41 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized41 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized35 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized35 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized35 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized35 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized35 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized37 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized37 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized5 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized5 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized5 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized5 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized5 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized29 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized27 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized27 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized27 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized27 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized27 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized1 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized67 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized67 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized67 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized67 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized67 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized63 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized63 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized63 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized63 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized63 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port NORMALIZE[1]
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port FIXED_POINT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port FIX_MANT_SIGN
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized102 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized102 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized102 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized102 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized102 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized61 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized61 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized61 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized61 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized61 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized59 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized59 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized59 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized59 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized59 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[47]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[46]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[45]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[44]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[43]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[42]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[41]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[40]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[39]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[38]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[37]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[36]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[35]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[34]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 501.211 ; gain = 244.430
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 501.211 ; gain = 244.430
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 976 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  FDE => FDRE: 10 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 834.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 834.871 ; gain = 578.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 834.871 ; gain = 578.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for dadddsub_64ns_64ns_64_5_full_dsp_1_U1/fft_ap_dadddsub_3_full_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dadddsub_64ns_64ns_64_5_full_dsp_1_U2/fft_ap_dadddsub_3_full_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dmul_64ns_64ns_64_6_max_dsp_1_U3/fft_ap_dmul_4_max_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dmul_64ns_64ns_64_6_max_dsp_1_U4/fft_ap_dmul_4_max_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dmul_64ns_64ns_64_6_max_dsp_1_U5/fft_ap_dmul_4_max_dsp_64_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dmul_64ns_64ns_64_6_max_dsp_1_U6/fft_ap_dmul_4_max_dsp_64_u. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 834.871 ; gain = 578.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'int_real_r_shift_reg[0:0]' into 'int_real_twid_shift_reg[0:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:610]
+INFO: [Synth 8-4471] merging register 'int_img_shift_reg[0:0]' into 'int_real_twid_shift_reg[0:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:642]
+INFO: [Synth 8-4471] merging register 'int_img_twid_shift_reg[0:0]' into 'int_real_twid_shift_reg[0:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:674]
+WARNING: [Synth 8-6014] Unused sequential element int_real_r_shift_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:610]
+WARNING: [Synth 8-6014] Unused sequential element int_img_shift_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:642]
+WARNING: [Synth 8-6014] Unused sequential element int_img_twid_shift_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:674]
+WARNING: [Synth 8-6014] Unused sequential element int_real_twid_shift_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_BUS_A_s_axi.v:578]
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'real_addr_reg_436_reg[9:0]' into 'img_addr_reg_441_reg[9:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:404]
+INFO: [Synth 8-4471] merging register 'real_addr_1_reg_460_reg[9:0]' into 'img_addr_1_reg_465_reg[9:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:411]
+WARNING: [Synth 8-6014] Unused sequential element real_addr_reg_436_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:404]
+WARNING: [Synth 8-6014] Unused sequential element real_addr_1_reg_460_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft.v:411]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "icmp_ln16_fu_230_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "icmp_ln30_fu_295_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 834.871 ; gain = 578.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/SUB_DELAY' (delay__parameterized1) to 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/SUBTRACT_PREADD_DEL'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/YES_DIST_1.DIST_1_PREADD_DEL' (delay__parameterized1) to 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/YES_DIST_1.DIST_1_ADD_DEL'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_DEL' (delay__parameterized7) to 'bbgemm_ap_dadd_3_full_dsp_64:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_INC_DELAY' (delay__parameterized1) to 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/NORMALIZE_DEL' (delay__parameterized7) to 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/NORMALIZE_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized50) to 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized50) to 'bbgemm_ap_dmul_4_max_dsp_64:/U0/i_synth/MULT.OP/R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'dadddsub_64ns_64ns_64_5_full_dsp_1_U2/ce_r_reg' into 'dadddsub_64ns_64ns_64_5_full_dsp_1_U1/ce_r_reg' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dadddsub_64ns_64ns_64_5_full_dsp_1.v:54]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U3/ce_r_reg' into 'dadddsub_64ns_64ns_64_5_full_dsp_1_U1/ce_r_reg' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U4/ce_r_reg' into 'dadddsub_64ns_64ns_64_5_full_dsp_1_U1/ce_r_reg' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U5/ce_r_reg' into 'dadddsub_64ns_64ns_64_5_full_dsp_1_U1/ce_r_reg' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U5/din0_buf1_reg[63:0]' into 'dmul_64ns_64ns_64_6_max_dsp_1_U3/din0_buf1_reg[63:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:52]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U5/din1_buf1_reg[63:0]' into 'dmul_64ns_64ns_64_6_max_dsp_1_U4/din1_buf1_reg[63:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:54]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U6/ce_r_reg' into 'dadddsub_64ns_64ns_64_5_full_dsp_1_U1/ce_r_reg' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U6/din0_buf1_reg[63:0]' into 'dmul_64ns_64ns_64_6_max_dsp_1_U4/din0_buf1_reg[63:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:52]
+INFO: [Synth 8-4471] merging register 'dmul_64ns_64ns_64_6_max_dsp_1_U6/din1_buf1_reg[63:0]' into 'dmul_64ns_64ns_64_6_max_dsp_1_U3/din1_buf1_reg[63:0]' [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:54]
+WARNING: [Synth 8-6014] Unused sequential element dadddsub_64ns_64ns_64_5_full_dsp_1_U2/ce_r_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dadddsub_64ns_64ns_64_5_full_dsp_1.v:54]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U3/ce_r_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U4/ce_r_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U5/ce_r_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U5/din0_buf1_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:52]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U5/din1_buf1_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:54]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U6/ce_r_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:50]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U6/din0_buf1_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:52]
+WARNING: [Synth 8-6014] Unused sequential element dmul_64ns_64ns_64_6_max_dsp_1_U6/din1_buf1_reg was removed.  [C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/fft/IP_HDL/verilog/fft_dmul_64ns_64ns_64_6_max_dsp_1.v:54]
+INFO: [Synth 8-5546] ROM "icmp_ln30_fu_295_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[28]' (FDRE) to 'span_1_reg_152_reg[29]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[29]' (FDRE) to 'span_1_reg_152_reg[27]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dadddsub_64ns_64ns_64_5_full_dsp_1_U1/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln12_reg_416_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln12_reg_416_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln12_reg_416_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln12_reg_416_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln12_reg_416_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln12_reg_416_reg[4] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[27]' (FDE) to 'sext_ln12_reg_410_reg[28]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[28]' (FDE) to 'sext_ln12_reg_410_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[29] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[27]' (FDRE) to 'span_1_reg_152_reg[26]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[26] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[25]' (FDE) to 'sext_ln12_reg_410_reg[26]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[29]' (FDE) to 'sext_ln12_reg_410_reg[26]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[26] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[25]' (FDRE) to 'span_1_reg_152_reg[24]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[26]' (FDRE) to 'span_1_reg_152_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[24] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[23]' (FDE) to 'sext_ln12_reg_410_reg[24]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[26]' (FDE) to 'sext_ln12_reg_410_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[24] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[23]' (FDRE) to 'span_1_reg_152_reg[22]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[24]' (FDRE) to 'span_1_reg_152_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[22] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[21]' (FDE) to 'sext_ln12_reg_410_reg[22]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[24]' (FDE) to 'sext_ln12_reg_410_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[22] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[21]' (FDRE) to 'span_1_reg_152_reg[20]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[22]' (FDRE) to 'span_1_reg_152_reg[20]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[20] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[19]' (FDE) to 'sext_ln12_reg_410_reg[20]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[22]' (FDE) to 'sext_ln12_reg_410_reg[20]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[20] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[19]' (FDRE) to 'span_1_reg_152_reg[18]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[20]' (FDRE) to 'span_1_reg_152_reg[18]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[18] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[17]' (FDE) to 'sext_ln12_reg_410_reg[18]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[20]' (FDE) to 'sext_ln12_reg_410_reg[18]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[18] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[17]' (FDRE) to 'span_1_reg_152_reg[16]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[18]' (FDRE) to 'span_1_reg_152_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[16] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[15]' (FDE) to 'sext_ln12_reg_410_reg[16]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[18]' (FDE) to 'sext_ln12_reg_410_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[16] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[15]' (FDRE) to 'span_1_reg_152_reg[14]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[16]' (FDRE) to 'span_1_reg_152_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[14] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[13]' (FDE) to 'sext_ln12_reg_410_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[16]' (FDE) to 'sext_ln12_reg_410_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[14] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[13]' (FDRE) to 'span_1_reg_152_reg[12]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[14]' (FDRE) to 'span_1_reg_152_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[12] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[11]' (FDE) to 'sext_ln12_reg_410_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[14]' (FDE) to 'sext_ln12_reg_410_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[12] )
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[11]' (FDRE) to 'span_1_reg_152_reg[10]'
+INFO: [Synth 8-3886] merging instance 'span_1_reg_152_reg[12]' (FDRE) to 'span_1_reg_152_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\span_1_reg_152_reg[10] )
+INFO: [Synth 8-3886] merging instance 'sext_ln12_reg_410_reg[12]' (FDE) to 'sext_ln12_reg_410_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sext_ln12_reg_410_reg[10] )
+WARNING: [Synth 8-3332] Sequential element (dadddsub_64ns_64ns_64_5_full_dsp_1_U1/ce_r_reg) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[63]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[62]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[61]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[60]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[59]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[58]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[57]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[56]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[55]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[54]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[53]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[52]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[51]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[50]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[49]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[48]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[47]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[46]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[45]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[44]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[43]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[42]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[41]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[40]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[39]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[38]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[37]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[36]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[35]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[34]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[33]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[32]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[31]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[30]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[29]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[28]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[27]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[26]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[25]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[24]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[23]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[22]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[21]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[20]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[19]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[18]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[17]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[16]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[15]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[14]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[13]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[12]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[11]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[10]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[9]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[8]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[7]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[6]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[5]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[4]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[3]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[2]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[1]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U3/dout_r_reg[0]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[63]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[62]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[61]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[60]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[59]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[58]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[57]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[56]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[55]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[54]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[53]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[52]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[51]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[50]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[49]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[48]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[47]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[46]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[45]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[44]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[43]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[42]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[41]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[40]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[39]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[38]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[37]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[36]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[35]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[34]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[33]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[32]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[31]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[30]) is unused and will be removed from module custom_IP.
+WARNING: [Synth 8-3332] Sequential element (dmul_64ns_64ns_64_6_max_dsp_1_U4/dout_r_reg[29]) is unused and will be removed from module custom_IP.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 834.871 ; gain = 578.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 935.398 ; gain = 678.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 939.496 ; gain = 682.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'BUS_A_s_axi_Ui_1444' (FD) to 'BUS_A_s_axi_Ui_1443'
+INFO: [Synth 8-3886] merging instance 'BUS_A_s_axi_Ui_267' (FD) to 'BUS_A_s_axi_Ui_534'
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_twid/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_twid/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_twid/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_twid/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_r/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_r/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_r/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_real_r/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img_twid/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img_twid/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img_twid/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance BUS_A_s_axi_U/int_img_twid/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |CARRY4     |    37|
+|3     |DSP48E1    |     8|
+|4     |DSP48E1_1  |     2|
+|5     |DSP48E1_10 |     4|
+|6     |DSP48E1_11 |     4|
+|7     |DSP48E1_2  |     4|
+|8     |DSP48E1_3  |     4|
+|9     |DSP48E1_4  |     4|
+|10    |DSP48E1_5  |     4|
+|11    |DSP48E1_6  |     4|
+|12    |DSP48E1_7  |     4|
+|13    |DSP48E1_8  |     4|
+|14    |DSP48E1_9  |     4|
+|15    |LUT1       |    44|
+|16    |LUT2       |   325|
+|17    |LUT3       |   517|
+|18    |LUT4       |   379|
+|19    |LUT5       |   640|
+|20    |LUT6       |   988|
+|21    |MUXCY      |   534|
+|22    |MUXF7      |    47|
+|23    |MUXF8      |     2|
+|24    |RAMB36E1   |     8|
+|25    |SRL16E     |    52|
+|26    |XORCY      |   268|
+|27    |FDE        |    10|
+|28    |FDRE       |  3294|
+|29    |FDSE       |    53|
+|30    |IBUF       |    73|
+|31    |OBUF       |    42|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 966.965 ; gain = 710.184
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 645 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:42 . Memory (MB): peak = 966.965 ; gain = 376.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 966.965 ; gain = 710.184
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1029 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 220 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 210 instances
+  FDE => FDRE: 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+239 Infos, 218 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 966.965 ; gain = 721.719
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/IPs/template/template.runs/synth_1/custom_IP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file custom_IP_utilization_synth.rpt -pb custom_IP_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 966.965 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  1 19:46:35 2022...

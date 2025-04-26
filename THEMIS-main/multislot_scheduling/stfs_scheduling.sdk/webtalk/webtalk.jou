@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# 
+# Start of session at: Fri Nov 11 15:12:12 2022
+# Process ID: 73992
+# Current directory: C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/stfs_scheduling.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/stfs_scheduling.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/stfs_scheduling.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

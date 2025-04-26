@@ -1,0 +1,29 @@
+/*
+ * fft_profiling.h
+ *
+ *  Created on: Sep 4, 2022
+ *      Author: ekarabu
+ */
+
+#ifndef SRC_FFT_PROFILING_H_
+#define SRC_FFT_PROFILING_H_
+
+
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "sleep.h"
+#include <time.h>
+#include "xtime_l.h"
+#include <stdlib.h>
+
+#define AES256_CRTL XPAR_IP_WRAPPER_0_S00_AXI_BASEADDR
+#define FFT_REAL_TWD XPAR_IP_WRAPPER_0_S00_AXI_BASEADDR + 0x1000
+#define FFT_REAL_R   XPAR_IP_WRAPPER_0_S00_AXI_BASEADDR + 0x2000
+#define FFT_REAL_IMG XPAR_IP_WRAPPER_0_S00_AXI_BASEADDR + 0x3000
+#define AES256_Plain_Chipher XPAR_IP_WRAPPER_0_S00_AXI_BASEADDR + 0x40
+
+#endif /* SRC_FFT_PROFILING_H_ */

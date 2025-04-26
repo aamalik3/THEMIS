@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep  2 14:13:44 2022
+# Process ID: 267996
+# Current directory: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/Custom_IP/custom_IP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent269080 C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\Custom_IP\custom_IP\custom_IP.xpr
+# Log file: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/Custom_IP/custom_IP/vivado.log
+# Journal file: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/Custom_IP/custom_IP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  2 14:13:56 2022...

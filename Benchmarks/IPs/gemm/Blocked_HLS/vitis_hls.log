@@ -1,0 +1,99 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'aamalik3' on host 'diomedes' (Windows NT_amd64 version 6.2) on Thu Sep 01 13:41:39 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/aamalik3/Desktop/IPs/gemm/Blocked_HLS'
+Sourcing Tcl script 'C:/Users/aamalik3/Desktop/IPs/gemm/Blocked_HLS/Blocked_HLS/Blocked_HLS/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project Blocked_HLS 
+INFO: [HLS 200-10] Opening project 'C:/Users/aamalik3/Desktop/IPs/gemm/Blocked_HLS/Blocked_HLS'.
+INFO: [HLS 200-1510] Running: set_top bbgemm 
+INFO: [HLS 200-1510] Running: add_files ../CCODE_Blocked/check.data 
+INFO: [HLS 200-10] Adding design file '../CCODE_Blocked/check.data' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCODE_Blocked/gemm.c 
+INFO: [HLS 200-10] Adding design file '../CCODE_Blocked/gemm.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../CCODE_Blocked/input.data 
+INFO: [HLS 200-10] Adding design file '../CCODE_Blocked/input.data' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCODE_Blocked/harness.c 
+INFO: [HLS 200-10] Adding test bench file '../CCODE_Blocked/harness.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCODE_Blocked/support.c 
+INFO: [HLS 200-10] Adding test bench file '../CCODE_Blocked/support.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../CCODE_Blocked/support.h 
+INFO: [HLS 200-10] Adding test bench file '../CCODE_Blocked/support.h' to the project
+INFO: [HLS 200-1510] Running: open_solution Blocked_HLS -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/aamalik3/Desktop/IPs/gemm/Blocked_HLS/Blocked_HLS/Blocked_HLS'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 219.720 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCODE_Blocked/gemm.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.544 seconds; current allocated memory: 221.095 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.983 seconds; current allocated memory: 222.295 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 222.296 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 223.411 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 222.732 MB.
+INFO: [XFORM 203-510] Pipelining loop 'loopk' (../CCODE_Blocked/gemm.c:16) in function 'bbgemm' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopk' (../CCODE_Blocked/gemm.c:16) in function 'bbgemm' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopj' (../CCODE_Blocked/gemm.c:16) in function 'bbgemm' completely with a factor of 8.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 243.322 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'loopi' (../CCODE_Blocked/gemm.c:16:6) in function 'bbgemm'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loopkk' (../CCODE_Blocked/gemm.c:16:19) in function 'bbgemm'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loopjj' (../CCODE_Blocked/gemm.c:16:15) in function 'bbgemm'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 236.272 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bbgemm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bbgemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopjj_loopi_loopk'.
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'bbgemm' (loop 'loopjj_loopi_loopk'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('prod_addr_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_1', ../CCODE_Blocked/gemm.c:29 on array 'prod' and 'load' operation ('prod_load', ../CCODE_Blocked/gemm.c:29) on array 'prod'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('prod_addr_3_write_ln29', ../CCODE_Blocked/gemm.c:29) of variable 'bitcast_ln29_11', ../CCODE_Blocked/gemm.c:29 on array 'prod' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'prod'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('m2_load_4', ../CCODE_Blocked/gemm.c:28) on array 'm2' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'm2'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 17, Depth = 25, loop 'loopjj_loopi_loopk'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.867 seconds; current allocated memory: 237.028 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.327 seconds; current allocated memory: 237.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bbgemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bbgemm/m1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bbgemm/m2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bbgemm/prod' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'bbgemm' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'm1', 'm2', 'prod' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bbgemm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.389 seconds; current allocated memory: 239.426 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.209 seconds; current allocated memory: 249.155 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for bbgemm.
+INFO: [VLOG 209-307] Generating Verilog RTL for bbgemm.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 107.08 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 8.411 seconds; current allocated memory: 249.288 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 2 seconds. Total elapsed time: 10.758 seconds; peak allocated memory: 249.155 MB.

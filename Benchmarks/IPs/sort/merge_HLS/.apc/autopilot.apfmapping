@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\IPs\sort\check.data"/>
+    <originFiles name="input.data" path="C:\Users\aamalik3\Desktop\IPs\sort\input.data"/>
+    <originFiles name="sort.c" path="C:\Users\aamalik3\Desktop\IPs\sort\sort.c"/>
+  </source>
+  <testbench>
+    <originFiles name="harness.c" path="C:\Users\aamalik3\Desktop\IPs\sort\harness.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

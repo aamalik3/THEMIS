@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Sep 19 12:07:42 2022
+# Process ID: 58720
+# Current directory: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling
+# Command line: vivado.exe C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\multislot_scheduling\multislot_scheduling.xpr
+# Log file: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/vivado.log
+# Journal file: C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/multislot_scheduling' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 955.992 ; gain = 209.871
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+file mkdir C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk
+write_hwdef -force  -file C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+zip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileslaunch_sdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 19 13:55:11 2022...

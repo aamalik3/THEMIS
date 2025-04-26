@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../custom_IP.srcs/sources_1/ip/DAcc_1/sim/DAcc.vhd" \
+
+nosort

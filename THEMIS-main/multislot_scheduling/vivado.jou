@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Nov  7 11:15:02 2022
+# Process ID: 12264
+# Current directory: C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9628 C:\Users\aamalik3\Desktop\Scheduling-PR\multislot_scheduling\multislot_scheduling.xpr
+# Log file: C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/vivado.log
+# Journal file: C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/multislot_scheduling.xpr
+update_compile_order -fileset sources_1
+file mkdir C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk
+write_hwdef -force  -file C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf
+launch_sdk -workspace C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk -hwspec C:/Users/aamalik3/Desktop/Scheduling-PR/multislot_scheduling/multislot_scheduling.sdk/design_1_wrapper.hdf

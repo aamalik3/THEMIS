@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1662996189514">
+  <ports id="1" name="val_r" type="PortType" coreName="RAM_1P" coreId="1" bitwidth="64" iftype="IfTypeRegister" arraysize="1666">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="cols" type="PortType" coreName="RAM_1P" coreId="4294967292" bitwidth="32" iftype="IfTypeRegister" arraysize="1666">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="rowDelimiters" type="PortType" coreName="RAM_1P" coreId="3143318544" bitwidth="32" iftype="IfTypeRegister" arraysize="495">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="4" name="vec" type="PortType" coreName="RAM_1P" coreId="824195684" bitwidth="64" iftype="IfTypeRegister" arraysize="494">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="5" name="out_r" type="PortType" coreName="RAM_1P" coreId="1295780106" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="494">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="75" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="76" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="77" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="80" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="81" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="84" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="87" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="88" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="90" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="91" source_obj="//@ports.2" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="94" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="95" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="96" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="97" source_obj="//@ports.2" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="99" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="100" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="101" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="102" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="103" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="105" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="106" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="109" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="112" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="114" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="116" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="117" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="118" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="123" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="128" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="140" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="142" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@ports.4"/>
+  <edges id="144" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="145" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="146" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="425" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="427" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="429" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="430" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="431" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <blocks id="29" name="block_29" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_35</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln21" lineNumber="21" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" opcode="br" m_display="0" m_delay="1.58" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="21" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <controlInputObjs>block_35</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCode_crs/spmv.c">
+      <validLinenumbers>21</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="35" name="block_35" type="BlockType">
+    <controlInputObjs>block_29</controlInputObjs>
+    <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_74</controlOutputObjs>
+    <controlOutputObjs>.split2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="i" lineNumber="24" originalName="i" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="4294967295" contextFuncName="spmv" bitwidth="9" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="24" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+      <controlInputObjs>block_29</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="add_ln24" lineNumber="24" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="add_ln24_fu_191_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="spmv" bitwidth="9" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="24" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln21" lineNumber="21" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="icmp_ln21_fu_197_p2" opType="icmp" coreId="1" contextFuncName="spmv" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.66" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="21" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln21" lineNumber="21" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="4184142850" contextFuncName="spmv" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="21" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlInputObjs>block_74</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCode_crs/spmv.c">
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>21</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="46" name=".split2" type="BlockType">
+    <controlInputObjs>block_35</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_52</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="zext_ln21" lineNumber="21" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="zext_ln21_fu_203_p1" coreId="0" contextFuncName="spmv" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="21" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="rowDelimiters_addr" lineNumber="23" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" bitwidth="9" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="23" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>rowDelimiters</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_begin" lineNumber="23" originalName="tmp_begin" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="spmv" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="23" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="zext_ln24" lineNumber="24" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="zext_ln24_fu_208_p1" coreId="0" contextFuncName="spmv" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="24" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="rowDelimiters_addr_1" lineNumber="24" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" bitwidth="9" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="24" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>rowDelimiters</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="tmp_end" lineNumber="24" originalName="tmp_end" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="spmv" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="24" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="sext_ln25" lineNumber="25" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="sext_ln25_fu_212_p1" coreId="0" contextFuncName="spmv" bitwidth="64" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="25" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="sext_ln25_1" lineNumber="25" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="sext_ln25_1_fu_215_p1" coreId="3214304558" contextFuncName="spmv" bitwidth="64" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="25" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln25" lineNumber="25" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" opcode="br" nodeLabel="3.0" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="25" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <controlInputObjs>block_52</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCode_crs/spmv.c">
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="72" name="._crit_edge.loopexit" type="BlockType">
+    <controlInputObjs>block_52</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_35</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="bitcast_ln29" lineNumber="29" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="out_r_d0" coreId="0" contextFuncName="spmv" bitwidth="64" opcode="bitcast" nodeLabel="18.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="29" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="out_addr" lineNumber="29" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="1848707992" contextFuncName="spmv" bitwidth="9" opcode="getelementptr" nodeLabel="18.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="29" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>out_r</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="out_addr_write_ln29" lineNumber="29" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="spmv" opcode="store" nodeLabel="18.0" m_display="0" m_delay="3.25" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="29" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="br_ln0" coreId="4294967295" opcode="br" nodeLabel="18.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_35</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCode_crs/spmv.c">
+      <validLinenumbers>29</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="74" name="block_74" type="BlockType">
+    <controlInputObjs>block_35</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln31" lineNumber="31" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="31" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../CCode_crs/spmv.c">
+      <validLinenumbers>31</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="4" typeName="Pipeline" id="254" pipe_depth="14" RegionName="spmv_2">
+    <basic_blocks id="52" name="block_52" type="BlockType">
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="j_1" lineNumber="25" originalName="j" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" bitwidth="64" opcode="phi" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="25" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>.split2</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="sum" originalName="sum" coreId="50" bitwidth="64" opcode="phi" nodeLabel="13.0" m_display="0" m_isOnCriticalPath="true" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <dataInputObjs>dadd</dataInputObjs>
+        <dataOutputObjs>dadd</dataOutputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>.split2</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="icmp_ln25" lineNumber="25" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="icmp_ln25_fu_219_p2" opType="icmp" coreId="3101646953" contextFuncName="spmv" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.77" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="25" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="br_ln25" lineNumber="25" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="25" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../CCode_crs/spmv.c">
+        <validLinenumbers>25</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="67" name=".split" type="BlockType">
+      <controlInputObjs>block_52</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_52</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="val_addr" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>val_r</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="val_load" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="spmv" bitwidth="64" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="bitcast_ln26" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="grp_fu_187_p0" coreId="0" contextFuncName="spmv" bitwidth="64" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>dmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="cols_addr" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="0" contextFuncName="spmv" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>cols</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="cols_load" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="spmv" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="zext_ln26" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="zext_ln26_fu_224_p1" coreId="3082914312" contextFuncName="spmv" bitwidth="64" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="vec_addr" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreId="1" contextFuncName="spmv" bitwidth="9" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>vec</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="vec_load" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="auto" opType="ram_1p" coreId="86" contextFuncName="spmv" bitwidth="64" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="bitcast_ln26_1" lineNumber="26" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="grp_fu_187_p1" coreId="0" contextFuncName="spmv" bitwidth="64" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>dmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="Si" lineNumber="26" originalName="Si" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="dmul_64ns_64ns_64_6_max_dsp_1_U2" coreName="DMul_maxdsp" implIndex="maxdsp" control="auto" opType="dmul" coreId="49" contextFuncName="spmv" bitwidth="64" opcode="dmul" nodeLabel="7.0" nodeLatency="5" m_display="0" m_delay="7.78" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="26" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>dadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="sum_1" lineNumber="27" originalName="sum" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="dadd_64ns_64ns_64_5_full_dsp_1_U1" coreName="DAddSub_fulldsp" implIndex="fulldsp" control="auto" opType="dadd" coreId="37" contextFuncName="spmv" bitwidth="64" opcode="dadd" nodeLabel="13.0" nodeLatency="4" m_display="1" m_delay="8.23" m_isOnCriticalPath="true" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="27" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>dmul</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="add_ln25" lineNumber="25" fileName="../CCode_crs/spmv.c" fileDirectory=".." rtlName="add_ln25_fu_237_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="spmv" bitwidth="64" opcode="add" nodeLabel="7.0" m_display="0" m_delay="3.52" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../CCode_crs/spmv.c" linenumber="25" fileDirectory="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\crs_HLS" functionName="spmv"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="br_ln0" coreId="11" opcode="br" nodeLabel="17.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_52</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../CCode_crs/spmv.c">
+        <validLinenumbers>26</validLinenumbers>
+        <validLinenumbers>27</validLinenumbers>
+        <validLinenumbers>25</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <regnodes realName="bitcast_ln26_1_reg_321">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="sum_1_reg_336">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln21_reg_257">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln25_reg_287">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="val_addr_reg_291">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln25_reg_277">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_147">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="vec_addr_reg_306">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln25_reg_326">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln25_1_reg_282">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="val_load_reg_301">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="rowDelimiters_addr_reg_262">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="Si_reg_331">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="cols_addr_reg_296">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="j_1_reg_158">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="rowDelimiters_addr_1_reg_272">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln24_reg_248">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="vec_load_reg_311">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_begin_reg_267">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln26_reg_316">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="sum_reg_170">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i_phi_fu_151">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln25_1_fu_215">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln29_fu_243">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln25_fu_237">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln21_fu_197">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sum_phi_fu_174">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_addr_gep_fu_134">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln26_fu_229">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="vec_addr_gep_fu_121">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cols_addr_gep_fu_108">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_1_phi_fu_161">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln24_fu_191">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln25_fu_212">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rowDelimiters_addr_gep_fu_74">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln21_fu_203">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln24_fu_208">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rowDelimiters_addr_1_gep_fu_87">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln26_fu_224">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln26_1_fu_233">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln25_fu_219">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="val_addr_gep_fu_95">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_182">
+    <nodeIds>64</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_187">
+    <nodeIds>63</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="cols">
+    <nodeIds>58</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="out_r">
+    <nodeIds>70</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="rowDelimiters">
+    <nodeIds>39</nodeIds>
+    <nodeIds>42</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="val_r">
+    <nodeIds>55</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="vec">
+    <nodeIds>61</nodeIds>
+  </memoryPorts>
+  <ioPorts name="cols(p0)">
+    <contents name="load">
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_r(p0)">
+    <contents name="store">
+      <nodeIds>70</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="rowDelimiters(p0)">
+    <contents name="load">
+      <nodeIds>39</nodeIds>
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="val_r(p0)">
+    <contents name="load">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="vec(p0)">
+    <contents name="load">
+      <nodeIds>61</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="2" latency="2"/>
+      <operations id="73" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="2"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="2" latency="2"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="55" stage="1" latency="2"/>
+      <operations id="58" stage="1" latency="2"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="61" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="6" latency="6"/>
+      <operations id="65" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="63" stage="5" latency="6"/>
+    </states>
+    <states id="10">
+      <operations id="63" stage="4" latency="6"/>
+    </states>
+    <states id="11">
+      <operations id="63" stage="3" latency="6"/>
+    </states>
+    <states id="12">
+      <operations id="63" stage="2" latency="6"/>
+    </states>
+    <states id="13">
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="6"/>
+    </states>
+    <states id="14">
+      <operations id="64" stage="5" latency="5"/>
+    </states>
+    <states id="15">
+      <operations id="64" stage="4" latency="5"/>
+    </states>
+    <states id="16">
+      <operations id="64" stage="3" latency="5"/>
+    </states>
+    <states id="17">
+      <operations id="64" stage="2" latency="5"/>
+    </states>
+    <states id="18">
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="5"/>
+      <operations id="66" stage="1" latency="1"/>
+    </states>
+    <states id="19">
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="spmv" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>29</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="spmv_1" mII="-1" mDepth="-1" mMinTripCount="494" mMaxTripCount="494" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="2">
+      <basicBlocks>35</basicBlocks>
+      <basicBlocks>46</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="spmv_2" mII="4" mDepth="14" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>52</basicBlocks>
+      <basicBlocks>67</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>72</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>74</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

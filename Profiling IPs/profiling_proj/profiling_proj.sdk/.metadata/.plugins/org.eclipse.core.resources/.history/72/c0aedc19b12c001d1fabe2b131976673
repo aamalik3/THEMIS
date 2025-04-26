@@ -1,0 +1,141 @@
+
+#include "PR_executer.h"
+
+//omments to uncomment for AES
+// Parameters for Partial Reconfiguration
+#define PARTIAL_AES_BITFILE_LEN  0x20939 // in number of words
+#define PARTIAL_ADDER_BITFILE_LEN  0x20939 // in number of words
+#define PARTIAL_MULT_BITFILE_LEN  0x20939 // in number of words
+#define base_addr 0x43C10000
+#define counter_addr 0x43C00000
+#define SIZE_OF_PARTIAL_BITSTREAM_BUFFER 	1*1024*1024
+#define TOTAL_NUMBER_OF_PARTIAL_BITSTREAMS 	4
+
+static FATFS fatfs;
+static XHwIcap HwIcap;	// The instance of the HWICAP device
+static XDcfg_Config *XDcfg_0;
+
+int SD_Init()
+{
+	FRESULT rc;
+
+	rc = f_mount(&fatfs, "0:/bitstreams/", 0);
+	if (rc) {
+		xil_printf(" ERROR : f_mount returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+int SD_TransferPartial(char *FileName, u32 DestinationAddress, u32 ByteLength)
+{
+	FIL fil;
+	FRESULT rc;
+	UINT br;
+
+	rc = f_open(&fil, FileName, FA_READ);
+	if (rc) {
+		xil_printf(" ERROR : f_open returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	rc = f_lseek(&fil, 0);
+	if (rc) {
+		xil_printf(" ERROR : f_lseek returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	rc = f_read(&fil, (void*)DestinationAddress, ByteLength, &br);
+	if (rc) {
+		xil_printf(" ERROR : f_read returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	rc = f_close(&fil);
+	if (rc) {
+		xil_printf(" ERROR : f_close returned %d\r\n", rc);
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+int XDcfg_TransferBitfile(XHwIcap *HwIcapInstPtr, u32 *PartialAddress, u32 bitfile_length_words)
+{
+	u32 Status = 0;
+
+	Status = XHwIcap_DeviceWrite(HwIcapInstPtr, PartialAddress, bitfile_length_words);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("error writing to ICAP (%d)\r\n", Status);
+		return -1;
+	}
+	while (XHwIcap_IsDeviceBusy(HwIcapInstPtr));
+
+	return XST_SUCCESS;
+}
+
+
+int PR_Init()
+{
+
+	XHwIcap_Config *ConfigPtr;
+	// Invalidate and enable Data Cache
+
+
+	// Initialize Device Configuration Interface
+	DcfgInstPtr = &DcfgInstance;
+	XDcfg_0 = XDcfg_LookupConfig(XPAR_XDCFG_0_DEVICE_ID);
+	PR_Status = XDcfg_CfgInitialize(DcfgInstPtr, XDcfg_0, XDcfg_0->BaseAddr);
+	if (PR_Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	// Deselect PCAP as the configuration device as we are going to use the ICAP
+	XDcfg_ClearControlRegister(DcfgInstPtr, XDCFG_CTRL_PCAP_PR_MASK);
+
+	ConfigPtr = XHwIcap_LookupConfig(XPAR_AXI_HWICAP_0_DEVICE_ID);
+	if (ConfigPtr == NULL) {
+		return XST_FAILURE;
+	}
+
+	HwIcapInstPtr = &HwIcap;
+	PR_Status = XHwIcap_CfgInitialize(HwIcapInstPtr, ConfigPtr,
+		ConfigPtr->BaseAddress);
+	if (PR_Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	XHwIcap_Reset(HwIcapInstPtr);
+	//	while(!XHwIcap_IsDeviceBusy(HwIcapInstPtr));
+	print("HWICAP Initialized\r\n");
+
+	return XST_SUCCESS;
+
+}
+
+
+
+int PR_execution(char* file_name)
+{
+	Xil_DCacheDisable();
+
+	partial_bitstream_buffers = (u32 *) malloc ( SIZE_OF_PARTIAL_BITSTREAM_BUFFER * sizeof(u32));
+			// Initialize SD controller and transfer partials to DDR
+	SD_Init();
+	SD_TransferPartial(file_name, (u32)partial_bitstream_buffers, (PARTIAL_AES_BITFILE_LEN << 2));
+	printf ("%s bitstream reading\n\r",file_name);
+	xil_printf("Partial Binaries transferred successfully!\r\n");
+	Xil_DCacheEnable();
+
+	//PartialAddress = partial_bitstream_buffers[0];
+	xil_printf("Starting %s Reconfiguration\n\r",file_name);
+	PR_Status = XDcfg_TransferBitfile(HwIcapInstPtr, (u32*)partial_bitstream_buffers, PARTIAL_AES_BITFILE_LEN);
+	if (PR_Status != XST_SUCCESS) {
+		xil_printf("Error : FPGA configuration failed!\n\r");
+		exit(EXIT_FAILURE);
+	}
+	xil_printf("%s Reconfiguration Completed!\n\r",file_name);
+
+	return XST_SUCCESS;
+}

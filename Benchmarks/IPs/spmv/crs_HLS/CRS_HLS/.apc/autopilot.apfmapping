@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="spmv.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\CCode_crs\spmv.c"/>
+    <originFiles name="input.data" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\CCode_crs\input.data"/>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\CCode_crs\check.data"/>
+  </source>
+  <testbench>
+    <originFiles name="support.h" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\CCode_crs\support.h"/>
+    <originFiles name="support.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\CCode_crs\support.c"/>
+    <originFiles name="harness.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\spmv\CCode_crs\harness.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

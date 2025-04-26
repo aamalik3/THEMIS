@@ -1,0 +1,24 @@
+synth_design -mode out_of_context -top custom_IP
+write_checkpoint custom_IP.dcp
+write_checkpoint ./spmv/custom_IP.dcp
+
+update_design -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] -black_box 
+update_design -cell [get_cell design_1_i/IP_wrapper_1/inst/custom_IP] -black_box 
+update_design -cell [get_cell design_1_i/IP_wrapper_2/inst/custom_IP] -black_box 
+
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_1/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_2/inst/custom_IP] custom_IP.dcp
+opt_design
+place_design
+route_design
+write_bitstream -file ../../multislot_scheduling/Full_Partial_Bitfiles/stencil2.bit
+
+write_cfgmem -format BIN -interface SMAPx32 -disablebitswap -loadbit "up 0 gemmbitstream_pblock_custom_IP_partial.bit" sort_partial_bit.bin
+
+cd ../../multislot_scheduling
+write_cfgmem -format BIN -interface SMAPx8 -loadbit "up 0 stencil2_pblock_custom_IP_partial.bit"   ../multislot_scheduling/bitstreams/stencil2.bin
+write_cfgmem -format BIN -interface SMAPx8 -loadbit "up 0 stencil2_pblock_custom_IP_1_partial.bit" ../multislot_scheduling/bitstreams/stencil2.bin
+write_cfgmem -format BIN -interface SMAPx8 -loadbit "up 0 stencil2_pblock_custom_IP_2_partial.bit" ../multislot_scheduling/bitstreams/stencil2.bin
+
+lock_design -level routing

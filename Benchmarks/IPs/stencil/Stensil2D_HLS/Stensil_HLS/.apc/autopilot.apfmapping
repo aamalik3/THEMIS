@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\stencil\Stensil2D_HLS\check.data"/>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\stencil\CCode_stencil2d\check.data"/>
+    <originFiles name="input.data" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\stencil\CCode_stencil2d\input.data"/>
+    <originFiles name="stencil.c" path="C:\Users\aamalik3\Desktop\GitHub\Scheduling-PR\IPs\stencil\CCode_stencil2d\stencil.c"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

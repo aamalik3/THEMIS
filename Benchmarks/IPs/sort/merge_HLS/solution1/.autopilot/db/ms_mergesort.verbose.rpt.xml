@@ -1,0 +1,147 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ms_mergesort'" level="0">
+<item name = "Date">Thu Sep  1 11:41:28 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
+<item name = "Project">merge_ip</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 9.366 ns, 0.10 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_merge_1_fu_78">merge_1, ?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- mergesort_label1">?, ?, ?, -, -, 11, no</column>
+<column name=" + mergesort_label2">?, ?, ?, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 186, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">8, -, 656, 839, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 87, -</column>
+<column name="Register">-, -, 167, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, ~0, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="BUS_A_s_axi_U">BUS_A_s_axi, 4, 0, 116, 110, 0</column>
+<column name="grp_merge_1_fu_78">merge_1, 4, 0, 540, 729, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln46_fu_127_p2">+, 0, 0, 32, 32, 32</column>
+<column name="i_fu_161_p2">+, 0, 0, 39, 32, 32</column>
+<column name="mid_fu_133_p2">+, 0, 0, 32, 32, 2</column>
+<column name="to_fu_139_p2">+, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln43_fu_99_p2">icmp, 0, 0, 14, 21, 1</column>
+<column name="icmp_ln44_fu_121_p2">icmp, 0, 0, 14, 21, 1</column>
+<column name="icmp_ln48_fu_155_p2">icmp, 0, 0, 14, 21, 1</column>
+<column name="ap_block_state5_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="a_ce0">9, 2, 1, 2</column>
+<column name="a_we0">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">37, 7, 1, 7</column>
+<column name="grp_merge_1_fu_78_stop">14, 3, 32, 96</column>
+<column name="i_2_reg_66">9, 2, 32, 64</column>
+<column name="m_reg_54">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="grp_merge_1_fu_78_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_2_reg_66">32, 0, 32, 0</column>
+<column name="icmp_ln48_reg_188">1, 0, 1, 0</column>
+<column name="m_1_reg_169">31, 0, 32, 1</column>
+<column name="m_reg_54">32, 0, 32, 0</column>
+<column name="mid_reg_178">32, 0, 32, 0</column>
+<column name="to_reg_183">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_BUS_A_AWVALID">in, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_AWREADY">out, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_AWADDR">in, 14, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_WVALID">in, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_WREADY">out, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_WDATA">in, 32, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_WSTRB">in, 4, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_ARVALID">in, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_ARREADY">out, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_ARADDR">in, 14, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_RVALID">out, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_RREADY">in, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_RDATA">out, 32, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_RRESP">out, 2, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_BVALID">out, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_BREADY">in, 1, s_axi, BUS_A, array</column>
+<column name="s_axi_BUS_A_BRESP">out, 2, s_axi, BUS_A, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, ms_mergesort, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, ms_mergesort, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, ms_mergesort, return value</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,71 @@
+/*
+ * scheduler.c
+ *
+ *  Created on: Sep 9, 2022
+ *      Author: ekarabu
+ */
+
+#include "scheduler.h"
+
+void scheduling()
+{
+
+    u32 Status = PR_Init();
+    if (Status != XST_SUCCESS)
+    {
+    	xil_printf("error in ICAP \n");
+    }
+    workload aes_load,fft_load,sha_load;
+    aes_256_operation_profile	(&aes_load);
+    xil_printf("aes latency %u\n",aes_load.latency);
+    fft_operation_profile	(&fft_load);
+    xil_printf("fft latency %u\n",fft_load.latency);
+    //bfs_operation		();
+    //gemm_operation		();
+    //kmp_operation		();
+    //sort_operation		();
+    //spmv_operation		();
+    sha_operation_profile	(&sha_load);
+    xil_printf("sha latency %u\n",sha_load.latency);
+    aes_load.demandedResource =	1;
+    fft_load.demandedResource =	4;
+    sha_load.demandedResource =	3;
+    totalSlot=6;
+    interval =0;
+    remainingSlot=6;
+    int work_order[6][3]={
+    		{3, 3, 2},
+			{1, 2, 3},
+			{2, 3, 0},
+			{1, 3, 0},
+			{1, 0, 0},
+			{1, 0, 0}
+    };
+    int queue[6][3];
+    int successRate[3];
+    int i,j;
+    for(i=0;i<6;i++)
+    {
+    	for(j=0;j<3;j++)
+    	{
+    		queue[i][j] = 0;
+    		successRate[j] = 0;
+    	}
+    }
+    int terms=0;
+    while(terms<18)
+    {
+    	for(i=0;i<6;i++)
+    	{
+    		for(j=0;j<3;j++)
+    	    {
+
+    	    }
+    	}
+
+    	terms++;
+    }
+
+
+
+}

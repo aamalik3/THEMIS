@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Sep  4 20:30:47 2022
+# Process ID: 312720
+# Current directory: C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent311720 C:\Users\ekarabu\Desktop\Aydin_amro\github_files\Scheduling-PR\profiling_proj\profiling_proj.xpr
+# Log file: C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/vivado.log
+# Journal file: C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.xpr
+open_hw
+update_compile_order -fileset sources_1
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/ekarabu/Desktop/Aydin_amro/github_files/Scheduling-PR/profiling_proj/profiling_proj.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw

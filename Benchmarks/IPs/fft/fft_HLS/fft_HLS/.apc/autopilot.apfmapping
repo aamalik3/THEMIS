@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="check.data" path="C:\Users\aamalik3\Desktop\IPs\fft\CCode_fft\check.data"/>
+    <originFiles name="fft.c" path="C:\Users\aamalik3\Desktop\IPs\fft\CCode_fft\fft.c"/>
+    <originFiles name="input.data" path="C:\Users\aamalik3\Desktop\IPs\fft\CCode_fft\input.data"/>
+  </source>
+  <testbench>
+    <originFiles name="harness.c" path="C:\Users\aamalik3\Desktop\IPs\fft\CCode_fft\harness.c"/>
+    <originFiles name="support.c" path="C:\Users\aamalik3\Desktop\IPs\fft\CCode_fft\support.c"/>
+    <originFiles name="support.h" path="C:\Users\aamalik3\Desktop\IPs\fft\CCode_fft\support.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

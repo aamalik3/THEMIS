@@ -1,0 +1,73 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.152 seconds; current allocated memory: 219.748 MB.
+INFO: [HLS 200-10] Analyzing design file '../CCode_fft/fft.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.549 seconds; current allocated memory: 221.092 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.027 seconds; current allocated memory: 222.516 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 222.517 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 223.689 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 222.970 MB.
+INFO: [XFORM 203-510] Pipelining loop 'inner' (../CCode_fft/fft.c:18) in function 'fft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 243.380 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'outer' (../CCode_fft/fft.c:12:12) in function 'fft' the outer loop is not a perfect loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 235.875 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fft' ...
+WARNING: [SYN 201-107] Renaming port name 'fft/real' to 'fft/real_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'inner'.
+WARNING: [HLS 200-880] The II Violation in module 'fft' (loop 'inner'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('img_addr_write_ln27', ../CCode_fft/fft.c:27) of variable 'bitcast_ln27', ../CCode_fft/fft.c:27 on array 'img' and 'load' operation ('img_load', ../CCode_fft/fft.c:25) on array 'img'.
+WARNING: [HLS 200-880] The II Violation in module 'fft' (loop 'inner'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('img_addr_write_ln27', ../CCode_fft/fft.c:27) of variable 'bitcast_ln27', ../CCode_fft/fft.c:27 on array 'img' and 'load' operation ('img_load', ../CCode_fft/fft.c:25) on array 'img'.
+WARNING: [HLS 200-880] The II Violation in module 'fft' (loop 'inner'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('img_addr_write_ln27', ../CCode_fft/fft.c:27) of variable 'bitcast_ln27', ../CCode_fft/fft.c:27 on array 'img' and 'load' operation ('img_load', ../CCode_fft/fft.c:25) on array 'img'.
+WARNING: [HLS 200-880] The II Violation in module 'fft' (loop 'inner'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('img_addr_write_ln27', ../CCode_fft/fft.c:27) of variable 'bitcast_ln27', ../CCode_fft/fft.c:27 on array 'img' and 'load' operation ('img_load', ../CCode_fft/fft.c:25) on array 'img'.
+WARNING: [HLS 200-880] The II Violation in module 'fft' (loop 'inner'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between 'store' operation ('img_addr_1_write_ln33', ../CCode_fft/fft.c:33) of variable 'bitcast_ln33', ../CCode_fft/fft.c:33 on array 'img' and 'load' operation ('img_load_1', ../CCode_fft/fft.c:25) on array 'img'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('real_load', ../CCode_fft/fft.c:21) on array 'real_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'real_r'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 24, Depth = 24, loop 'inner'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.271 seconds; current allocated memory: 236.345 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.242 seconds; current allocated memory: 236.876 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/real_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/img' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/real_twid' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/img_twid' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'real_twid', 'real_r', 'img', 'img_twid' to AXI-Lite port BUS_A.
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.274 seconds; current allocated memory: 237.664 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.753 seconds; current allocated memory: 246.088 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.48 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 7.158 seconds; current allocated memory: 246.213 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 9.566 seconds; peak allocated memory: 246.088 MB.

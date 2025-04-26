@@ -1,0 +1,173 @@
+14:25:02 **** Incremental Build of configuration Debug for project multiblock_sch_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/PR_executer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PR_executer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/PR_executer.d" -MT"src/PR_executer.o" -o "src/PR_executer.o" "../src/PR_executer.c"
+'Finished building: ../src/PR_executer.c'
+' '
+'Building file: ../src/aes_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/aes_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/aes_checker.d" -MT"src/aes_checker.o" -o "src/aes_checker.o" "../src/aes_checker.c"
+../src/aes_checker.c: In function 'aes_256_operation':
+../src/aes_checker.c:30:4: warning: this 'else' clause does not guard... [-Wmisleading-indentation]
+    else
+    ^~~~
+../src/aes_checker.c:32:5: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'else'
+     for (i = 0; i < 8; i++)
+     ^~~
+../src/aes_checker.c:17:14: warning: variable 'res1' set but not used [-Wunused-but-set-variable]
+     uint32_t res1;
+              ^~~~
+../src/aes_checker.c:16:14: warning: variable 'res0' set but not used [-Wunused-but-set-variable]
+     uint32_t res0;
+              ^~~~
+'Finished building: ../src/aes_checker.c'
+' '
+'Building file: ../src/bfs_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bfs_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/bfs_checker.d" -MT"src/bfs_checker.o" -o "src/bfs_checker.o" "../src/bfs_checker.c"
+'Finished building: ../src/bfs_checker.c'
+' '
+'Building file: ../src/fft_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_checker.d" -MT"src/fft_checker.o" -o "src/fft_checker.o" "../src/fft_checker.c"
+../src/fft_checker.c: In function 'fft_operation':
+../src/fft_checker.c:38:23: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+              uint32_t tmp;
+                       ^~~
+'Finished building: ../src/fft_checker.c'
+' '
+'Building file: ../src/fft_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fft_profiling.d" -MT"src/fft_profiling.o" -o "src/fft_profiling.o" "../src/fft_profiling.c"
+'Finished building: ../src/fft_profiling.c'
+' '
+'Building file: ../src/gemm_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gemm_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gemm_checker.d" -MT"src/gemm_checker.o" -o "src/gemm_checker.o" "../src/gemm_checker.c"
+../src/gemm_checker.c: In function 'gemm_operation':
+../src/gemm_checker.c:18:14: warning: implicit declaration of function 'PR_execution' [-Wimplicit-function-declaration]
+              PR_execution("gemm0.bin");
+              ^~~~~~~~~~~~
+../src/gemm_checker.c:43:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+../src/gemm_checker.c:83:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    for (i = 0; i < 8192; i++){
+                             ^~~
+'Finished building: ../src/gemm_checker.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/kmp_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/kmp_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/kmp_checker.d" -MT"src/kmp_checker.o" -o "src/kmp_checker.o" "../src/kmp_checker.c"
+../src/kmp_checker.c: In function 'kmp_operation':
+../src/kmp_checker.c:19:14: warning: implicit declaration of function 'PR_execution' [-Wimplicit-function-declaration]
+'Finished building: ../src/kmp_checker.c'
+              PR_execution("kmp0.bin");
+' '
+              ^~~~~~~~~~~~
+../src/kmp_checker.c:44:25: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                uint32_t tmp;
+                         ^~~
+../src/kmp_checker.c:87:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+../src/kmp_checker.c:130:16: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+       uint32_t tmp;
+                ^~~
+'Building file: ../src/scheduler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/scheduler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/scheduler.d" -MT"src/scheduler.o" -o "src/scheduler.o" "../src/scheduler.c"
+'Finished building: ../src/scheduler.c'
+' '
+'Building file: ../src/sha_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_checker.d" -MT"src/sha_checker.o" -o "src/sha_checker.o" "../src/sha_checker.c"
+../src/sha_checker.c: In function 'sha_operation':
+../src/sha_checker.c:39:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:72:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+../src/sha_checker.c:104:18: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+         uint32_t tmp;
+                  ^~~
+'Finished building: ../src/sha_checker.c'
+' '
+'Building file: ../src/sha_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sha_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sha_profiling.d" -MT"src/sha_profiling.o" -o "src/sha_profiling.o" "../src/sha_profiling.c"
+'Finished building: ../src/sha_profiling.c'
+' '
+'Building file: ../src/sort_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_checker.d" -MT"src/sort_checker.o" -o "src/sort_checker.o" "../src/sort_checker.c"
+../src/sort_checker.c: In function 'sort_operation':
+../src/sort_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:75:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/sort_checker.c:110:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/sort_checker.c'
+' '
+'Building file: ../src/sort_profiling.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sort_profiling.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sort_profiling.d" -MT"src/sort_profiling.o" -o "src/sort_profiling.o" "../src/sort_profiling.c"
+'Finished building: ../src/sort_profiling.c'
+' '
+'Building file: ../src/spmv_checking.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spmv_checking.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/spmv_checking.d" -MT"src/spmv_checking.o" -o "src/spmv_checking.o" "../src/spmv_checking.c"
+../src/spmv_checking.c: In function 'spmv_operation':
+../src/spmv_checking.c:12:14: warning: implicit declaration of function 'PR_execution' [-Wimplicit-function-declaration]
+              PR_execution("spmv0.bin");
+              ^~~~~~~~~~~~
+../src/spmv_checking.c:42:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:86:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/spmv_checking.c:130:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/spmv_checking.c'
+' '
+'Building file: ../src/stencil_checker.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stencil_checker.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../multiblock_sch_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stencil_checker.d" -MT"src/stencil_checker.o" -o "src/stencil_checker.o" "../src/stencil_checker.c"
+../src/stencil_checker.c: In function 'stencil_operation':
+../src/stencil_checker.c:40:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+../src/stencil_checker.c:76:29: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                    uint32_t tmp;
+                             ^~~
+'Finished building: ../src/stencil_checker.c'
+' '
+'Building target: multiblock_sch_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../multiblock_sch_app_bsp/ps7_cortexa9_0/lib -o "multiblock_sch_app.elf"  ./src/PR_executer.o ./src/aes_checker.o ./src/bfs_checker.o ./src/fft_checker.o ./src/fft_profiling.o ./src/gemm_checker.o ./src/helloworld.o ./src/kmp_checker.o ./src/platform.o ./src/scheduler.o ./src/sha_checker.o ./src/sha_profiling.o ./src/sort_checker.o ./src/sort_profiling.o ./src/spmv_checking.o ./src/stencil_checker.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: multiblock_sch_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size multiblock_sch_app.elf  |tee "multiblock_sch_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 128616	   3420	322131760	322263796	13355af4	multiblock_sch_app.elf
+'Finished building: multiblock_sch_app.elf.size'
+' '
+
+14:25:06 Build Finished (took 4s.545ms)
+

@@ -1,0 +1,23 @@
+/*
+ * common.h
+ *
+ *  Created on: Sep 9, 2022
+ *      Author: ekarabu
+ */
+
+#ifndef SRC_COMMON_H_
+#define SRC_COMMON_H_
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include <stdlib.h>
+
+typedef struct WorkLoad {
+  int feet;
+} workload;
+
+uint32_t totalSlot;
+
+
+#endif /* SRC_COMMON_H_ */

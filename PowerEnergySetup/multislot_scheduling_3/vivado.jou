@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Nov  9 19:11:21 2022
+# Process ID: 58300
+# Current directory: C:/Users/aamalik3/Desktop/PowerEnergySetup/multislot_scheduling_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent55420 C:\Users\aamalik3\Desktop\PowerEnergySetup\multislot_scheduling_3\multislot_scheduling.xpr
+# Log file: C:/Users/aamalik3/Desktop/PowerEnergySetup/multislot_scheduling_3/vivado.log
+# Journal file: C:/Users/aamalik3/Desktop/PowerEnergySetup/multislot_scheduling_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/aamalik3/Desktop/PowerEnergySetup/multislot_scheduling_3/multislot_scheduling.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+cd C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/sha_secworks/
+update_design -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] -black_box 
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_1/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_2/inst/custom_IP] custom_IP.dcp
+opt_design
+place_design
+route_design
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] custom_IP.dcp
+update_design -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] -black_box 
+update_design -cell [get_cell design_1_i/IP_wrapper_1/inst/custom_IP] -black_box 
+update_design -cell [get_cell design_1_i/IP_wrapper_2/inst/custom_IP] -black_box
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_0/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_1/inst/custom_IP] custom_IP.dcp
+read_checkpoint -cell [get_cell design_1_i/IP_wrapper_2/inst/custom_IP] custom_IP.dcp
+opt_design
+add_files -norecurse C:/Users/aamalik3/Desktop/GitHub/Scheduling-PR/IPs/sha_secworks/custom_IP.dcp
