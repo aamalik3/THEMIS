@@ -8,6 +8,7 @@ This repository contains the full source code accompanying the paper:
 
 THEMIS: Time, Heterogeneity, and Energy Minded Scheduling for Fair Multi-Tenant Use in FPGAs
 by Emre Karabulut, Arsalan Ali Malik, Amro Awad, and Aydin Aysu
+
 **Software**
  * Xilinx Vivado 2017.4
  * Xilinx SDK 2017.4
