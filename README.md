@@ -50,12 +50,22 @@ cd THEMIS-main
 If you find this work useful in your research, please cite it using the following BibTeX entry:
 
 ```bibtex
-@article{karabulut2024themis,
-  title={THEMIS: Time, Heterogeneity, and Energy Minded Scheduling for Fair Multi-Tenant Use in FPGAs},
-  author={Karabulut, Emre and Malik, Arsalan Ali and Awad, Amro and Aysu, Aydin},
-  journal={arXiv preprint arXiv:2404.00507},
-  year={2024}
-}
+@ARTICLE{10985821,
+author={Karabulut, Emre and Malik, Arsalan Ali and Awad, Amro and Aysu, Aydin},
+journal={ IEEE Transactions on Computers },
+title={{ THEMIS: Time, Heterogeneity, and Energy Minded Scheduling for Fair Multi-Tenant Use in FPGAs }},
+year={5555},
+volume={},
+number={01},
+ISSN={1557-9956},
+pages={1-14},
+keywords={Field programmable gate arrays;Resource management;Scheduling algorithms;Measurement;Job shop scheduling;Energy efficiency;Spatiotemporal phenomena;Hardware;Cloud computing;Dynamic scheduling},
+doi={10.1109/TC.2025.3566874},
+url = {https://doi.ieeecomputersociety.org/10.1109/TC.2025.3566874},
+publisher={IEEE Computer Society},
+address={Los Alamitos, CA, USA},
+month=may}
+
 ```
 MachSuite Benchmarks
 ```bibtex
