@@ -54,7 +54,7 @@ If you find this work useful in your research, please cite it using the followin
 author={Karabulut, Emre and Malik, Arsalan Ali and Awad, Amro and Aysu, Aydin},
 journal={ IEEE Transactions on Computers },
 title={{ THEMIS: Time, Heterogeneity, and Energy Minded Scheduling for Fair Multi-Tenant Use in FPGAs }},
-year={5555},
+year={2025},
 volume={},
 number={01},
 ISSN={1557-9956},
